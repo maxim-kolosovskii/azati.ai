@@ -1,0 +1,173 @@
+/*
+General layout
+*/
+
+html,
+body {
+  //height: 100%;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  background-color: #fff;
+  color: $font-color-base;
+  font: $font-weight-400 1rem/1.25 $font-family-base;
+  //display: flex;
+  //flex-direction: column;
+  //min-height: 100vh;
+}
+
+main[role="main"] {
+  //flex: 1;
+  position: relative;
+
+  //&:before {
+  //  content: '';
+  //  border-top: 700px solid $color-blue;
+  //  border-left: 700px solid transparent;
+  //  width: 0;
+  //  height: 0;
+  //  position: absolute;
+  //  top: 0;
+  //  right: 0;
+  //}
+}
+
+.container-fluid {
+  position: relative;
+
+    &:after {
+      content: '';
+      //background-color: $color-grey-light;
+      //height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      //width: 50vw;
+    }
+    &.container-fluid_right {
+      &:after {
+        right: 0;
+      }
+    }
+    &.container-fluid_left {
+      &:after {
+        left: 0;
+      }
+    }
+  @include media-laptop-mn {
+  }
+}
+
+.container {
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  transition: max-width $transition-duration $transition-timing-function;
+
+  @media only screen and (max-width: 399px) {
+    padding: 0 16px;
+    width: 100%;
+  }
+    @media only screen and (max-width: 299px) {
+      padding: 0 8px;
+  }
+  @media only screen and (min-width: 400px) {
+    max-width: calc(90% - 50px);
+    width: 100%;
+  }
+  @include media-phone-mn {
+    max-width: calc(80% - 50px);
+    width: 100%;
+  }
+  @include media-phablet-mn {
+    max-width: calc(100% - 12vw);
+  }
+  @include media-tablet-v-mn {
+    max-width: calc(100% - 16vw);
+  }
+  @include media-laptop-mn {
+    max-width: 1270px;
+  }
+  @include media-desktop-mn {
+    max-width: 1602px;
+  }
+}
+
+*:not(hr) {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-accent;
+  //font-style: normal;
+  //line-height: 1.1;
+  line-height: 1.35;
+  margin: 0;
+}
+
+h1, h2 {
+  font-weight: $font-weight-700;
+}
+
+h3, h4, h5, h6 {
+  font-weight: $font-weight-800;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+*::selection {
+  background: $color-blue;
+  //background: $color-orange;
+  color: #fff;
+}
+
+a {
+  color: $font-color-base;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all $transition-duration $transition-timing-function;
+
+  &:link,
+  &:visited {}
+
+  a:focus,
+  &:active,
+  &:hover {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+blockquote {
+  margin: 0;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.d-none {
+  display: none;
+}
+
+.blue {
+  color: $color-blue;
+}

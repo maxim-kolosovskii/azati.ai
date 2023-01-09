@@ -1,0 +1,85 @@
+/*
+Hamburger
+*/
+
+#hamburger {
+  @include media-netbook-mx {
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    position: relative;
+    top: 3px;
+    right: -10px;
+    z-index: 11;
+
+    // Animation
+    -webkit-animation: slideTop .5s $transition-timing-function both;
+    animation: slideTop .5s $transition-timing-function both;
+  }
+  @include media-small-mx {
+    right: 0;
+  }
+  @include media-netbook-mn {
+    display: none;
+  }
+
+  span {
+    background-color: $color-blue;
+    border-radius: 9px;
+    display: block;
+    height: 2px;
+    width: calc(100% - 20px);
+    opacity: 1;
+    position: absolute;
+    left: 10px;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 12px;
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+      top: 18px;
+    }
+
+    &:nth-child(4) {
+      top: 24px;
+    }
+  }
+
+  &:hover span {
+    background-color: $color-orange;
+
+    &:nth-child(4) {
+      width: calc(86% - 20px);
+    }
+  }
+
+  &.open span {
+
+    &:nth-child(1) {
+      top: 18px;
+      width: 0;
+      left: 50%;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+    &:nth-child(4) {
+      top: 18px;
+      width: 0;
+      left: 50%;
+    }
+  }
+}

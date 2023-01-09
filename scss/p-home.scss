@@ -1,0 +1,270 @@
+@import 'variables';
+
+@import "section";
+
+/* Top section */
+.section__title {
+  @include media-laptop-mx {
+    br {
+      display: none;
+    }
+  }
+}
+
+
+/* Services section */
+.section_services {
+  //display: none;
+
+  @import "card";
+
+  @include media-phablet-mx {
+
+    .btn {
+      margin-top: -1px;
+    }
+  }
+  @include media-phablet-mn {
+
+    .btn {
+      margin-left: auto;
+      max-width: 50%;
+    }
+  }
+  @include media-tablet-h-mn {
+
+    .btn {
+      max-width: calc(25% + 3px);
+    }
+  }
+}
+
+
+/* Industries section */
+.section_industries {
+  //display: none;
+
+  @include media-phablet-mn {
+  .container-fluid:after {
+    background-color: $color-grey-light;
+    width: 50vw;
+  }
+  }
+
+  @import "industries";
+  //@import "toggle";
+}
+
+
+/* Hire section */
+.section_hire {
+  //display: none;
+
+  .container-fluid_left {
+
+    @include media-laptop-mx {
+      &:after {
+        content: none;
+      }
+
+      .container_blue {
+        position: relative;
+
+        &:after {
+          content: '';
+          background-color: $color-blue;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          z-index: -1;
+          width: 32vw;
+        }
+      }
+
+      .container_blue + .container {
+
+        .section__title {
+          display: none;
+        }
+      }
+    }
+
+    @include media-laptop-mn {
+      &:after {
+        background-color: $color-blue;
+        width: 31vw;
+      }
+
+      .container_blue {
+        display: none;
+      }
+    }
+  }
+
+  .container {
+
+    @include media-laptop-mn {
+      display: flex;
+    }
+  }
+
+  .section__title {
+    background-color: $color-blue;
+    color: #fff;
+    margin: 0;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+
+    @include media-laptop-mn {
+      min-width: fit-content;
+      padding-right: 3.5vw;
+    }
+  }
+
+  @import "numbers";
+}
+
+
+/* Trusted section */
+.section_trusted {
+  background-color: $color-grey-light;
+  //display: none;
+  //overflow-x: auto;
+
+  @include media-phablet-mx {
+    padding: 4.5vh 0;
+  }
+  @include media-phablet-mn {
+    padding: 8vh 0;
+  }
+
+  .section__title {
+
+    @include media-phablet-mn {
+      background-color: $color-grey-light;
+      background: linear-gradient(90deg, rgba(244,244,245,0) 0%, rgba(244,244,245,1) 10%, rgba(244,244,245,1) 90%, rgba(244,244,245,0) 100%);
+      margin-left: -50px;
+      max-width: fit-content;
+      padding-right: 99px;
+      padding-left: 50px;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  .companies-wrapper {
+    margin-top: 2.5vh;
+    margin-bottom: 5vh;
+    overflow-x: auto;
+
+    & + .companies-wrapper {
+      margin-top: 5vh;
+    }
+  }
+
+  .companies {
+    display: flex;
+    align-items: center;
+    min-width: max-content;
+  }
+
+  .companies_logo {
+    filter: grayscale(100%);
+    margin: 0 3vw;
+    object-fit: contain;
+    opacity: .5;
+    transition: all var(--transition-duration) var(--transition-timing-function);
+
+    @include media-phablet-mx {
+      max-height: 50px;
+      max-width: 180px;
+    }
+    @include media-phablet-mn {
+      max-width: 307px;
+    }
+
+    &:hover {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
+}
+
+/* Reviews section */
+.section_reviews {
+  display: none;
+
+  .container {
+    border-top: 1px solid $color-grey-medium;
+    display: flex;
+  }
+
+  .section__title {
+    margin-top: 3vh;
+    width: 33.33%;
+  }
+
+ .review {
+   border-right: 1px solid $color-grey-medium;
+   border-bottom: 1px solid $color-grey-medium;
+   border-left: 1px solid $color-grey-medium;
+   margin-left: auto;
+   position: relative;
+   width: 66.66%;
+ }
+
+  .review__content-box {
+    display: flex;
+  }
+
+  .review__header {
+    border-bottom: 1px solid $color-grey-medium;
+    display: flex;
+
+    IMG {
+      margin-right: 40px;
+    }
+
+    DIV {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    H3 {
+      color: $color-grey-dark;
+      font-weight: $font-weight-400;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  .review__left {
+    border-right: 1px solid $color-grey-medium;
+
+    P {
+      line-height: 32px;
+      max-width: 36em;
+      padding: 4vh 3vw;
+    }
+  }
+
+  .review__right {
+    font-family: $font-family-accent;
+    font-weight: $font-weight-500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 40%;
+  }
+
+  @import "toggle";
+}
+
+
+/* Form section */
+.section_form {
+  display: none;
+}

@@ -1,0 +1,69 @@
+/* Modal background */
+.modal {
+  background-color: #000; /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal content box */
+.modal__content {
+  background-color: #fff;
+  margin: auto;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  // Animation
+  animation-duration: 0.4s;
+  -webkit-animation-name: animatetop;
+  animation-name: animatetop;
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  /* Modal close button */
+  .close {
+    color: $font-color-base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    //font-size: 2.4rem; //48px;
+    //right: 0;
+    //height: 1em;
+    //width: 1em;
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    transition: all $transition-duration $transition-timing-function;
+
+    @media only screen and (max-width: 399px) {
+      right: 0;
+    }
+
+    @media only screen and (min-width: 400px) {
+      right: -14px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-orange;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+/* Card box */
+
+.card_outer {
+  border-top: 1px solid $color-grey-medium;
+  display: grid;
+  //gap: 1rem;
+
+  @include media-phablet-mx {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  @include media-phablet-mn {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include media-tablet-h-mn {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card {
+  border-bottom: 1px solid $color-grey-medium;
+  border-left: 1px solid $color-grey-medium;
+  grid-column: span 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  //flex-grow: 1;
+  opacity: 1;
+  transition: all $transition-duration $transition-timing-function;
+
+  @include media-phablet-mx {
+    border-right: 1px solid $color-grey-medium;
+  }
+  @include media-phone-mx {
+    padding: 3vh 15px 2vh;
+  }
+  @include media-phone-mn {
+    padding: 5vh 3vw 4vw;
+  }
+  @include media-desktop-mn {
+    padding: 7vh 5.5vw 6vh 2.5vw;
+  }
+
+  &:hover {
+    background-color: $color-blue-dark;
+    color: #fff;
+
+    .card_title a {
+      color: $color-orange;
+
+      &:hover {
+        //color: #fff;
+        //color: lighten($color-orange, 10%);
+        color: darken($color-orange, 10%);
+      }
+    }
+
+    .card_more {
+      color: $color-orange;
+
+      span {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI1IDE2IiB2aWV3Qm94PSIwIDAgMjUgMTYiPjxwYXRoIGQ9Ik0xNi4yIDIuMWMtLjQtLjQtLjQtMS4xIDAtMS42LjQtLjQgMS4xLS40IDEuNiAwbDYuNyA2LjdjLjQuNC40IDEuMSAwIDEuNmwtNi43IDYuN2MtLjQuNC0xLjEuNC0xLjYgMC0uNC0uNC0uNC0xLjEgMC0xLjZMMjEgOS4xSDEuNEMuOCA5LjEuMyA4LjYuMyA4cy41LTEuMSAxLjEtMS4xaDE5LjVsLTQuNy00Ljh6IiBzdHlsZT0iZmlsbDojZmY5NzFkIi8+PC9zdmc+"); //orange icon
+      }
+    }
+  }
+}
+
+.card_title {
+  font-weight: $font-weight-800;
+
+  @include media-tablet-v-mx {
+    font-size: 1.5rem; //24px;
+    line-height: 1.315;
+  }
+  @include media-tablet-v-mn {
+    font-size: clamp(1.1rem, calc(16px + 1vw), 32px);
+    line-height: 1.34;
+  }
+}
+
+.card_txt {
+  line-height: 1.6;
+
+  @include media-tablet-v-mx {
+    font-size: 0.875rem; //14px;
+  }
+  @include media-tablet-v-mn {
+    font-size: clamp(0.75rem, calc(5px + 1vw), 20px);
+    padding-bottom: 2vh;
+  }
+}
+
+.card_footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+
+.card_more {
+  display: flex;
+  align-items: center;
+  font-family: $font-family-accent;
+  font-weight: $font-weight-700;
+  letter-spacing: 2px;
+  line-height: 1.9;
+  padding: 5px;
+  text-transform: uppercase;
+
+  @include media-tablet-v-mn {
+    font-size: 0.8rem; //16px;
+  }
+
+  span {
+    background: url("../img/i-arrow-min.svg") no-repeat;
+    margin-left: calc(var(--md) + 2px);
+    width: 25px;
+    height: 16px;
+    transition: all $transition-duration-fast $transition-timing-function;
+  }
+
+  &:hover {
+    span {
+      transform: translateX(5px);
+    }
+  }
+}
