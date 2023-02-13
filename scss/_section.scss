@@ -8,7 +8,7 @@ General Landing styles
   //  transition: all $transition-duration $transition-timing-function;
   //display: none !important;
 
-  &:not(.section_top) {
+  &:not(.section_top):not(.section_form) {
     //line-height: 1.2;
 
     @include media-phablet-mx {
@@ -37,7 +37,17 @@ General Landing styles
 
     @include media-phablet-mn {
       max-width: 10em;
+      //max-width: 8em;
     }
+
+    //@include media-laptop-mx {
+    br {
+      display: none;
+    }
+    //}
+    //@include media-laptop-mn {
+    //  max-width: 10em;
+    //}
   }
 
   &:not(.section__title_page) {
@@ -231,12 +241,13 @@ General Landing styles
 
     @include media-phablet-mn {
       border-top: 1px solid $color-grey-medium;
-      bottom: -68px;
+      bottom: -60px;
       display: flex;
       position: absolute;
       width: 100%;
 
       .btn {
+        margin-top: -1px;
 
         @include media-tablet-h-mx {
           min-width: auto;
@@ -244,12 +255,15 @@ General Landing styles
         }
 
         @include media-tablet-h-mn {
-          width: 25%;
-        }
-      }
 
-      .btn_empty {
-        border: 0 none;
+          &.btn_primary {
+            width: 25%;
+          }
+
+          &.btn_empty {
+            width: calc(25% + 1px);
+          }
+        }
       }
     }
   }

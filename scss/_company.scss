@@ -1,0 +1,147 @@
+.section_company {
+    overflow-x: hidden;
+}
+
+//.company {
+//    @include media-phablet-mx {
+//        margin: -9vh 0 -9vh;
+//        transform: scale(.5);
+//
+//        .company__list:first-child {
+//            margin-left: -150px;
+//        }
+//        .company__list:last-child {
+//            margin-right: 150px;
+//        }
+//    }
+//}
+
+.company__list {
+    list-style: none;
+    display: flex;
+
+    &:nth-of-type(2n) {
+        direction: rtl;
+    }
+}
+
+.company__item {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+
+    @include media-phablet-mx {
+        margin: 0 1vw 3vh;
+        //margin: 1vh 5vw 5vh;
+    }
+    @include media-phablet-mn {
+        margin: 4vh 1.5vw;
+    }
+}
+
+.company__logo {
+    filter: grayscale(100%);
+    object-fit: contain;
+    opacity: .3;
+    transition: all var(--transition-duration) var(--transition-timing-function);
+
+    @include media-phablet-mx {
+        //margin: 0 1vw 3vh;
+        //margin: 1vh 5vw 5vh;
+
+        &.company__logo_aptagen {
+            width: 58px;
+        }
+        &.company__logo_auction {
+            width: 160px;
+        }
+        &.company__logo_chilewich {
+            width: 119px;
+        }
+        &.company__logo_cib {
+            width: 115px;
+        }
+        &.company__logo_citizen {
+            width: 144px;
+        }
+        &.company__logo_clarivate {
+            width: 165px;
+        }
+        &.company__logo_doxa {
+            width: 104px;
+        }
+        &.company__logo_empyrealstrings {
+            width: 61px;
+        }
+        &.company__logo_e-z_riser {
+            width: 140px;
+        }
+        &.company__logo_geolytics {
+            width: 150px;
+        }
+        &.company__logo_marketboomer {
+            width: 130px;
+        }
+        &.company__logo_medpro {
+            width: 170px;
+        }
+        &.company__logo_tophotelprojects {
+            width: 125px;
+        }
+        &.company__logo_venstar {
+            width: 140px;
+        }
+    }
+    @include media-phablet-mn {
+        //margin: 4vh 1.5vw;
+
+        &.company__logo_aptagen {
+            width: 155px;
+        }
+        &.company__logo_auction {
+            width: 342px;
+        }
+        &.company__logo_chilewich {
+            width: 255px;
+        }
+        &.company__logo_cib {
+            width: 115px;
+        }
+        &.company__logo_citizen {
+            width: 264px;
+        }
+        &.company__logo_clarivate {
+            width: 265px;
+        }
+        &.company__logo_doxa {
+            width: 194px;
+        }
+        &.company__logo_empyrealstrings {
+            width: 160px;
+        }
+        &.company__logo_e-z_riser {
+            width: 240px;
+        }
+        &.company__logo_geolytics {
+            width: 250px;
+        }
+        &.company__logo_marketboomer {
+            width: 230px;
+        }
+        &.company__logo_medpro {
+            width: 270px;
+        }
+        &.company__logo_tophotelprojects {
+            width: 225px;
+        }
+        &.company__logo_venstar {
+            width: 260px;
+        }
+    }
+
+    &:hover {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+}

@@ -196,11 +196,6 @@ $media-retina-min: 2560px;
     @content;
   }
 }
-@mixin media-netbook-laptop {
-  @media screen and (min-width: #{$media-netbook-min}) and (max-width: #{$media-laptop-max}) {
-    @content;
-  }
-}
 
 /*
 CSS root variables media

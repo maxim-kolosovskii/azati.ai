@@ -140,6 +140,7 @@
     padding: 11vh 3vw;
   }
   @include media-desktop-mn {
+    min-height: 710px;
     padding-bottom: 27vh;
   }
 }

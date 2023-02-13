@@ -1,6 +1,6 @@
 /* Card box */
 
-.card_outer {
+.card-outer {
   border-top: 1px solid $color-grey-medium;
   display: grid;
   //gap: 1rem;
@@ -43,7 +43,7 @@
     background-color: $color-blue-dark;
     color: #fff;
 
-    .card_title a {
+    .card__title a {
       color: $color-orange;
 
       &:hover {
@@ -53,7 +53,7 @@
       }
     }
 
-    .card_more {
+    .card__more {
       color: $color-orange;
 
       span {
@@ -63,7 +63,7 @@
   }
 }
 
-.card_title {
+.card__title {
   font-weight: $font-weight-800;
 
   @include media-tablet-v-mx {
@@ -76,7 +76,7 @@
   }
 }
 
-.card_txt {
+.card__txt {
   line-height: 1.6;
 
   @include media-tablet-v-mx {
@@ -88,14 +88,14 @@
   }
 }
 
-.card_footer {
+.card__footer {
   display: flex;
   justify-content: flex-end;
   margin-top: auto;
 }
 
 
-.card_more {
+.card__more {
   display: flex;
   align-items: center;
   font-family: $font-family-accent;
