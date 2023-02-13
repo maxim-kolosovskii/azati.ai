@@ -56,8 +56,9 @@ General Landing styles
     @media screen and (min-width: 768px) {
       .section__title.section__title_page {
         max-width: 10em; } }
-    .section__title.section__title_page br {
-      display: none; }
+    @media screen and (max-width: 1399px) {
+      .section__title.section__title_page br {
+        display: none; } }
   .section__title:not(.section__title_page) {
     font-size: clamp(30px, calc(13px + 5vw), 72px);
     line-height: 1.175; }

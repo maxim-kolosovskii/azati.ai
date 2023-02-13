@@ -40,11 +40,11 @@ General Landing styles
       //max-width: 8em;
     }
 
-    //@include media-laptop-mx {
-    br {
-      display: none;
+    @include media-laptop-mx {
+      br {
+        display: none;
+      }
     }
-    //}
     //@include media-laptop-mn {
     //  max-width: 10em;
     //}
