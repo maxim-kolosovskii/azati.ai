@@ -1,0 +1,74 @@
+.user-content {
+  ...
+
+  a {
+    color: $font-color-base;
+
+    &:hover {
+      color: $color-blue;
+      outline: none;
+    }
+
+    &:active {
+      color: $color-blue;
+      outline: none;
+    }
+
+    &:focus {
+      color: $color-blue;
+      outline: none;
+    }
+  }
+
+  p {
+    ...
+  }
+
+  table {
+
+    thead {
+      ...
+
+      th {
+        ...
+      }
+    }
+
+    tbody {
+
+      tr {
+        ...
+
+        td {
+          ...
+        }
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6, h7 {
+    font-family: $font-family-accent;
+    @include reset;
+  }
+
+  h1 {
+    ...
+  }
+  ...
+
+  h7 {
+    ...
+  }
+
+  ul, ol {
+    @include reset;
+
+    li {
+      ...
+    }
+  }
+
+  img {
+    ...
+  }
+}

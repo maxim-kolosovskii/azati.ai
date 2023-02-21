@@ -2,14 +2,10 @@
 General Landing styles
 */
 .section {
-  margin-left: auto;
-  margin-right: auto;
-  transition: all $transition-duration-fast $transition-timing-function;
-  //  transition: all $transition-duration $transition-timing-function;
-  //display: none !important;
+  @include margin-auto;
+  @include transition(all $transition-duration-fast $transition-timing-function);
 
-  &:not(.section_top):not(.section_form) {
-    //line-height: 1.2;
+  &:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form) {
 
     @include media-phablet-mx {
       margin: 10vh 0;
@@ -22,7 +18,7 @@ General Landing styles
   ul {
 
     li {
-      box-sizing: border-box;
+      @include box-sizing;
       list-style: none;
     }
   }
@@ -37,7 +33,6 @@ General Landing styles
 
     @include media-phablet-mn {
       max-width: 10em;
-      //max-width: 8em;
     }
 
     @include media-laptop-mx {
@@ -45,9 +40,6 @@ General Landing styles
         display: none;
       }
     }
-    //@include media-laptop-mn {
-    //  max-width: 10em;
-    //}
   }
 
   &:not(.section__title_page) {
@@ -65,253 +57,32 @@ General Landing styles
 }
 
 .section__slogan {
-  display: block;
   line-height: 1.59;
   margin: 0;
 
+  @include media-phablet-mn {
+    padding: 4.5vh 0 0;
+  }
+
+  @include media-tablet-v-mn {
+    font-size: clamp(0.8rem, calc(7px + 1vw), 24px);
+  }
+}
+
+.section_top .section__slogan {
   @include media-phablet-mx {
     padding: 2vh 3vw 1vh 0;
   }
   @include media-phablet-mn {
     max-width: 22em;
-    padding: 4.5vh 0 0;
   }
   @media only screen and (min-width: 940px) {
     max-width: 24em;
-  }
-  @include media-tablet-v-mn {
-    font-size: clamp(0.8rem, calc(7px + 1vw), 24px);
   }
   @include media-laptop-mn {
     max-width: 28em;
   }
   @include media-desktop-mn {
     max-width: 36em;
-  }
-}
-
-
-/* Top section */
-.section_top {
-  //display: none;
-
-  @include media-phablet-mn {
-    margin-bottom: 68px;
-  }
-
-  // Blue triangle on the right
-  &:before {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: all $transition-duration $transition-timing-function;
-
-    @include media-tablet-v-mx {
-      border-top: 20rem solid $color-blue;
-      border-left: 18rem solid transparent;
-    }
-    @include media-phablet-mx {
-      border-left: 40vw solid transparent;
-    }
-    @include media-tablet-v-mn {
-      border-top: 20rem solid $color-blue;
-      border-left: 20rem solid transparent;
-    }
-    @include media-laptop-mn {
-      border-top: 25rem solid $color-blue;
-      border-left: 25rem solid transparent;
-    }
-    @include media-desktop-mn {
-      border-top: 30rem solid $color-blue;
-      border-left: 30rem solid transparent;
-    }
-  }
-
-  .container {
-    position: relative;
-
-    @include media-phablet-mn {
-      border-right: 1px solid $color-grey-medium;
-    }
-
-    @include media-tablet-h-mn {
-      &:before {
-        content: '';
-        background-color: $color-grey-medium;
-        height: 100%;
-        width: 1px;
-        position: absolute;
-        top: 0;
-        left: calc(75% - 1px);
-        bottom: 0;
-        transition: all $transition-duration-fast $transition-timing-function;
-        //  transition: all $transition-duration $transition-timing-function;
-      }
-    }
-  }
-
-  .section__img-outer {
-    display: block;
-    position: relative;
-
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      z-index: -1;
-      transition: all $transition-duration-fast $transition-timing-function;
-      //  transition: all $transition-duration $transition-timing-function;
-    }
-
-    @include media-phablet-mx {
-      &:before {
-        background-color: $color-grey-medium;
-        left: 50%;
-        width: 1px;
-      }
-      &:after {
-        border-right: 1px solid $color-grey-medium;
-        width: 100%;
-
-        @include media-phablet-mx {
-          left: 0;
-          right: 0;
-          margin: auto;
-          max-width: calc(80% - 51px);
-        }
-        @media only screen and (max-width: 575px) {
-          max-width: calc(90% - 51px);
-        }
-        @media only screen and (max-width: 399px) {
-          max-width: calc(100% - 33px);
-        }
-        @media only screen and (max-width: 299px) {
-          max-width: calc(100% - 17px);
-        }
-      }
-    }
-
-    &:after {
-      @include media-phablet-mn {
-        max-width: calc(100% - 12vw);
-      }
-    }
-  }
-
-  .section__img {
-
-    @include media-phablet-mx {
-      max-width: 100%;
-      position: relative;
-      z-index: 1;
-      display: block;
-    }
-
-    @include media-phablet-mn {
-      max-width: 60%;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
-      transition: all $transition-duration $transition-timing-function;
-    }
-    @include media-laptop-mn {
-      max-width: 50%;
-    }
-  }
-
-  .btn-outer {
-
-    .btn {
-
-      @include media-phablet-mx {
-        margin-top: 20px;
-      }
-      @include media-small-mn {
-        min-width: auto;
-      }
-    }
-
-    @include media-phablet-mn {
-      border-top: 1px solid $color-grey-medium;
-      bottom: -60px;
-      display: flex;
-      position: absolute;
-      width: 100%;
-
-      .btn {
-        margin-top: -1px;
-
-        @include media-tablet-h-mx {
-          min-width: auto;
-          width: 33.33%;
-        }
-
-        @include media-tablet-h-mn {
-
-          &.btn_primary {
-            width: 25%;
-          }
-
-          &.btn_empty {
-            width: calc(25% + 1px);
-          }
-        }
-      }
-    }
-  }
-}
-
-.section__content-left {
-  position: relative;
-
-  &:before,
-  &:after {
-    content: '';
-    background-color: $color-grey-medium;
-    display: block;
-    height: 100%;
-    width: 1px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-  }
-
-  @include media-phablet-mx {
-    border-right: 1px solid $color-grey-medium;
-    padding: 3vh 0 0;
-
-    &:before {
-      left: 50%;
-    }
-    &:after {
-      display: none;
-    }
-  }
-  @include media-phablet-mn {
-    padding: 7vh 0;
-
-    &:before {
-      left: 33.33%;
-    }
-    &:after {
-      left: 66.66%;
-    }
-  }
-  @include media-tablet-h-mn {
-    &:before {
-      left: 25%;
-    }
-    &:after {
-      left: 50%;
-    }
   }
 }

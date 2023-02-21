@@ -8,7 +8,7 @@ footer[role="contentinfo"] {
 
   .container {
     display: grid;
-    transition: all $transition-duration $transition-timing-function;
+    @include transition(all $transition-duration $transition-timing-function);
 
     @include media-phablet-mx {
       grid-template-columns: 1fr;
@@ -33,37 +33,20 @@ footer[role="contentinfo"] {
     }
   }
 
-  h1 {
-    //@include media-tablet-v-mx {
-    //  font-size: 2.75rem; //44px;
-    //  line-height: 1.1;
-    //}
-    @include media-phablet-mx {
-      font-size: 2rem; //32px;
-      line-height: 1.1;
-    }
-    @include media-phablet-laptop {
-      font-size: calc(0.045 * 100vw + 10px);
-      //font-size: calc(0.035 * 100vw + 10px );
-      line-height: 1.195;
-    }
+  .footer__title {
+    @include title_2;
+
     @include media-laptop-mn {
-      font-size: 3.6rem; //72px;
-      line-height: 1.195;
       max-width: 6em;
     }
   }
 
-  h2 {
+  h3 {
     display: inline-block;
-    line-height: 24px;
     letter-spacing: 1px;
+    line-height: 1.2;
     position: relative;
     text-transform: uppercase;
-
-    //&:not(a > *) {
-    //  border: solid 1px;
-    //}
 
     @include media-tablet-v-mx {
       font-size: 1.25rem; //20px
@@ -217,15 +200,11 @@ footer[role="contentinfo"] {
   max-width: 19em;
   padding-bottom: 2.8vh;
 
-  //@include media-phablet-mx {
   @include media-tablet-v-mx {
     line-height: 26px;
-    //padding-bottom: 2.5vh;
   }
-  //@include media-phablet-mn {
   @include media-tablet-v-mn {
     line-height: 32px;
-    //padding-bottom: 2.8vh;
   }
 }
 

@@ -15,7 +15,7 @@
 /* Modal content box */
 .modal__content {
   background-color: #fff;
-  margin: auto;
+  @include margin-auto;
   padding: 0;
   position: relative;
   height: 100%;
@@ -23,16 +23,8 @@
 
   // Animation
   animation-duration: 0.4s;
-  -webkit-animation-name: animatetop;
-  animation-name: animatetop;
-  @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
-  @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
+  -webkit-animation-name: animateTop;
+  animation-name: animateTop;
 
   /* Modal close button */
   .close {
@@ -49,7 +41,7 @@
     font-size: 48px;
     width: 48px;
     height: 48px;
-    transition: all $transition-duration $transition-timing-function;
+    @include transition(all $transition-duration $transition-timing-function);
 
     @media only screen and (max-width: 399px) {
       right: 0;

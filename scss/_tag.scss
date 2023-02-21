@@ -1,0 +1,47 @@
+/*
+Tag Block
+*/
+.tag {
+  font-size: 0;
+  line-height: 1.6;
+  list-style: none;
+  margin-bottom: 5vh;
+
+  @include media-phone-mn {
+    display: flex;
+    //display: none;
+  }
+}
+
+.tag__col:not(:first-child) {
+  @include media-tablet-v-mn {
+    margin-left: 4vw;
+  }
+}
+
+.tag__title {
+  @include title_5;
+  margin-bottom: 1.7vh;
+}
+
+.tag__item {
+  border: 1px solid $color-grey-medium;
+  display: inline-block;
+  font-family: $font-family-accent;
+  font-size: 0.8rem;
+  font-weight: $font-weight-500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @include media-tablet-v-mx {
+    margin-right: 12px;
+    margin-bottom: 12px;
+    padding: 4px 7px;
+  }
+  @include media-tablet-v-mn {
+    margin-right: 16px;
+    margin-bottom: 16px;
+    padding: 7px 10px;
+  }
+}

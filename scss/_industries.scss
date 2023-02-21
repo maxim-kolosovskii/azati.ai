@@ -1,7 +1,7 @@
 /* Industries */
 
-.content-img {
-  transition: all $transition-duration $transition-timing-function;
+.section__img-outer {
+  @include transition(all $transition-duration $transition-timing-function);
 
   @include media-netbook-mx {
     display: none;
@@ -18,7 +18,7 @@
     z-index: 1;
 
     IMG {
-      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.05);
+      @include box-shadow(0 0 8px 0 rgba(0, 0, 0, 0.05));
       display: block;
       object-fit: cover;
       margin-top: auto;

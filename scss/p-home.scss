@@ -2,6 +2,8 @@
 
 @import "section";
 
+@import "section-top";
+
 
 /* Services section */
 .section_services {
@@ -168,129 +170,10 @@
     min-height: 360px;
   }
   .clutch-widget {
-    margin: auto;
+    @include margin-auto;
     max-width: 1440px;
   }
 }
 
 
-/* Form section */
-.section_form {
-  //display: none;
-
-  @include media-phablet-mx {
-    margin: 10vh 0 0;
-  }
-  @include media-phablet-mn {
-    margin: 10vh 0 0;
-
-    .btn_right {
-      padding-left: 2vw;
-      padding-right: 2vw;
-    }
-  }
-  @include media-netbook-mn {
-    margin: 20vh 0 0;
-  }
-  @include media-desktop-mn {
-    margin: 27vh 0 0;
-  }
-
-  .container {
-    @include media-netbook-laptop {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: "head form form";
-
-      .section__title,
-      .form {
-        grid-area: form;
-      }
-    }
-  }
-
-  & > .container {
-    position: relative;
-    z-index: 1;
-  }
-
-  .section__title {
-    padding-bottom: 0;
-    @include media-netbook-mx {
-      margin-bottom: 0;
-    }
-    @include media-phablet-mn {
-      padding-left: 5vw;
-    }
-    @include media-netbook-mn {
-      margin-bottom: -16px;
-      padding-left: 3vw;
-      transition: none;
-    }
-    @include media-laptop-mn {
-      margin-left: 383px;
-    }
-    @include media-desktop-mn {
-      padding-left: 6vw;
-    }
-  }
-
-  .container-fluid {
-    @include media-phablet-mn {
-      background-color: $color-grey-light;
-    }
-
-    .container {
-
-      @include media-phablet-mx {
-        padding-bottom: 3vh;
-      }
-      @include media-phablet-mn {
-        padding-bottom: 7vh;
-      }
-      @include media-laptop-mn {
-        display: grid;
-        grid-template-columns: 383px 1fr;
-      }
-      @include media-desktop-mn {
-        padding-bottom: 20vh;
-      }
-    }
-  }
-
-  .content-img {
-    position: relative;
-
-    @include media-netbook-mx {
-      display: none;
-    }
-    @include media-netbook-laptop {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      max-width: calc(8vw + 28% + 1px);
-      width: 100%;
-    }
-
-    IMG {
-      display: block;
-      max-width: 100%;
-      transition: all $transition-duration $transition-timing-function;
-
-      @include media-laptop-mn {
-        position: absolute;
-        right: 0;
-        bottom: -7vh;
-        min-width: 30vw;
-        max-width: 400px;
-      }
-      @include media-desktop-mn {
-        bottom: -20vh;
-        max-width: 600px;
-        min-width: auto;
-        width: 33vw;
-      }
-    }
-  }
-}
+@import "section-form";

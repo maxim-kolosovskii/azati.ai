@@ -64,10 +64,9 @@ main[role="main"] {
 }
 
 .container {
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
-  transition: max-width $transition-duration $transition-timing-function;
+  @include box-sizing;
+  @include margin-auto;
+  @include transition(max-width $transition-duration $transition-timing-function);
 
   @media only screen and (max-width: 399px) {
     padding: 0 16px;
@@ -98,35 +97,40 @@ main[role="main"] {
   }
 }
 
-*:not(hr) {
-  box-sizing: border-box;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.title {
   font-family: $font-family-accent;
-  //font-style: normal;
-  //line-height: 1.1;
-  line-height: 1.35;
-  margin: 0;
+  @include reset;
+  @include transition(all $transition-duration $transition-timing-function);
 }
 
-h1, h2 {
-  font-weight: $font-weight-700;
+.title_1 {
+  @include title_1;
 }
-
-h3, h4, h5, h6 {
-  font-weight: $font-weight-800;
+.title_2 {
+  @include title_2;
+}
+.title_3 {
+  @include title_3;
+}
+.title_4 {
+  @include title_4;
+}
+.title_5 {
+  @include title_5;
+}
+.title_6 {
+  @include title_6;
 }
 
 ul,
 ol {
-  margin: 0;
-  padding: 0;
+  @include reset;
 }
 
 nav ul {
@@ -144,7 +148,7 @@ a {
   cursor: pointer;
   text-decoration: none;
   //text-decoration: underline;
-  transition: all $transition-duration $transition-timing-function;
+  @include transition(all $transition-duration $transition-timing-function);
 
   &:link,
   &:visited {}
@@ -170,10 +174,22 @@ sup {
   top: -0.1em;
 }
 
+*:not(hr) {
+  @include box-sizing;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $color-grey-medium;
+  height: 0;
+  padding: 0;
+}
+
 .nowrap {
   white-space: nowrap;
 }
 
+.hidden,
 .d-none {
   display: none;
 }

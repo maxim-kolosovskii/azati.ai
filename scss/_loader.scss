@@ -1,9 +1,10 @@
 .loader-outer {
+  position: relative;
+  z-index: 9999;
 
   // Animation
   opacity: 0;
-  -webkit-animation: fadeInloader .1s $transition-timing-function both;
-  animation: fadeInloader .1s $transition-timing-function both;
+  @include x-animation(fadeInloader .1s $transition-timing-function both);
   animation-delay: .15s;
 
   @-webkit-keyframes fadeInloader {
@@ -20,22 +21,12 @@
   border: 6px solid #f1f1f1; /* Light grey */
   outline: 2px solid #fff;
   border-top: 6px solid $color-blue;
-  border-radius: 50%;
-  margin: auto;
+  @include b-radius(50%);
+  @include margin-auto;
   width: 50px;
   height: 50px;
 
   // Animation
-  -webkit-animation: spin 1.15s linear infinite;
-  animation: spin 1.15s linear infinite;
+  @include x-animation(spinLoad 1.15s linear infinite);
   animation-delay: .15s;
-
-  @-webkit-keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
 }

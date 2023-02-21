@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" /><![endif]-->
-    <title>New Azati – Homepage</title>
-    <meta name="description" content="Azati is the team of bright-minded software developers, architects, designers and project managers not scared of sophisticated challenges.">
+<head itemscope itemtype="http://schema.org/WPHeader">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1"><![endif]-->
+    <title itemprop="headline">Homepage - New Azati</title>
+    <meta itemprop="description" name="description" content="Azati is the team of bright-minded software developers, architects, designers and project managers not scared of sophisticated challenges.">
+    <meta itemprop="keywords" name="keywords" content="development">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon//apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon//favicon-32x32.png">
@@ -19,31 +20,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- CSS styles -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/p-home.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/p-home.css">
 </head>
 
 <body id="hiddenScroll">
 
 <header role="banner" id="stickyHeader">
     <div class="container">
-        <a class="logo-azati" href="javascript:void(0);">
-            <img src="./img/logo-azati-min.svg" alt="Azati" />
-        </a>
+        <span class="logo-azati">
+            <img src="./img/logo-azati-min.svg" alt="Azati">
+        </span>
 
         <div id="hamburger">
             <span></span><span></span><span></span><span></span>
         </div>
 
-        <nav role="navigation">
+        <nav itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
             <ul class="nav__desktop">
-                <li><a class="nav__item" href="javascript:void(0);">About Azati</a></li> <!-- Shorthand -->
-                <li><a class="nav__item nav__item_parent" id="myBtn" href="javascript:void(0);">Services</a><!-- Trigger/Open The Modal --></li>
-                <li><a class="nav__item" href="javascript:void(0);">Portfolio</a></li>
-                <li><a class="nav__item" href="javascript:void(0);">Blog</a></li>
-                <li><a class="nav__item" href="javascript:void(0);">Career</a></li>
-                <li><a class="nav__item" href="javascript:void(0);">Contact Us</a></li>
+                <li><a itemprop="url" class="nav__item" href="javascript:void(0);">About Azati</a></li> <!-- Shorthand -->
+                <li><a itemprop="url" class="nav__item nav__item_parent" id="myBtn" href="javascript:void(0);">Services</a><!-- Trigger/Open The Modal --></li>
+                <li><a itemprop="url" class="nav__item" href="javascript:void(0);">Portfolio</a></li>
+                <li><a itemprop="url" class="nav__item" href="blog.html">Blog</a></li>
+                <li><a itemprop="url" class="nav__item" href="javascript:void(0);">Career</a></li>
+                <li><a itemprop="url" class="nav__item" href="javascript:void(0);">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -54,9 +55,9 @@
                     <span class="close">&times;</span>
                     <nav>
                         <ul>
-                            <li><a href="/"><span>01 /</span> Custom Software <br />Engineering</a></li>
-                            <li><a href="/"><span>02 /</span> Artificial Intelligence/ <br />Machine Learning</a></li>
-                            <li><a href="/"><span>03 /</span> Document <br />Digitization</a></li>
+                            <li><a href="/"><span>01 /</span> Custom Software <br>Engineering</a></li>
+                            <li><a href="/"><span>02 /</span> Artificial Intelligence/ <br>Machine Learning</a></li>
+                            <li><a href="/"><span>03 /</span> Document <br>Digitization</a></li>
                             <li class="spacer">&nbsp;</li>
                             <li><a href="/"><span>04 /</span> Quality Assurance</a></li>
                             <li><a href="/"><span>05 /</span> DevOps</a></li>
@@ -73,7 +74,7 @@
     <section class="section section_top">
         <div class="container">
             <div class="section__content-left">
-                <h1 class="section__title section__title_page">Uniting experts <br />to fulfil important projects</h1>
+                <h1 class="section__title section__title_page">Uniting experts <br>to fulfil important projects</h1>
                 <p class="section__slogan">
                     Since 2002 Azati reliably delivers software engineering services requiring innovated approach, speed, scale, complexity and security. We provide our partners from the Fortune 500 and growing companies with dedicated development teams.
                 </p>
@@ -88,7 +89,7 @@
 
         <div class="container">
             <div class="btn-outer">
-                <a class="btn btn_primary" href="javascript:void(0);">Hire your team</a>
+                <a class="btn" href="javascript:void(0);">Hire your team</a>
                 <a class="btn btn_empty" href="javascript:void(0);">Join Us</a>
             </div>
         </div>
@@ -97,14 +98,14 @@
 
     <section class="section section_services">
         <div class="container">
-            <h1 class="section__title">Core Services</h1>
+            <h2 class="section__title">Core Services</h2>
             <div class="card-outer">
                 <div class="card">
-                    <h2 class="card__title">
+                    <h3 class="card__title">
                         <a href="javascript:void(0);">
-                            Custom Software <br />Engineering
+                            Custom Software <br>Engineering
                         </a>
-                    </h2>
+                    </h3>
                     <p class="card__txt">
                         Web and Mobile application development from scratch, legacy solutions maintenance and third-party applications customization
                     </p>
@@ -114,11 +115,11 @@
                 </div><!-- end card #1 -->
 
                 <div class="card">
-                    <h2 class="card__title">
+                    <h3 class="card__title">
                         <a href="javascript:void(0);">
-                            Artificial Intelligence/<br />Machine Learning
+                            Artificial Intelligence/<br>Machine Learning
                         </a>
-                    </h2>
+                    </h3>
                     <p class="card__txt">
                         Azati offers various scenarios to improve your business by using Artificial intelligenсe
                     </p>
@@ -128,11 +129,11 @@
                 </div><!-- end card #2 -->
 
                 <div class="card">
-                    <h2 class="card__title">
+                    <h3 class="card__title">
                         <a href="javascript:void(0);">
-                            Document <br />Digitization
+                            Document <br>Digitization
                         </a>
-                    </h2>
+                    </h3>
                     <p class="card__txt">
                         Azati offers various scenarios to improve your business by using Artificial intelligenсe
                     </p>
@@ -142,11 +143,11 @@
                 </div><!-- end card #3 -->
 
                 <div class="card">
-                    <h2 class="card__title">
+                    <h3 class="card__title">
                         <a href="javascript:void(0);">
-                            Quality <br />Assurance
+                            Quality <br>Assurance
                         </a>
-                    </h2>
+                    </h3>
                     <p class="card__txt">
                         Azati combines manual and automated testing techniques to create bug-free software and feature-rich applications.
                     </p>
@@ -156,11 +157,11 @@
                 </div><!-- end card #4 -->
 
                 <div class="card">
-                    <h2 class="card__title">
+                    <h3 class="card__title">
                         <a href="javascript:void(0);">
                             UX/UI Design
                         </a>
-                    </h2>
+                    </h3>
                     <p class="card__txt">
                         Our digital design process was developed from a passion for great User Interfaces (UI) that help drive a powerful User Experience (UX).
                     </p>
@@ -170,11 +171,11 @@
                 </div><!-- end card #5 -->
 
                 <div class="card">
-                    <h2 class="card__title">
+                    <h3 class="card__title">
                         <a href="javascript:void(0);">
                             DevOps
                         </a>
-                    </h2>
+                    </h3>
                     <p class="card_txt">
                         Azati provides various DevOps services from consulting to configuration management
                     </p>
@@ -190,13 +191,14 @@
 
     <section class="section section_industries">
         <div class="container">
-            <h1 class="section__title">Industries</h1>
+            <h2 class="section__title">Industries</h2>
         </div>
 
         <div class="container-fluid container-fluid_right">
-            <div class="content-img">
-                <img src="img/to_delete/tmp-industries.webp" alt="">
-            </div>
+            <picture class="section__img-outer">
+                <source srcset="img/to_delete/tmp-industries.webp" type="image/webp">
+                <img src="img/to_delete/tmp-industries-min.jpg" alt="">
+            </picture>
 
             <div class="container">
                 <div class="toggle">
@@ -213,7 +215,7 @@
                     </ul>
                     <div class="toggle__content">
                         <div class="toggle__content-box visible">
-                            <h2>Case study <span>/ 01</span></h2>
+                            <h3 class="toggle__title">Case study <span>/ 01</span></h3>
                             <p>
                                 Custom Software Engineering<br>
                                 Web and Mobile application development from scratch, legacy solutions maintenance and third-party applications customization
@@ -223,59 +225,59 @@
                                 We solve complex data extraction tasks, enabling our clients to automatically digitize complex documents.
                             </p>
 
-                            <a class="btn btn_primary btn_more" href="javascript:void(0);">Learn More <span></span></a>
+                            <a class="btn-more" href="javascript:void(0);">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
-                            <h2>Case study <span>/ 02</span></h2>
+                            <h3 class="toggle__title">Case study <span>/ 02</span></h3>
                             <p>содержимое вкладки 2</p>
 
-                            <a class="btn btn_primary btn_more" href="javascript:void(0);">Learn More <span></span></a>
+                            <a class="btn-more" href="javascript:void(0);">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
-                            <h2>Case study <span>/ 03</span></h2>
+                            <h3 class="toggle__title">Case study <span>/ 03</span></h3>
                             <p>содержимое вкладки 3</p>
 
-                            <a class="btn btn_primary btn_more" href="javascript:void(0);">Learn More <span></span></a>
+                            <a class="btn-more" href="javascript:void(0);">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
-                            <h2>Case study <span>/ 04</span></h2>
+                            <h3 class="toggle__title">Case study <span>/ 04</span></h3>
                             <p>содержимое вкладки 4</p>
 
-                            <a class="btn btn_primary btn_more" href="javascript:void(0);">Learn More <span></span></a>
+                            <a class="btn-more" href="javascript:void(0);">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
-                            <h2>Case study <span>/ 05</span></h2>
+                            <h3 class="toggle__title">Case study <span>/ 05</span></h3>
                             <p>содержимое вкладки 5</p>
 
-                            <a class="btn btn_primary btn_more" href="javascript:void(0);">Learn More <span></span></a>
+                            <a class="btn-more" href="javascript:void(0);">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
-                            <h2>Case study <span>/ 06</span></h2>
+                            <h3 class="toggle__title">Case study <span>/ 06</span></h3>
                             <p>содержимое вкладки 6</p>
 
-                            <a class="btn btn_primary btn_more" href="javascript:void(0);">Learn More <span></span></a>
+                            <a class="btn-more" href="javascript:void(0);">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
-                            <h2>Case study <span>/ 07</span></h2>
+                            <h3 class="toggle__title">Case study <span>/ 07</span></h3>
                             <p>содержимое вкладки 7</p>
 
-                            <a class="btn btn_primary btn_more" href="javascript:void(0);">Learn More <span></span></a>
+                            <a class="btn-more" href="javascript:void(0);">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
-                            <h2>Case study <span>/ 08</span></h2>
+                            <h3 class="toggle__title">Case study <span>/ 08</span></h3>
                             <p>содержимое вкладки 8</p>
 
-                            <a class="btn btn_primary btn_more" href="javascript:void(0);">Learn More <span></span></a>
+                            <a class="btn-more" href="javascript:void(0);">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
-                            <h2>Case study <span>/ 09</span></h2>
+                            <h3 class="toggle__title">Case study <span>/ 09</span></h3>
                             <p>содержимое вкладки 9</p>
 
-                            <a class="btn btn_primary btn_more" href="javascript:void(0);">Learn More <span></span></a>
+                            <a class="btn-more" href="javascript:void(0);">Learn More <span></span></a>
                         </div>
                         <div class="toggle__controls">
-                            <a href="#" class="btn btn_arrow prev"><span>&lt; Prev</span></a>
-                            <a href="#" class="btn btn_arrow next"><span>Next &gt;</span></a>
+                            <a href="#" class="btn-arrow btn-arrow_prev"><span>&lt; Prev</span></a>
+                            <a href="#" class="btn-arrow btn-arrow_next"><span>Next &gt;</span></a>
                         </div>
                     </div>
                 </div>
@@ -288,35 +290,35 @@
         <div class="container-fluid container-fluid_left">
             <div class="container_blue">
                 <div class="container">
-                    <h1 class="section__title">Hire Your <br>Team On <br>Demand</h1>
+                    <h2 class="section__title">Hire Your <br>Team On <br>Demand</h2>
                 </div>
             </div>
 
             <div class="container">
-                <h1 class="section__title">Hire Your <br>Team On <br>Demand</h1>
+                <h2 class="section__title">Hire Your <br>Team On <br>Demand</h2>
                 <div class="numbers">
                     <div class="numbers__item">
-                        <h2>Fast Project <br>and Team Setting</h2>
+                        <h3 class="numbers__title">Fast Project <br>and Team Setting</h3>
                         <p>01 /</p>
                     </div>
                     <div class="numbers__item">
-                        <h2>Stress-free <br>delivery</h2>
+                        <h3 class="numbers__title">Stress-free <br>delivery</h3>
                         <p>02 /</p>
                     </div>
                     <div class="numbers__item">
-                        <h2>Reasonable <br>Pricing</h2>
+                        <h3 class="numbers__title">Reasonable <br>Pricing</h3>
                         <p>03 /</p>
                     </div>
                     <div class="numbers__item">
-                        <h2>Large <br>Talent Pool</h2>
+                        <h3 class="numbers__title">Large <br>Talent Pool</h3>
                         <p>04 /</p>
                     </div>
                     <div class="numbers__item">
-                        <h2>Cooperation <br>Transparency</h2>
+                        <h3 class="numbers__title">Cooperation <br>Transparency</h3>
                         <p>05 /</p>
                     </div>
                     <div class="numbers__item">
-                        <h2>Outstaffing <br>Options</h2>
+                        <h3 class="numbers__title">Outstaffing <br>Options</h3>
                         <p>06 /</p>
                     </div>
                 </div>
@@ -327,7 +329,7 @@
 
     <section class="section section_company">
         <div class="container">
-            <h1 class="section__title">Trusted by</h1>
+            <h2 class="section__title">Trusted by</h2>
         </div>
 
         <div class="company">
@@ -369,12 +371,12 @@
 
     <section class="section section_reviews">
         <div class="container">
-            <h1 class="section__title">What Customers Say</h1>
+            <h2 class="section__title">What Customers Say</h2>
         </div>
         <div class="container">
             <div class="clutch-widget-outer">
                 <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>
-                <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="12" data-height="auto" data-nofollow="true" data-expandifr="true" data-scale="100" data-scale="100" data-primary-color="#29a2ff" data-secondary-color="#151731" data-reviews="2075977,2070710,2066303,2066195,760554,681970,413234,271696,143062,133475" data-clutchcompany-id="121634"></div>
+                <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="12" data-height="auto" data-nofollow="true" data-expandifr="true" data-scale="100" data-primary-color="#29a2ff" data-secondary-color="#151731" data-reviews="2075977,2070710,2066303,2066195,760554,681970,413234,271696,143062,133475" data-clutchcompany-id="121634"></div>
             </div>
         </div>
     </section><!-- end reviews section -->
@@ -382,11 +384,11 @@
 
     <section class="section section_form">
         <div class="container">
-            <h1 class="section__title">Drop us a line</h1>
+            <h2 class="section__title">Drop us a line</h2>
         </div>
         <div class="container-fluid">
             <div class="container">
-                <picture class="content-img">
+                <picture class="section__img-outer">
                     <source srcset="img/bg-form.webp" type="image/webp">
                     <img src="img/bg-form-min.jpg" alt="">
                 </picture>
@@ -430,28 +432,35 @@
     </section><!-- end form section -->
 </main>
 
-<footer role="contentinfo">
+<footer itemscope itemtype="http://schema.org/WPFooter" role="contentinfo">
     <div class="container">
-        <header class="footer__title">
-            <h1>Connect <span class="nowrap">with us</span></h1>
-        </header>
+        <h2 class="footer__title">Connect <span class="nowrap">with us</span></h2>
 
         <section class="footer__col">
-            <h2>
-                Poland <a href="https://www.gov.pl/web/poland-businessharbour/specjalista-it" target="_blank">(Member of PBH)</a>
-            </h2>
-            <address class="address">
-                <span class="street-address">Hozha 86/410</span>
-                <span class="locality">Warsaw</span>,
-                <span class="postal-code">00-682</span>
-            </address>
-
-            <h2>USA</h2>
-            <address class="address">
-                <span class="street-address">184 South Livingston Avenue Section 9,</span>
-                <span class="locality">Suite 119 Livingston, NJ</span>
-                <span class="postal-code">07039</span>
-            </address>
+            <div itemscope itemtype="http://schema.org/LocalBusiness">
+                <h3 itemprop="name">
+                    Poland <a href="https://www.gov.pl/web/poland-businessharbour/specjalista-it" target="_blank">(Member of PBH)</a>
+                </h3>
+                <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="address">
+<!--                    <span class="street-address">Hozha 86/410</span>-->
+                    <meta itemprop="streetAddress" class="street-address" content="Hozha 86/410">
+<!--                    <span itemprop="addressLocality" class="locality">Warsaw,</span>-->
+                    <meta itemprop="addressLocality" class="locality" content="Warsaw,">
+<!--                    <span itemprop="postalCode" class="postal-code">00-682</span>-->
+                    <meta itemprop="postalCode" class="postal-code" content="00-682">
+                </address>
+            </div>
+            <div itemscope itemtype="http://schema.org/LocalBusiness">
+                <h3 itemprop="name">USA</h3>
+                <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="address">
+<!--                    <span class="street-address">184 South Livingston Avenue Section 9,</span>-->
+                    <meta itemprop="streetAddress" class="street-address" content="184 South Livingston Avenue Section 9,">
+<!--                    <span class="locality">Suite 119 Livingston, NJ</span>-->
+                    <meta itemprop="addressLocality" class="locality" content="Suite 119 Livingston, NJ">
+<!--                    <span itemprop="postalCode" class="postal-code">07039</span>-->
+                    <meta itemprop="postalCode" class="postal-code" content="07039">
+                </address>
+            </div>
 
             <nav>
                 <ul class="footer__nav">
@@ -463,22 +472,24 @@
         </section><!-- end middle column -->
 
         <section class="footer__col">
-            <h2>Contact us</h2>
+            <h3>Contact us</h3>
             <address class="address">
                 <span class="icon icon_email"><a href="mailto:info@azati.com">info@azati.com</a></span>
                 <span class="icon icon_telegram"><a href="https://t.me/Azati_bot" target="_blank">telegram</a></span>
                 <span class="icon icon_linkedin"><a href="https://www.linkedin.com/company/azati-corporation" target="_blank">linkedin</a></span>
             </address>
 
-            <a class="btn btn_primary" href="">Schedule a call</a>
+            <a class="btn" href="">Schedule a call</a>
         </section><!-- end last column -->
     </div>
 
+    <meta itemprop="copyrightYear" content="2023">
+    <meta itemprop="copyrightHolder" content="Azati">
     <p class="footer__copy">Azati© Copyright 2022. All Rights Reserved.</p>
 </footer>
 
 <!-- Modal window -->
-<script type="text/javascript">
+<script>
     // Get the modal
     var modal = document.getElementById("topNavModal");
 
@@ -507,7 +518,7 @@
 </script>
 
 <!-- Body add/remove class -->
-<script type="text/javascript">
+<script>
 // In progress, it still throws an error !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //     var body = document.getElementById("hiddenScroll");
 //
@@ -525,7 +536,7 @@
 </script>
 
 <!-- Hamburger -->
-<script type="text/javascript">
+<script>
     var hamburger = document.getElementById("hamburger");
 
     hamburger.onclick = function() {
@@ -538,7 +549,7 @@
 </script>
 
 <!-- Sticky header -->
-<script type="text/javascript">
+<script>
     // When the user scrolls the page, execute myFunction
     window.onscroll = function() {stickyFunction()};
 
@@ -569,7 +580,7 @@
         $(".section").each(function(indx, el) {
             var li = $("li", el),
                 box = $(".toggle__content-box", el),
-                btn = $(".btn_arrow", el),
+                btn = $(".btn-arrow", el),
                 len = li.length - 1,
                 i = 0;
             $(el).on("click", "li", function() {
@@ -577,9 +588,9 @@
                 li.removeClass("current").eq(i).addClass("current");
                 box.removeClass("visible").eq(i).addClass("visible")
             });
-            $(el).on("click", ".btn_arrow", function(event) {
+            $(el).on("click", ".btn-arrow", function(event) {
                 event.preventDefault();
-                i += $(this).is(".prev") ? -1 : 1;
+                i += $(this).is(".btn-arrow_prev") ? -1 : 1;
                 i < 0 && (i = len);
                 i > len && (i = 0);
                 li.eq(i).click()
@@ -595,5 +606,6 @@
         autosize(document.querySelectorAll('#form-message'));
     }, false);
 </script>
+
 </body>
 </html>

@@ -16,7 +16,7 @@ header[role="banner"] {
   z-index: 9;
   height: var(--header-height);
 
-  transition: all $transition-duration $transition-timing-function;
+  @include transition(all $transition-duration $transition-timing-function);
 
   &.sticky {
     @include media-phablet-mx {
@@ -57,9 +57,8 @@ header[role="banner"] {
 
     // Animation
     opacity: 0;
-    transition: all $transition-duration $transition-timing-function;
-    -webkit-animation: slideTop .5s cubic-bezier(0.25, 0.45, 0.45, 0.94) both;
-    animation: slideTop .5s cubic-bezier(0.25, 0.45, 0.45, 0.95) both;
+    @include transition(all $transition-duration $transition-timing-function);
+    @include x-animation(slideTop .5s cubic-bezier(0.25, 0.45, 0.45, 0.95) both);
 
     IMG {
       display: block;
@@ -69,7 +68,7 @@ header[role="banner"] {
 
     &:hover {
       IMG {
-        transform: scale(1.05);
+        @include transform(scale(1.05));
       }
     }
   }
@@ -87,8 +86,7 @@ header[role="banner"] {
     }
 
     // Animation
-    -webkit-animation: slideTop .5s $transition-timing-function both;
-    animation: slideTop .5s $transition-timing-function both;
+    @include x-animation(slideTop .5s $transition-timing-function both);
 
     UL {
       height: 100%;
@@ -103,7 +101,7 @@ header[role="banner"] {
     }
 
     li {
-      transition: all $transition-duration $transition-timing-function;
+      @include transition(all $transition-duration $transition-timing-function);
 
       @include media-netbook-mn {
         &:not(:first-child):not(:last-child) {
@@ -125,8 +123,8 @@ header[role="banner"] {
 
       // Animation
       opacity: 0;
-      -webkit-animation: fadeIn 0.15s ease-in forwards;
-      animation: fadeIn 0.15s ease-in forwards;
+      @include x-animation(fadeIn 0.15s ease-in forwards);
+
       &:nth-child(2) {
         animation-delay: 0.1s;
       }
@@ -196,13 +194,12 @@ header[role="banner"] {
 
         @include media-netbook-mx {
           display: block;
-          margin: auto;
+          @include margin-auto;
           max-width: fit-content;
           padding: 4vh 0 2vh;
         }
         @include media-netbook-mn {
           font-size: 0.9rem; //18px;
-          //padding: 31px 0;
           height: 100%;
           display: flex;
           align-items: center;
@@ -211,7 +208,7 @@ header[role="banner"] {
         &:after {
           content: '';
           background-color: $color-blue;
-          margin: auto;
+          @include margin-auto;
           position: absolute;
           right: 0;
           bottom: 0;
@@ -233,17 +230,14 @@ header[role="banner"] {
             width: 100%;
 
             // Animation
-            -webkit-animation: widthScale .25s $transition-timing-function both;
-            animation: widthScale .25s $transition-timing-function both;
+            @include x-animation(widthScale .25s $transition-timing-function both);
             animation-delay: .15s;
-            @-webkit-keyframes widthScale {
-              0% { width: 0; }
-              100% { width: 100%; }
-            }
-            @keyframes widthScale {
-              0% { width: 0; }
-              100% { width: 100%; }
-            }
+          }
+        }
+
+        &.active {
+          &:after {
+            width: 100%;
           }
         }
 
@@ -327,7 +321,7 @@ Submenu
 
   nav {
     @include media-phablet-mx {
-      margin: auto;
+      @include margin-auto;
     }
     @include media-phablet-mn {
       width: 100%;

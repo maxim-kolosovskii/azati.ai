@@ -4,21 +4,20 @@ Hamburger
 
 #hamburger {
   @include media-netbook-mx {
-    box-sizing: border-box;
+    @include box-sizing;
     cursor: pointer;
     width: 40px;
     height: 40px;
     margin-left: auto;
-    transform: rotate(0deg);
-    transition: .5s ease-in-out;
     position: relative;
     top: 3px;
     right: -10px;
     z-index: 11;
+    @include transform(rotate(0deg));
+    @include transition(all $transition-duration-fast $transition-timing-function);
 
     // Animation
-    -webkit-animation: slideTop .5s $transition-timing-function both;
-    animation: slideTop .5s $transition-timing-function both;
+    @include x-animation(slideTop .5s $transition-timing-function both);
   }
   @include media-small-mx {
     right: 0;
@@ -29,15 +28,15 @@ Hamburger
 
   span {
     background-color: $color-blue;
-    border-radius: 9px;
+    @include b-radius(9px);
     display: block;
     height: 2px;
     width: calc(100% - 20px);
     opacity: 1;
     position: absolute;
     left: 10px;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    @include transform(rotate(0deg));
+    @include transition(all $transition-duration $transition-timing-function);
 
     &:nth-child(1) {
       top: 12px;
@@ -69,11 +68,11 @@ Hamburger
     }
 
     &:nth-child(2) {
-      transform: rotate(45deg);
+      @include transform(rotate(45deg));
     }
 
     &:nth-child(3) {
-      transform: rotate(-45deg);
+      @include transform(rotate(-45deg));
     }
 
     &:nth-child(4) {

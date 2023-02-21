@@ -2,31 +2,37 @@
 Animation
 */
 
-@-webkit-keyframes slideTop {
-  0% { opacity: 0; transform: translateY(-50px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes slideTop {
+@include x-keyframes(slideTop) {
   0% { opacity: 0; transform: translateY(-50px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-
-@-webkit-keyframes slideRight {
-  0% { opacity: 0; transform: translateX(50px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
-@keyframes slideRight {
+@include x-keyframes(slideRight) {
   0% { opacity: 0; transform: translateX(50px); }
   100% { opacity: 1; transform: translateX(0); }
 }
 
-
-@-webkit-keyframes fadeIn {
+@include x-keyframes(fadeIn) {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+
+@include x-keyframes(widthScale) {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@include x-keyframes(animateTop) {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@include x-keyframes(sectionTop) {
+  from {height:0;}
+  to {height:auto;}
+}
+
+@include x-keyframes(spinLoad) {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

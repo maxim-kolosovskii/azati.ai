@@ -24,7 +24,7 @@
   li {
     font-family: $font-family-accent;
     text-transform: uppercase;
-    transition: all $transition-duration $transition-timing-function;
+    @include transition(all $transition-duration $transition-timing-function);
 
     @include media-phablet-mx {
       font-weight: $font-weight-700;
@@ -121,7 +121,7 @@
       }
     }
 
-    H2 {
+    .toggle__title {
       font-size: clamp(28px, calc(16px + 2vw), 48px);
 
       SPAN {

@@ -48,11 +48,9 @@
     padding: 2.5vh 27px 8vh;
   }
 
-  H2 {
+  .numbers__title {
     order: 2;
-    font-weight: $font-weight-800;
-    font-size: clamp(18px, calc(9px + 2vw), 32px);
-    line-height: 1.32;
+    @include title_4;
 
     @include media-tablet-v-mx {
       BR {
@@ -66,7 +64,7 @@
     font-family: $font-family-accent;
     font-size: clamp(24px, calc(16px + 2vw), 48px);
     line-height: 1.55; //56px;
-    transition: all $transition-duration $transition-timing-function;
+    @include transition(all $transition-duration $transition-timing-function);
     margin: 0;
   }
 }
