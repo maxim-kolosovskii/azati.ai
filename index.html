@@ -7,6 +7,8 @@
     <title itemprop="headline">Homepage - New Azati</title>
     <meta itemprop="description" name="description" content="Azati is the team of bright-minded software developers, architects, designers and project managers not scared of sophisticated challenges.">
     <meta itemprop="keywords" name="keywords" content="development">
+    <!-- CSP rules for HTML template only -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon//apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon//favicon-32x32.png">
@@ -443,31 +445,31 @@
                     Poland <a href="https://www.gov.pl/web/poland-businessharbour/specjalista-it" target="_blank">(Member of PBH)</a>
                 </h3>
                 <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="address">
-<!--                    <span class="street-address">Hozha 86/410</span>-->
-                    <meta itemprop="streetAddress" class="street-address" content="Hozha 86/410">
-<!--                    <span itemprop="addressLocality" class="locality">Warsaw,</span>-->
-                    <meta itemprop="addressLocality" class="locality" content="Warsaw,">
-<!--                    <span itemprop="postalCode" class="postal-code">00-682</span>-->
-                    <meta itemprop="postalCode" class="postal-code" content="00-682">
+                    <meta itemprop="streetAddress" content="Hozha 86/410">
+                    <span class="street-address">Hozha 86/410</span>
+                    <meta itemprop="addressLocality" content="Warsaw,">
+                    <span class="locality">Warsaw,</span>
+                    <meta itemprop="postalCode" content="00-682">
+                    <span class="postal-code">00-682</span>
                 </address>
             </div>
             <div itemscope itemtype="http://schema.org/LocalBusiness">
                 <h3 itemprop="name">USA</h3>
                 <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="address">
-<!--                    <span class="street-address">184 South Livingston Avenue Section 9,</span>-->
-                    <meta itemprop="streetAddress" class="street-address" content="184 South Livingston Avenue Section 9,">
-<!--                    <span class="locality">Suite 119 Livingston, NJ</span>-->
-                    <meta itemprop="addressLocality" class="locality" content="Suite 119 Livingston, NJ">
-<!--                    <span itemprop="postalCode" class="postal-code">07039</span>-->
-                    <meta itemprop="postalCode" class="postal-code" content="07039">
+                    <meta itemprop="streetAddress" content="184 South Livingston Avenue Section 9,">
+                    <span class="street-address">184 South Livingston Avenue Section 9,</span>
+                    <meta itemprop="addressLocality" content="Suite 119 Livingston, NJ">
+                    <span class="locality">Suite 119 Livingston, NJ</span>
+                    <meta itemprop="postalCode" content="07039">
+                    <span class="postal-code">07039</span>
                 </address>
             </div>
 
             <nav>
                 <ul class="footer__nav">
-                    <li><a href="/">Privacy Policy</a></li>
-                    <li><a href="/">Terms of Use</a></li>
-                    <li><a href="/">Cookie Policy</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/terms-of-use">Terms of Use</a></li>
+                    <li><a href="/cookie-policy">Cookie Policy</a></li>
                 </ul>
             </nav>
         </section><!-- end middle column -->
@@ -480,7 +482,7 @@
                 <span class="icon icon_linkedin"><a href="https://www.linkedin.com/company/azati-corporation" target="_blank">linkedin</a></span>
             </address>
 
-            <a class="btn" href="">Schedule a call</a>
+            <a class="btn" href="/">Schedule a call</a>
         </section><!-- end last column -->
     </div>
 
