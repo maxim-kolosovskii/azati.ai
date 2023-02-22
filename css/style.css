@@ -139,6 +139,8 @@ body {
   color: #151731;
   font: 400 1rem/1.25 "Open Sans", "Arial", sans-serif; }
 
+@font-face {
+  font-display: swap; }
 main[role="main"] {
   position: relative; }
 
@@ -357,11 +359,12 @@ header[role="banner"] {
     header[role="banner"] .logo-azati IMG {
       display: block;
       max-width: 100%;
+      object-fit: contain;
       transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
-    header[role="banner"] .logo-azati:hover IMG {
-      -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-      transform: scale(1.05); }
+  header[role="banner"] a.logo-azati:hover IMG {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05); }
   header[role="banner"] nav[role="navigation"] {
     -webkit-animation: slideTop 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95) both;
     animation: slideTop 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; }

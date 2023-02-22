@@ -197,23 +197,26 @@ General Landing styles
   @media screen and (min-width: 768px) {
     .section_top .section__img-outer:after {
       max-width: calc(100% - 12vw); } }
-@media screen and (max-width: 767px) {
-  .section_top .section__img {
-    max-width: 100%;
-    position: relative;
-    z-index: 1;
-    display: block; } }
-@media screen and (min-width: 768px) {
-  .section_top .section__img {
-    max-width: 60%;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); } }
-@media screen and (min-width: 1400px) {
-  .section_top .section__img {
-    max-width: 50%; } }
+.section_top .section__img {
+  height: auto;
+  object-fit: contain; }
+  @media screen and (max-width: 767px) {
+    .section_top .section__img {
+      max-width: 100%;
+      position: relative;
+      z-index: 1;
+      display: block; } }
+  @media screen and (min-width: 768px) {
+    .section_top .section__img {
+      max-width: 60%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); } }
+  @media screen and (min-width: 1400px) {
+    .section_top .section__img {
+      max-width: 50%; } }
 @media screen and (max-width: 767px) {
   .section_top .btn-outer .btn {
     margin-top: 20px; } }
