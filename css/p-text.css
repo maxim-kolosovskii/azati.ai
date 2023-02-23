@@ -174,7 +174,7 @@ Tag Block
 .tag__item {
   border: 1px solid #e1dfdf;
   display: inline-block;
-  font-family: "Work Sans", "Arial", sans-serif;
+  font-family: "Work Sans ExtraBold", sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 2px;
@@ -194,7 +194,7 @@ Tag Block
 /* Text section */
 .content-txt:not(.content-txt_table) HR {
   margin-bottom: 6vh; }
-.content-txt H2, .content-txt H3, .content-txt P {
+.content-txt H2, .content-txt H3, .content-txt P, .content-txt UL, .content-txt OL {
   max-width: 67em; }
 .content-txt .section__subtitle {
   font-weight: 800;

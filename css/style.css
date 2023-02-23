@@ -1,15 +1,66 @@
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+ # Fonts
  # Variables
+ # Animation
  # General layout
  # Header elements
  # Footer elements
  # Form elements
  # Buttons
- # Loader
  # Icons
 --------------------------------------------------------------*/
+/*
+Fonts
+*/
+@font-face {
+  font-family: 'Work Sans ExtraBold';
+  src: url("../fonts/WorkSans-ExtraBold.woff2") format("woff2"), url("../fonts/WorkSans-ExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Work Sans Bold';
+  src: url("../fonts/WorkSans-Bold.woff2") format("woff2"), url("../fonts/WorkSans-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Work Sans SemiBold';
+  src: url("../fonts/WorkSans-SemiBold.woff2") format("woff2"), url("../fonts/WorkSans-SemiBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Work Sans Medium';
+  src: url("../fonts/WorkSans-Medium.woff2") format("woff2"), url("../fonts/WorkSans-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Work Sans Regular';
+  src: url("../fonts/WorkSans-Regular.woff2") format("woff2"), url("../fonts/WorkSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/* latin-ext */
+/* latin */
+@font-face {
+  font-family: 'Open Sans Medium';
+  src: url("../fonts/OpenSans-Medium.woff2") format("woff2"), url("../fonts/OpenSans-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Lato Bold';
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Lato Regular';
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 /*
 CSS root variables media
 */
@@ -137,7 +188,7 @@ html {
 body {
   background-color: #fff;
   color: #151731;
-  font: 400 1rem/1.25 "Open Sans", "Arial", sans-serif; }
+  font: 400 1rem/1.25 "Work Sans ExtraBold", sans-serif; }
 
 @font-face {
   font-display: swap; }
@@ -202,7 +253,8 @@ h4,
 h5,
 h6,
 .title {
-  font-family: "Work Sans", "Arial", sans-serif;
+  font-family: "Work Sans ExtraBold", sans-serif;
+  font-family: 'Work Sans ExtraBold', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
@@ -432,7 +484,7 @@ header[role="banner"] {
           padding-left: 9vw; } }
       header[role="banner"] nav[role="navigation"] li .nav__item {
         color: #151731;
-        font-family: "Work Sans", "Arial", sans-serif;
+        font-family: "Work Sans ExtraBold", sans-serif;
         font-weight: 600;
         position: relative;
         text-transform: uppercase;
@@ -757,7 +809,7 @@ footer[role="contentinfo"] {
           width: 66%; } }
     footer[role="contentinfo"] h3 a {
       font-weight: initial;
-      font-family: "Open Sans", "Arial", sans-serif;
+      font-family: "Work Sans ExtraBold", sans-serif;
       letter-spacing: initial;
       text-transform: initial; }
   footer[role="contentinfo"] a {
@@ -1055,7 +1107,7 @@ input[type="checkbox"]:checked:after {
   color: #aeafbc;
   cursor: pointer;
   display: block;
-  font-family: "Work Sans", "Arial", sans-serif;
+  font-family: "Work Sans ExtraBold", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   outline: none;
@@ -1110,7 +1162,7 @@ input[type="checkbox"]:checked:after {
 .select-items div {
   background-color: #fff;
   cursor: pointer;
-  font-family: "Work Sans", "Arial", sans-serif;
+  font-family: "Work Sans ExtraBold", sans-serif;
   font-size: 0.875rem;
   padding: 1vh 1rem;
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
@@ -1146,7 +1198,7 @@ button,
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Work Sans", "Arial", sans-serif;
+  font-family: "Work Sans ExtraBold", sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 1.24;

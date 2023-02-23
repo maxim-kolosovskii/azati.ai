@@ -11,7 +11,6 @@
     <meta itemprop="keywords" name="keywords" content="development">
     <!-- CSP rules for HTML template only -->
 <!--    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">-->
-<!--    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <!-- Favicon -->
@@ -26,7 +25,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!--    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Work+Sans:wght@400;500;600;700;800&Lato:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Work+Sans:wght@400;500;600;700;800&family=Lato:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lato:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- CSS styles -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -423,9 +423,11 @@
                     </fieldset>
 
                     <fieldset class="form__group form__group_checkbox">
-                        <label class="form__checkbox" for="form-checkbox">
+<!--                        <label class="form__checkbox" for="form-checkbox">-->
+                        <label class="form__checkbox">
                             <!--<input id="form-radio" type="radio" name="form-checkbox" required>-->
-                            <input id="form-checkbox" type="checkbox" name="form-checkbox" required>
+<!--                            <input id="form-checkbox" type="checkbox" name="form-checkbox" required>-->
+                            <input type="checkbox" required>
                             <span class="checkmark"></span>
                         </label>
                         <span class="form__checkbox-txt">I permit to collect my data according to <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms-of-use" target="_blank" rel="noopener noreferrer">Terms of Use</a>.</span>
@@ -497,7 +499,7 @@
 </footer>
 
 <!-- Background Images Lazy Loading -->
-<script defer src="js/lazy.js"></script>
+<script defer src="js/lazy.min.js"></script>
 
 <!-- Modal window -->
 <script>
@@ -582,10 +584,9 @@
 
 <!-- Company logos -->
 <script src="js/vendors.min.js" defer="defer"></script>
-<script src="js/company.js" defer="defer"></script>
+<script src="js/company.min.js" defer="defer"></script>
 
 <!-- jQuery. Toggle tab slider with arrows -->
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
     $(function() {
