@@ -20,6 +20,10 @@ body {
   //min-height: 100vh;
 }
 
+@font-face {
+  font-display: swap;
+}
+
 main[role="main"] {
   //flex: 1;
   position: relative;

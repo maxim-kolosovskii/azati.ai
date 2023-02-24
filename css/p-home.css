@@ -350,7 +350,7 @@ General Landing styles
   .section_services .card__more {
     display: flex;
     align-items: center;
-    font-family: "Work Sans ExtraBold", sans-serif;
+    font-family: "Work Sans", "Arial", sans-serif;
     font-weight: 700;
     letter-spacing: 2px;
     line-height: 1.9;
@@ -441,7 +441,7 @@ General Landing styles
         min-width: fit-content;
         width: 26%; } }
     .section_industries .toggle__tabs li {
-      font-family: "Work Sans ExtraBold", sans-serif;
+      font-family: "Work Sans", "Arial", sans-serif;
       text-transform: uppercase;
       -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
       -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
@@ -627,7 +627,7 @@ General Landing styles
           display: none; } }
     .section_hire .numbers__item P {
       color: #29a2ff;
-      font-family: "Work Sans ExtraBold", sans-serif;
+      font-family: "Work Sans", "Arial", sans-serif;
       font-size: clamp(24px, calc(16px + 2vw), 48px);
       line-height: 1.55;
       -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);

@@ -63,13 +63,14 @@ header[role="banner"] {
     IMG {
       display: block;
       max-width: 100%;
+      object-fit: contain;
       transition: all $transition-duration $transition-timing-function;
     }
+  }
 
-    &:hover {
-      IMG {
-        @include transform(scale(1.05));
-      }
+  a.logo-azati:hover {
+    IMG {
+      @include transform(scale(1.05));
     }
   }
 
@@ -187,7 +188,7 @@ header[role="banner"] {
       .nav__item {
         color: $font-color-base;
         font-family: $font-family-accent;
-        font-weight: $font-weight-600;
+        font-weight: $font-weight-500;
         position: relative;
         text-transform: uppercase;
         white-space: nowrap;

@@ -125,6 +125,8 @@
   }
 
   .section__img {
+    height: auto;
+    object-fit: contain;
 
     @include media-phablet-mx {
       max-width: 100%;

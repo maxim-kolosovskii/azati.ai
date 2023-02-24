@@ -1,0 +1,129 @@
+/*
+Fonts
+*/
+
+
+
+// Main fonts
+
+// OpenSans
+@font-face {
+  font-family: 'OpenSans Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+  url('/fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('/fonts/OpenSans-Regular.woff') format('woff');
+  text-rendering: optimizeLegibility;
+}
+
+// WorkSans
+@font-face {
+  font-family: 'WorkSans Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(''),
+  url('/fonts/WorkSans-Medium.woff2') format('woff2'),
+  url('/fonts/WorkSans-Medium.woff') format('woff');
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'WorkSans Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+  url('/fonts/WorkSans-Bold.woff2') format('woff2'),
+  url('/fonts/WorkSans-Bold.woff') format('woff');
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'WorkSans ExtraBold';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local(''),
+  url('/fonts/WorkSans-ExtraBold.woff2') format('woff2'),
+  url('/fonts/WorkSans-ExtraBold.woff') format('woff');
+  text-rendering: optimizeLegibility;
+}
+
+
+
+// Fonts of iframe
+
+// Roboto
+@font-face {
+  font-family: 'Roboto Light';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(''),
+  url('/fonts/clutch/Roboto-Light.woff2') format('woff2'),
+  url('/fonts/clutch/Roboto-Light.woff') format('woff');
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Roboto Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+  url('/fonts/clutch/Roboto-Regular.woff2') format('woff2'),
+  url('/fonts/clutch/Roboto-Regular.woff') format('woff');
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Roboto Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(''),
+  url('/fonts/clutch/Roboto-Medium.woff2') format('woff2'),
+  url('/fonts/clutch/Roboto-Medium.woff') format('woff');
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Roboto Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+  url('/fonts/clutch/Roboto-Bold.woff2') format('woff2'),
+  url('/fonts/clutch/Roboto-Bold.woff') format('woff');
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Roboto Black';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local(''),
+  url('/fonts/clutch/Roboto-Black.woff2') format('woff2'),
+  url('/fonts/clutch/Roboto-Black.woff') format('woff');
+  text-rendering: optimizeLegibility;
+}
+
+// Lato
+@font-face {
+  font-family: 'Lato Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+  url('/fonts/clutch/Lato-Regular.woff2') format('woff2'),
+  url('/fonts/clutch/Lato-Regular.woff') format('woff');
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Lato Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+  url('/fonts/clutch/Lato-Bold.woff2') format('woff2'),
+  url('/fonts/clutch/Lato-Bold.woff') format('woff');
+  text-rendering: optimizeLegibility;
+}
