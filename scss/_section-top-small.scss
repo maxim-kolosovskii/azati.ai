@@ -1,5 +1,5 @@
 /*
-Top section
+Small top section
 */
 .section_top-small {
   margin-bottom: 6vh;
@@ -29,7 +29,8 @@ Top section
     }
   }
 
-  .title_2 {
+  .section__title-page {
+    @include title_2;
     @include media-phablet-mn {
       max-width: 14em;
     }

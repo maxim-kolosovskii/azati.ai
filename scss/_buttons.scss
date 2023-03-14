@@ -2,9 +2,17 @@
 Buttons
 */
 
-.btn,
-button,
-[role=button] {
+%hover {
+  background-color: $color-blue-dark;
+  border: 1px solid $color-blue-dark;
+  @include box-shadow(none);
+  color: $color-orange;
+  text-decoration: none;
+}
+
+//button,
+//[role=button],
+.btn {
   @include b-radius(0);
   @include box-sizing;
   cursor: pointer;
@@ -24,6 +32,9 @@ button,
   //width: 100%;
   @include transition(all $transition-duration-fast $transition-timing-function);
 
+  @include media-small-mx {
+    width: 100%;
+  }
   @include media-small-mn {
     min-width: 240px;
   }
@@ -37,12 +48,15 @@ button,
     @include media-tablet-v-mx {
       font-size: 1.25rem; //20px
     }
-    @include media-small-mx {
+    //@include media-small-mx {
+      @include media-tablet-h-mx {
       font-size: inherit; //16px
       min-height: 48px;
     }
-    @include media-small-mn {
-      min-height: 60px;
+    //@include media-small-mn {
+      @include media-tablet-h-mn {
+      //min-height: 60px;
+      min-height: 68px;
     }
   }
 
@@ -57,8 +71,7 @@ button,
     color: #fff;
 
     &:hover {
-      background-color: $color-blue-dark;
-      color: $color-orange;
+      @extend %hover;
     }
 
     &:disabled {
@@ -70,6 +83,10 @@ button,
     background-color: #fff;
     border: 1px solid $color-grey-medium;
     color: $font-color-base;
+
+    &:hover {
+      @extend %hover;
+    }
 
     &:disabled {
       color: #94d0ff;
@@ -85,14 +102,6 @@ button,
       margin-left: auto;
       max-width: max-content;
     }
-  }
-
-  &:hover {
-    background-color: $color-blue-dark;
-    border: 1px solid $color-blue-dark;
-    @include box-shadow(none);
-    color: $color-orange;
-    text-decoration: none;
   }
 
   //&:active {
@@ -115,27 +124,32 @@ button,
 }
 
 
+/* Button without text, only icon */
+.btn-icon {
+  @extend .btn;
+  background-position: 50%;
+  min-height: auto;
+  min-width: auto;
+}
+
+
 /* Button without text, only arrow */
 .btn-arrow {
   @extend .btn;
+  @extend .btn-icon;
   background-repeat: no-repeat;
-  background-position: 50%;
   @include background-size(50%);
 
-  min-height: auto;
-  min-width: auto;
-
-  @include media-laptop-mx {
-    height: 48px;
+  @include media-tablet-h-mx {
     width: 48px;
   }
-  @include media-laptop-mn {
-    height: 68px;
+  @include media-tablet-h-mn {
     width: 68px;
   }
 
   &.btn-arrow_prev {
-    background-image: url("../img/i-arrow-min.svg");
+    @extend .btn_empty;
+    background-image: url("../img/icons/i-arrow-min.svg");
     background-color: transparent;
     border: 1px solid $color-grey-medium;
     @include transform(rotate(180deg));

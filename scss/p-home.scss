@@ -95,6 +95,7 @@
 
     @include media-phablet-mn {
       border-top: 1px solid $color-grey-medium;
+      padding-bottom: 5vh;
       max-width: 408px;
       width: 26%;
     }
@@ -103,6 +104,7 @@
       text-transform: uppercase;
 
       @include media-phablet-mx {
+        letter-spacing: 1px;
 
         &:not(:first-child) {
           margin-top: 5.5vh;
@@ -114,13 +116,6 @@
         font-size: 0.9rem; //18px;
         line-height: 1.61;  //26px;
         letter-spacing: 2px;
-
-        &:not(:first-child) {
-          padding: 3.8vh 20px 1vh 0;
-        }
-        &:first-child {
-          padding: 2.6vh 20px 1vh 0;
-        }
 
         &.current,
         &:hover A {

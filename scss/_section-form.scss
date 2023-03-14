@@ -1,6 +1,6 @@
-@import 'variables';
-
-/* Form section */
+/*
+Form section
+*/
 .section_form {
   //display: none;
 
@@ -18,9 +18,9 @@
   //@include media-netbook-mn {
   //  margin: 20vh 0 0;
   //}
-  //@include media-desktop-mn {
-  //  margin: 27vh 0 0;
-  //}
+  @include media-desktop-mn {
+    margin: 27vh 0 0;
+  }
 
   .container {
     @include media-netbook-laptop {
@@ -53,6 +53,7 @@
       margin-bottom: -16px;
       padding-left: 3vw;
       transition: none;
+      grid-area: form;
     }
     @include media-laptop-mn {
       margin-left: 383px;

@@ -18,57 +18,114 @@
 // ------------ Components ------------
 
 
+@mixin underline_link {
+  font-family: $font-family-accent;
+  font-weight: $font-weight-500;
+  position: relative;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:after {
+    content: '';
+    background-color: $color-blue;
+    @include margin-auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    //width: 100%;
+
+    @include media-netbook-mx {
+      height: 3px;
+    }
+    @include media-netbook-mn {
+      height: 5px;
+    }
+  }
+
+  &:not(.active):hover {
+    &:after {
+      width: 100%;
+
+      // Animation
+      @include x-animation(widthScale .25s $transition-timing-function both);
+      animation-delay: .15s;
+    }
+  }
+
+  &.active {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
 @mixin title_1 {
   font-size: clamp(40px, calc(29px + 4vw), 96px);
   font-weight: $font-weight-700;
-  line-height: 1.18;
+  line-height: 1.01; //98px;
 }
 
 @mixin title_2 {
   font-size: clamp(30px, calc(13px + 5vw), 72px);
   font-weight: $font-weight-700;
-  //line-height: 1.175;
 
-  @include media-phablet-mx {
+  @include media-tablet-v-mx {
     line-height: 1.1;
   }
-  @include media-phablet-mn {
-    line-height: 1.195;
+  @include media-tablet-v-mn {
+    line-height: 1.195; //86px;
   }
 }
 
 @mixin title_3 {
+  font-size: clamp(28px, calc(12px + 3vw), 40px);
   font-weight: $font-weight-800;
+  line-height: 1.2; //48px;
 
-  font-size: 2rem; //40px;
-  line-height: 54px;
+  //@include media-tablet-v-mx {
+  //  line-height: 1.28;
+  //}
+  //@include media-tablet-v-mn {
+    //line-height: 1.35; //54px;
+  //}
 }
 
 @mixin title_4 {
   font-weight: $font-weight-800;
+  line-height: 1.315; //42px;
 
   @include media-tablet-v-mx {
     font-size: 1.5rem; //24px;
-    line-height: 1.315;
   }
   @include media-tablet-v-mn {
-    font-size: clamp(1.1rem, calc(16px + 1vw), 32px);
-    line-height: 1.33;
+    font-size: clamp(24px, calc(10px + 2vw), 32px);
   }
 }
 
 @mixin title_5 {
   font-weight: $font-weight-800;
+  line-height: 1.33; //32px;
 
-  font-size: 1.2rem; //24px;
-  line-height: 32px;
+  @include media-tablet-v-mx {
+    font-size: 1.2rem; //19px;
+  }
+  @include media-tablet-v-mn {
+    font-size: 1.2rem; //24px;
+  }
 }
 
 @mixin title_6 {
   font-weight: $font-weight-800;
+  line-height: 1.45; //26px;
 
-  font-size: 0.9rem; //18px;
-  line-height: 26px;
+  @include media-tablet-v-mx {
+    font-size: 1rem; //16px;
+  }
+  @include media-tablet-v-mn {
+    font-size: 0.9rem; //18px;
+  }
 }
 
 

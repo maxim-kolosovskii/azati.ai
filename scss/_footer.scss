@@ -92,11 +92,6 @@ footer[role="contentinfo"] {
     }
   }
 
-  .icon {
-    padding-top: 1px;
-    padding-bottom: 2px;
-  }
-
   .btn {
     max-width: 100%;
 
@@ -205,6 +200,12 @@ footer[role="contentinfo"] {
   }
   @include media-tablet-v-mn {
     line-height: 32px;
+  }
+
+  //.icon {
+  SPAN {
+    padding-top: 1px;
+    padding-bottom: 2px;
   }
 }
 

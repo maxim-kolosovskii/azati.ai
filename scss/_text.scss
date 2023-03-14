@@ -1,0 +1,58 @@
+/*
+Text with image
+*/
+.text {
+  border-left: 1px solid $color-grey-medium;
+  padding-left: var(--lg);
+
+  @include media-tablet-v-mx {
+    margin-bottom: 2vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+  @include media-phablet-mx {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include media-tablet-v-mn {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 5vh;
+    padding-top: 5vh;
+  }
+
+  P {
+    @include media-tablet-v-mn {
+      font-size: 0.8rem; //16px;
+      line-height: 1.63; //26px;
+    }
+  }
+}
+
+.text__title {
+  @include title_3;
+
+  @include media-phablet-mn {
+    margin-bottom: 3.2vh;
+    max-width: 18em;
+  }
+}
+
+.img-right {
+  @include media-phablet-mx {
+    order: 1;
+    max-width: 100%;
+  }
+  @include media-phablet-mn {
+    float: right;
+    margin-bottom: var(--lg);
+    margin-left: 3vw;
+    max-width: 50%;
+  }
+  @include media-tablet-v-mn {
+    margin-left: 6vw;
+  }
+  @include media-desktop-mn {
+    margin-left: 10vw;
+  }
+}

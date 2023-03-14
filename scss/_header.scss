@@ -19,16 +19,19 @@ header[role="banner"] {
   @include transition(all $transition-duration $transition-timing-function);
 
   &.sticky {
-    @include media-phablet-mx {
-      height: calc(var(--header-height) - 10px);
-    }
-    @include media-phablet-mn {
-      height: calc(var(--header-height) - 12px);
-    }
-    @include media-netbook-mn {
-      height: calc(var(--header-height) - 40px);
-    }
+    //@include media-phablet-mx {
+    //  height: calc(var(--header-height) - 10px);
+    //}
+    //@include media-phablet-mn {
+    //  height: calc(var(--header-height) - 12px);
+    //}
+    //@include media-netbook-mn {
+    //  height: calc(var(--header-height) - 40px);
+    //}
+
+    height: var(--header-height-sticky);
   }
+
 
   .container {
     display: flex;
@@ -187,11 +190,13 @@ header[role="banner"] {
 
       .nav__item {
         color: $font-color-base;
-        font-family: $font-family-accent;
-        font-weight: $font-weight-500;
-        position: relative;
-        text-transform: uppercase;
-        white-space: nowrap;
+        //font-family: $font-family-accent;
+        //font-weight: $font-weight-500;
+        //position: relative;
+        //text-transform: uppercase;
+        //white-space: nowrap;
+
+        @include underline_link;
 
         @include media-netbook-mx {
           display: block;
@@ -206,46 +211,41 @@ header[role="banner"] {
           align-items: center;
         }
 
-        &:after {
-          content: '';
-          background-color: $color-blue;
-          @include margin-auto;
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          width: 0;
-          //width: 100%;
+        //&:after {
+        //  content: '';
+        //  background-color: $color-blue;
+        //  @include margin-auto;
+        //  position: absolute;
+        //  right: 0;
+        //  bottom: 0;
+        //  left: 0;
+        //  width: 0;
+        //  //width: 100%;
+        //
+        //  @include media-netbook-mx {
+        //    height: 3px;
+        //  }
+        //  @include media-netbook-mn {
+        //    height: 5px;
+        //  }
+        //}
 
-          @include media-netbook-mx {
-            height: 3px;
-          }
-          @include media-netbook-mn {
-            height: 5px;
-          }
-        }
-
-        &:hover {
-
-          &:after {
-            width: 100%;
-
-            // Animation
-            @include x-animation(widthScale .25s $transition-timing-function both);
-            animation-delay: .15s;
-          }
-        }
+        //&:hover {
+        //  &:after {
+        //    width: 100%;
+        //
+        //    // Animation
+        //    @include x-animation(widthScale .25s $transition-timing-function both);
+        //    animation-delay: .15s;
+        //  }
+        //}
 
         &.active {
-          &:after {
-            width: 100%;
-          }
+          pointer-events: none;
+        //  &:after {
+        //    width: 100%;
+        //  }
         }
-
-        //&.nav__item_parent {
-          //background-color: transparent;
-          //font-weight: initial;
-        //}
       }
     }
   }
@@ -320,7 +320,7 @@ Submenu
     }
   }
 
-  nav {
+  NAV {
     @include media-phablet-mx {
       @include margin-auto;
     }
@@ -329,7 +329,7 @@ Submenu
     }
   }
 
-  ul {
+  UL {
     @include media-phablet-mn {
       display: flex;
       gap: 10px;
@@ -337,7 +337,7 @@ Submenu
     }
   }
 
-  li {
+  .modal__item {
     text-align: left;
 
     @include media-phablet-mx {
@@ -347,40 +347,42 @@ Submenu
       width: calc(33% - 5px);
     }
 
-    &.spacer {
-      @include media-phablet-mx {
-        display: none;
+    A {
+      color: $font-color-base;
+      display: inline-block;
+      font-weight: $font-weight-700;
+
+      @include media-desktop-mx {
+        font-size: 1.25rem; //25px;
       }
-      @include media-phablet-mn {
-        background-color: $color-grey-medium;
-        margin: 5vh 0;
-        height: 1px;
-        width: 100%;
+      @include media-desktop-mn {
+        font-size: 1.4rem; //28px;
+      }
+
+      &:hover {
+        color: $color-orange;
       }
     }
-  }
 
-  a {
-    color: $font-color-base;
-    display: inline-block;
-    font-weight: $font-weight-700;
-
-    @include media-desktop-mx {
-      font-size: 1.25rem; //25px;
-    }
-    //@include media-phablet-desktop {
-    //  font-size: calc(0.045 * 100vw + 10px );
-    //}
-    @include media-desktop-mn {
-      font-size: 1.4rem; //28px;
-    }
-
-    &:hover {
+    &.active A {
       color: $color-orange;
+      pointer-events: none;
+    }
+
+    SPAN {
+      color: $color-grey-medium;
     }
   }
 
-  span {
-    color: $color-grey-medium;
+  .spacer {
+    @include media-phablet-mx {
+      display: none;
+    }
+    @include media-phablet-mn {
+      background-color: $color-grey-medium;
+      margin: 5vh 0;
+      height: 1px;
+      width: 100%;
+    }
   }
 }

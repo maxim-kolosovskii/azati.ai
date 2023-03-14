@@ -73,7 +73,6 @@
   }
 
   .card {
-    background-color: $color-blue;
     border-left: 0 none;
     padding: 0;
     position: relative;
@@ -107,11 +106,11 @@
         padding: 0 2vw 9vh 3vw;
       }
       @include media-netbook-mn {
-        padding: 0 1vw 17vh 4vw;
+        padding: 0 1vw 17vh calc(4vw - var(--lg));
         width: calc(100% - 150px);
       }
       @include media-laptop-mn {
-        padding: 0 1vw 21vh 4vw;
+        padding: 0 1vw 21vh calc(4vw - var(--lg));
         width: calc(100% - 272px);
       }
     }
@@ -142,10 +141,27 @@
           padding: 3vh 2vw 3vh 3vw;
         }
         @include media-netbook-mn {
-          padding: 4vh 1vw 6vh 4vw;
+          //padding: 4vh 1vw 6vh 4vw;
+          padding: 4vh 1vw 6vh calc(4vw - var(--lg));
         }
         @include media-laptop-mn {
-          padding: 5vh 1vw 7vh 4vw;
+          padding: 5vh 1vw 7vh calc(4vw - var(--lg));
+        }
+      }
+    }
+
+    &:nth-child(even) {
+
+      .card__content {
+        @include media-netbook-mn {
+          left: var(--lg);
+          padding-left: 4vw;
+        }
+      }
+
+      .card__img {
+        @include media-netbook-mn {
+          width: calc(100% - var(--lg));
         }
       }
     }
@@ -182,6 +198,7 @@
     height: 100%;
     overflow: hidden;
     position: absolute;
+    right: 0;
 
     IMG {
       height: 100%;

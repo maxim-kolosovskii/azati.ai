@@ -1,0 +1,73 @@
+/*
+Benefits section
+*/
+.section_benefits {
+  //display: none;
+
+  .section__title {
+
+    @include media-phablet-mn {
+      display: flex;
+      align-items: baseline;
+      position: relative;
+      white-space: nowrap;
+
+      &:after {
+        content: '';
+        border-bottom: 1px solid $color-grey-medium;
+        margin-left: 3vw;
+        width: 100%;
+      }
+    }
+  }
+
+  @import "card";
+
+  .card-outer {
+
+    @include media-tablet-h-netbook {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include media-netbook-mn {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  .card {
+    border-right: 1px solid $color-grey-medium;
+    border-bottom: 0 none;
+    margin-right: -1px;
+
+    @include media-phablet-mx {
+      &:not(:first-child) {
+        border-top: 1px solid $color-grey-medium;
+      }
+    }
+    @include media-phablet-netbook {
+      &:not(:first-child):not(:nth-child(2)) {
+        border-top: 1px solid $color-grey-medium;
+      }
+    }
+    @include media-netbook-mn {
+      &:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
+        border-top: 1px solid $color-grey-medium;
+      }
+    }
+    @include media-desktop-mn {
+      padding: 5vh 3.5vw 4vh 2.5vw;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+
+  .card__txt {
+
+    @include media-tablet-v-mn {
+      font-size: 0.8rem;
+      padding: 1vh 0 0;
+    }
+  }
+}

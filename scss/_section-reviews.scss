@@ -1,0 +1,23 @@
+/*
+Reviews section
+*/
+.section_reviews {
+  //display: none;
+
+  .section__title {
+
+    @include media-phablet-mx {
+      width: 7em;
+    }
+  }
+
+  .clutch-widget-outer {
+    background-color: #fafafa;
+    min-height: 360px;
+  }
+
+  .clutch-widget {
+    @include margin-auto;
+    max-width: 1440px;
+  }
+}
