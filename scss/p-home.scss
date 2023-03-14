@@ -11,6 +11,10 @@
 
   @import "card";
 
+  .card-outer {
+    border-top: 1px solid $color-grey-medium;
+  }
+
   @include media-phablet-mx {
 
     .btn_right {
@@ -35,8 +39,8 @@
 }
 
 
-/* Industries section */
-.section_industries {
+/* Toggle section */
+.section_toggle {
   //display: none;
 
   @include media-phablet-mn {
@@ -46,8 +50,132 @@
     }
   }
 
-  @import "industries";
-  //@import "toggle";
+  .section__img-outer {
+    @include transition(all $transition-duration $transition-timing-function);
+
+    @include media-netbook-mx {
+      display: none;
+    }
+    @include media-netbook-mn {
+      border-left: 1px solid $color-grey-medium;
+      display: flex;
+      align-items: flex-end;
+      max-width: 24vw;
+      min-height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+
+      IMG {
+        @include box-shadow(0 0 8px 0 rgba(0, 0, 0, 0.05));
+        display: block;
+        object-fit: cover;
+        margin-top: auto;
+        width: 100%;
+        transition: all $transition-duration $transition-timing-function;
+      }
+    }
+    @include media-laptop-mn {
+      max-width: 28vw;
+    }
+    @include media-desktop-mn {
+      max-width: 30vw;
+
+      IMG {
+        margin-bottom: -63px;
+      }
+    }
+  }
+
+  @import "toggle";
+
+  .toggle__tabs {
+    background-color: #fff;
+
+    @include media-phablet-mn {
+      border-top: 1px solid $color-grey-medium;
+      max-width: 408px;
+      width: 26%;
+    }
+
+    li {
+      text-transform: uppercase;
+
+      @include media-phablet-mx {
+
+        &:not(:first-child) {
+          margin-top: 5.5vh;
+        }
+      }
+
+      @include media-phablet-mn {
+        border-bottom: 1px solid #fff;
+        font-size: 0.9rem; //18px;
+        line-height: 1.61;  //26px;
+        letter-spacing: 2px;
+
+        &:not(:first-child) {
+          padding: 3.8vh 20px 1vh 0;
+        }
+        &:first-child {
+          padding: 2.6vh 20px 1vh 0;
+        }
+
+        &.current,
+        &:hover A {
+
+          &:after {
+            right: -14px;
+          }
+        }
+      }
+
+      SPAN {
+        color: $color-grey-dark;
+      }
+    }
+  }
+
+  .toggle__content {
+    padding-left: 3vw;
+    width: 74%;
+
+    @include media-phablet-mx {
+      display: none;
+    }
+    @include media-phablet-mn {
+      background-color: $color-grey-light;
+      border: 1px solid $color-grey-medium;
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+
+      .toggle__content-box {
+
+        &.visible {
+
+          @include media-netbook-mn {
+            max-width: 35vw;
+          }
+        }
+      }
+
+      .toggle__title {
+
+        SPAN {
+          padding-left: 16px;
+        }
+      }
+    }
+    @include media-netbook-mn {
+      padding-top: 11vh;
+      padding-bottom: 11vh;
+    }
+    @include media-desktop-mn {
+      min-height: 710px;
+      padding-bottom: 27vh;
+    }
+  }
 }
 
 
@@ -154,26 +282,7 @@
 }
 
 
-/* Reviews section */
-.section_reviews {
-  //display: none;
-
-  .section__title {
-
-    @include media-phablet-mx {
-      width: 7em;
-    }
-  }
-
-  .clutch-widget-outer {
-    background-color: #fafafa;
-    min-height: 360px;
-  }
-  .clutch-widget {
-    @include margin-auto;
-    max-width: 1440px;
-  }
-}
+@import "section-reviews";
 
 
 @import "section-form";

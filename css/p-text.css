@@ -6,7 +6,7 @@ CSS root variables media
     --bdrs: 3px;
     --sm: 5px;
     --md: 12px;
-    --lg: 20px;
+    --lg: 16px;
     --xl: 35px;
     --header-height: 99px; } }
 @media screen and (min-width: 1200px) {
@@ -14,17 +14,20 @@ CSS root variables media
     --bdrs: 5px;
     --sm: 8px;
     --md: 15px;
-    --lg: 30px;
+    --lg: 32px;
     --xl: 55px; } }
 @media screen and (max-width: 767px) {
   :root {
-    --header-height: 48px; } }
+    --header-height: 48px;
+    --header-height-sticky: calc(var(--header-height) - 10px); } }
 @media screen and (min-width: 768px) {
   :root {
-    --header-height: 59px; } }
+    --header-height: 59px;
+    --header-height-sticky: calc(var(--header-height) - 12px); } }
 @media screen and (min-width: 1200px) {
   :root {
-    --header-height: 96px; } }
+    --header-height: 96px;
+    --header-height-sticky: calc(var(--header-height) - 40px); } }
 @media screen and (max-width: 991px) {
   :root {
     --font-size-base: 16px; } }
@@ -46,34 +49,19 @@ General Landing styles
       margin: 10vh 0; } }
   @media screen and (min-width: 768px) {
     .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form) {
-      margin: 20vh 0; } }
-  .section ul li {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    list-style: none; }
+      margin: 18vh 0; } }
 
 .section__title {
+  font-size: clamp(30px, calc(13px + 5vw), 72px);
+  line-height: 1.175;
   transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
-  .section__title.section__title_page {
-    font-size: clamp(40px, calc(29px + 4vw), 96px);
-    line-height: 1.18; }
-    @media screen and (min-width: 768px) {
-      .section__title.section__title_page {
-        max-width: 10em; } }
-    @media screen and (max-width: 1399px) {
-      .section__title.section__title_page br {
-        display: none; } }
-  .section__title:not(.section__title_page) {
-    font-size: clamp(30px, calc(13px + 5vw), 72px);
-    line-height: 1.175; }
-    @media screen and (max-width: 767px) {
-      .section__title:not(.section__title_page) {
-        padding-right: 3vw;
-        margin-bottom: 25px; } }
-    @media screen and (min-width: 768px) {
-      .section__title:not(.section__title_page) {
-        margin-bottom: 3.5vh; } }
+  @media screen and (max-width: 767px) {
+    .section__title {
+      padding-right: 3vw;
+      margin-bottom: 25px; } }
+  @media screen and (min-width: 768px) {
+    .section__title {
+      margin-bottom: 3.5vh; } }
 
 .section__slogan {
   line-height: 1.59;
@@ -85,24 +73,8 @@ General Landing styles
     .section__slogan {
       font-size: clamp(0.8rem, calc(7px + 1vw), 24px); } }
 
-@media screen and (max-width: 767px) {
-  .section_top .section__slogan {
-    padding: 2vh 3vw 1vh 0; } }
-@media screen and (min-width: 768px) {
-  .section_top .section__slogan {
-    max-width: 22em; } }
-@media only screen and (min-width: 940px) {
-  .section_top .section__slogan {
-    max-width: 24em; } }
-@media screen and (min-width: 1400px) {
-  .section_top .section__slogan {
-    max-width: 28em; } }
-@media screen and (min-width: 1700px) {
-  .section_top .section__slogan {
-    max-width: 36em; } }
-
 /*
-Top section
+Small top section
 */
 .section_top-small {
   margin-bottom: 6vh;
@@ -125,12 +97,21 @@ Top section
     @media screen and (min-width: 1700px) {
       .section_top-small .section__content-left {
         padding: 10vh 0 16vh; } }
-  @media screen and (min-width: 768px) {
-    .section_top-small .title_2 {
-      max-width: 14em; } }
-  @media screen and (max-width: 1399px) {
-    .section_top-small .title_2 br {
-      display: none; } }
+  .section_top-small .section__title-page {
+    font-size: clamp(30px, calc(13px + 5vw), 72px);
+    font-weight: 700; }
+    @media screen and (max-width: 991px) {
+      .section_top-small .section__title-page {
+        line-height: 1.1; } }
+    @media screen and (min-width: 992px) {
+      .section_top-small .section__title-page {
+        line-height: 1.195; } }
+    @media screen and (min-width: 768px) {
+      .section_top-small .section__title-page {
+        max-width: 14em; } }
+    @media screen and (max-width: 1399px) {
+      .section_top-small .section__title-page br {
+        display: none; } }
   @media screen and (min-width: 768px) {
     .section_top-small .section__slogan {
       max-width: 38em; } }
@@ -167,29 +148,41 @@ Tag Block
 
 .tag__title {
   font-weight: 800;
-  font-size: 1.2rem;
-  line-height: 32px;
+  line-height: 1.33;
   margin-bottom: 1.7vh; }
+  @media screen and (max-width: 991px) {
+    .tag__title {
+      font-size: 1.2rem; } }
+  @media screen and (min-width: 992px) {
+    .tag__title {
+      font-size: 1.2rem; } }
 
 .tag__item {
   border: 1px solid #e1dfdf;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-family: "Work Sans", "Arial", sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  white-space: nowrap; }
+  white-space: nowrap;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
   @media screen and (max-width: 991px) {
     .tag__item {
+      height: 32px;
       margin-right: 12px;
       margin-bottom: 12px;
-      padding: 4px 7px; } }
+      padding: 0 7px; } }
   @media screen and (min-width: 992px) {
     .tag__item {
+      height: 40px;
       margin-right: 16px;
       margin-bottom: 16px;
-      padding: 7px 10px; } }
+      padding: 0 10px; } }
 
 /* Text section */
 .content-txt:not(.content-txt_table) HR {
@@ -198,28 +191,95 @@ Tag Block
   max-width: 67em; }
 .content-txt .section__subtitle {
   font-weight: 800;
-  margin-top: 1.8em;
-  margin-bottom: .8em; }
+  margin-top: 2.1em;
+  margin-bottom: -.15em; }
   @media screen and (max-width: 991px) {
     .content-txt .section__subtitle {
       font-size: 1.5rem; } }
   @media screen and (min-width: 992px) {
     .content-txt .section__subtitle {
       font-size: 2rem; } }
-@media screen and (min-width: 992px) {
-  .content-txt H3 {
-    font-size: 1.2rem; } }
 .content-txt .section__subtitle-caps {
+  font-weight: 800;
+  line-height: 1.315;
+  margin-top: 1.55em;
   text-transform: uppercase; }
+  @media screen and (max-width: 991px) {
+    .content-txt .section__subtitle-caps {
+      font-size: 1.5rem; } }
+  @media screen and (min-width: 992px) {
+    .content-txt .section__subtitle-caps {
+      font-size: clamp(24px, calc(10px + 2vw), 32px); } }
+.content-txt .section__subtitle-small {
+  font-weight: 800;
+  line-height: 1.33;
+  margin-top: 1em;
+  margin-bottom: -.6em; }
+  @media screen and (max-width: 991px) {
+    .content-txt .section__subtitle-small {
+      font-size: 1.2rem; } }
+  @media screen and (min-width: 992px) {
+    .content-txt .section__subtitle-small {
+      font-size: 1.2rem; } }
+.content-txt .section__subtitle-micro {
+  font-weight: 800;
+  line-height: 1.45;
+  margin-bottom: -.6em; }
+  @media screen and (max-width: 991px) {
+    .content-txt .section__subtitle-micro {
+      font-size: 1rem; } }
+  @media screen and (min-width: 992px) {
+    .content-txt .section__subtitle-micro {
+      font-size: 0.9rem; } }
 .content-txt P {
   line-height: 1.6;
   margin-top: 1.55em;
   margin-bottom: 1.55em; }
 .content-txt UL, .content-txt OL {
   line-height: 1.4;
+  margin-top: 1.55em;
+  margin-bottom: 1.55em;
   padding-left: 21px; }
   .content-txt UL LI, .content-txt OL LI {
-    margin: .8em 0; }
+    margin: .3em 0; }
+.content-txt A {
+  text-decoration: underline; }
+  .content-txt A:hover {
+    color: #29a2ff; }
+.content-txt TABLE TH, .content-txt TABLE TD {
+  border: 1px solid #e1dfdf; }
+  @media screen and (max-width: 767px) {
+    .content-txt TABLE TH, .content-txt TABLE TD {
+      padding: var(--lg) 1vw; } }
+  @media screen and (min-width: 768px) {
+    .content-txt TABLE TH, .content-txt TABLE TD {
+      padding: 3vh 1vw; } }
+.content-txt TABLE {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%; }
+  @media screen and (max-width: 767px) {
+    .content-txt TABLE {
+      overflow-x: scroll;
+      display: block; } }
+  .content-txt TABLE TH {
+    font-family: "Work Sans", "Arial", sans-serif;
+    font-weight: 500;
+    background-color: #f4f4f5;
+    border: 1px solid #e1dfdf; }
+    @media screen and (min-width: 768px) {
+      .content-txt TABLE TH {
+        position: sticky;
+        top: var(--header-height); }
+        .content-txt TABLE TH:first-child {
+          white-space: nowrap; } }
+  @media screen and (min-width: 992px) {
+    .content-txt TABLE TD {
+      font-size: 0.9rem; } }
+
+@media screen and (min-width: 768px) {
+  .sticky + main TABLE TH {
+    top: var(--header-height-sticky); } }
 
 .container-fluid {
   background-color: #f4f4f5; }
@@ -259,43 +319,15 @@ Tag Block
     max-width: 100%; }
 
 /*
-CSS root variables media
+Form section
 */
-@media screen and (max-width: 1199px) {
-  :root {
-    --bdrs: 3px;
-    --sm: 5px;
-    --md: 12px;
-    --lg: 20px;
-    --xl: 35px;
-    --header-height: 99px; } }
-@media screen and (min-width: 1200px) {
-  :root {
-    --bdrs: 5px;
-    --sm: 8px;
-    --md: 15px;
-    --lg: 30px;
-    --xl: 55px; } }
-@media screen and (max-width: 767px) {
-  :root {
-    --header-height: 48px; } }
-@media screen and (min-width: 768px) {
-  :root {
-    --header-height: 59px; } }
-@media screen and (min-width: 1200px) {
-  :root {
-    --header-height: 96px; } }
-@media screen and (max-width: 991px) {
-  :root {
-    --font-size-base: 16px; } }
-@media screen and (min-width: 992px) {
-  :root {
-    --font-size-base: 20px; } }
-/* Form section */
 @media screen and (min-width: 768px) {
   .section_form .btn_right {
     padding-left: 2vw;
     padding-right: 2vw; } }
+@media screen and (min-width: 1700px) {
+  .section_form {
+    margin: 27vh 0 0; } }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
   .section_form .container {
     display: grid;
@@ -319,7 +351,8 @@ CSS root variables media
     .section_form .section__title {
       margin-bottom: -16px;
       padding-left: 3vw;
-      transition: none; } }
+      transition: none;
+      grid-area: form; } }
   @media screen and (min-width: 1400px) {
     .section_form .section__title {
       margin-left: 383px; } }

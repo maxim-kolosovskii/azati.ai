@@ -1,0 +1,194 @@
+@import 'variables';
+
+@import "section";
+
+@import "section-top";
+
+@import "filter";
+
+
+/* Portfolio exceptions */
+.section_portfolio {
+  //display: none;
+
+  .filter__bar {
+    border-bottom: 1px solid $color-grey-medium;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .icon-filter {
+      margin-bottom: -1px;
+    }
+  }
+
+  @import "tag";
+
+  .tag {
+    flex-wrap: wrap;
+    margin: 6vh 0;
+
+    .tag__item {
+      cursor: pointer;
+
+      @include media-tablet-v-mx {
+        margin-right: 16px;
+        margin-bottom: 16px;
+      }
+      @include media-tablet-v-mn {
+        margin-right: 24px;
+        margin-bottom: 24px;
+      }
+
+      &:hover {
+        border-color: $color-blue;
+        color: $color-blue;
+      }
+
+      &.active {
+        border-color: $color-blue;
+        color: $color-blue;
+        position: relative;
+
+        &:after {
+          content: '×';
+          font-size: 28px;
+          font-weight: $font-weight-400;
+          line-height: 1;
+          margin: -2px 3px 0 11px;
+
+          &:hover {
+            color: $color-orange;
+          }
+        }
+      }
+    }
+  }
+
+  @import "card";
+
+  .card-outer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    background-color: $color-blue;
+    border-left: 0 none;
+    padding: 0;
+    position: relative;
+
+    @include media-phablet-mx {
+      border-right: 0 none;
+    }
+    @include media-phablet-mn {
+      margin-top: var(--lg);
+    }
+    @include media-netbook-mx {
+      width: 100%;
+    }
+    @include media-netbook-mn {
+      margin-top: 6vh;
+      width: 50%;
+    }
+
+    .card__content {
+      background-color: #fff;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+      @include transition(all $transition-duration $transition-timing-function);
+
+      @include media-netbook-mx {
+        padding: 0 1vw 13vh 3vw;
+        width: 70%;
+      }
+      @include media-phablet-mx {
+        padding: 0 2vw 9vh 3vw;
+      }
+      @include media-netbook-mn {
+        padding: 0 1vw 17vh 4vw;
+        width: calc(100% - 150px);
+      }
+      @include media-laptop-mn {
+        padding: 0 1vw 21vh 4vw;
+        width: calc(100% - 272px);
+      }
+    }
+
+    &:hover {
+      background-color: transparent;
+
+      @include media-netbook-mx {
+        padding-bottom: 5vh;
+      }
+      @include media-phablet-mx {
+        padding-bottom: 3vh;
+      }
+      @include media-netbook-mn {
+        padding-bottom: 7vh;
+      }
+      @include media-laptop-mn {
+        padding-bottom: 9vh;
+      }
+
+      .card__content {
+        background-color: $color-blue-dark;
+
+        @include media-netbook-mx {
+          padding: 4vh 1vw 4vh 3vw;
+        }
+        @include media-phablet-mx {
+          padding: 3vh 2vw 3vh 3vw;
+        }
+        @include media-netbook-mn {
+          padding: 4vh 1vw 6vh 4vw;
+        }
+        @include media-laptop-mn {
+          padding: 5vh 1vw 7vh 4vw;
+        }
+      }
+    }
+  }
+
+  .card__title {
+
+    @include media-netbook-mx {
+      @include title_3;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1699px) {
+      @include title_4;
+    }
+    @include media-desktop-mn {
+      @include title_3;
+    }
+  }
+
+  .card__tag {
+    word-break: break-word;
+
+    @include media-netbook-mx {
+      margin: 0 0 1vh;
+    }
+    @include media-phablet-mx {
+      margin: 1vh 0 0;
+    }
+    @include media-netbook-mn {
+      margin: 0 0 3vh;
+    }
+  }
+
+  .card__img {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+
+    IMG {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+@import "section-form";

@@ -1,0 +1,144 @@
+.branch {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin content-base {
+  content: '';
+  position:absolute;
+  top: 0;
+  height: 100%;
+  width: 50vw;
+}
+
+.branch__box {
+  position: relative;
+
+  @include media-tablet-v-mx {
+    padding: 3vh 0;
+    width: 100%;
+
+    &:before,
+    &:after {
+      @include content-base;
+    }
+    &:before {
+      left: -50vw;
+    }
+    &:after {
+      right: -50vw;
+    }
+
+    &:not(.branch__box_primary) {
+      &:before,
+      &:after {
+        background-color: $color-grey-light;
+      }
+    }
+    &.branch__box_primary {
+      &:before,
+      &:after {
+        background-color: $color-blue;
+      }
+    }
+  }
+
+  .branch__title {
+    padding-bottom: 20px;
+  }
+
+  UL {
+    list-style: none;
+
+    LI {
+      font-weight: $font-weight-800;
+      font-size: 0.9rem; //18px;
+      //line-height: 24px;
+      padding-bottom: 18px;
+    }
+  }
+
+  P {
+    @include media-tablet-v-mn {
+      font-size: 0.8rem; //16px;
+      line-height: 26px;
+    }
+  }
+}
+
+.branch:not(.branch_two) {
+  .branch__box {
+    @include media-tablet-v-mn {
+      border-top: 1px solid $color-grey-medium;
+      width: 33%;
+    //}
+
+    //@include media-tablet-v-mn {
+      padding: 4vh 16px 2vh;
+    }
+
+    @include media-laptop-mn {
+      padding: 6vh 32px 8vh;
+    }
+  }
+
+  .branch__title {
+    @include title_3;
+  }
+}
+
+.branch_two {
+  .branch__box {
+
+    @include media-tablet-v-mn {
+      padding: 7vh 5vw 10vh 0;
+      width: 50%;
+
+      &:before {
+        @include content-base;
+      }
+
+      &:not(.branch__box_primary) {
+
+        &:before {
+          background-color: $color-grey-light;
+          left: -50vw;
+        }
+      }
+      &.branch__box_primary {
+        padding: 7vh 0 10vh 4vw;
+
+        &:before {
+          background-color: $color-blue;
+          right: -50vw;
+        }
+      }
+    }
+  }
+
+  .branch__title {
+    @include title_2;
+  }
+}
+
+.branch__box:not(.branch__box_primary) {
+  background-color: $color-grey-light;
+}
+
+.branch__box_primary {
+  background-color: $color-blue;
+  color: #fff;
+
+  @include media-tablet-v-mn {
+
+    &:after {
+      content: '';
+      background-color: $color-blue;
+      position:absolute;
+      bottom: -6vh;
+      left: 0;
+      width: 100%;
+      height: 6vh;
+    }
+  }
+}

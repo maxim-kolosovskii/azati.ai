@@ -3,7 +3,6 @@
 <head itemscope itemtype="http://schema.org/WPHeader">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1"><![endif]-->
     <title itemprop="headline">Homepage - New Azati</title>
     <!-- Microdata's attribute -->
@@ -24,9 +23,8 @@
     <!-- Fonts -->
 <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
 <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans:wght@500;700;800&display=swap" rel="stylesheet">-->
 <!--    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans&family=Roboto:wght@300;400;500;700;900&family=Work+Sans:wght@500;700;800&display=swap" rel="stylesheet">-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans:wght@500;700;800&display=swap" rel="stylesheet">
     <!-- CSS styles -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -45,11 +43,11 @@
             <span></span><span></span><span></span><span></span>
         </div>
 
-        <nav itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <nav itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation" aria-label="main navigation">
             <ul class="nav__desktop">
                 <li><a itemprop="url" class="nav__item" href="/">About Azati</a></li>
                 <li><a itemprop="url" class="nav__item nav__item_parent" id="myBtn" href="/">Services</a><!-- Trigger/Open The Modal --></li>
-                <li><a itemprop="url" class="nav__item" href="/">Portfolio</a></li>
+                <li><a itemprop="url" class="nav__item" href="portfolio.html">Portfolio</a></li>
                 <li><a itemprop="url" class="nav__item" href="blog.html">Blog</a></li>
                 <li><a itemprop="url" class="nav__item" href="/">Career</a></li>
                 <li><a itemprop="url" class="nav__item" href="/">Contact Us</a></li>
@@ -61,15 +59,16 @@
             <div class="modal__content">
                 <div class="container">
                     <span class="close">&times;</span>
-                    <nav>
+                    <button type="button" class="close">&times;</button>
+                    <nav aria-label="modal navigation">
                         <ul>
-                            <li><a href="/"><span>01 /</span> Custom Software <br>Engineering</a></li>
-                            <li><a href="/"><span>02 /</span> Artificial Intelligence/ <br>Machine Learning</a></li>
-                            <li><a href="/"><span>03 /</span> Document <br>Digitization</a></li>
+                            <li class="modal__item"><a href="service-custom-software-engineering.html"><span>01 /</span> Custom Software <br>Engineering</a></li>
+                            <li class="modal__item"><a href="service-ai-ml.html"><span>02 /</span> Artificial Intelligence/ <br>Machine Learning</a></li>
+                            <li class="modal__item"><a href="service-document-digitization.html"><span>03 /</span> Document <br>Digitization</a></li>
                             <li class="spacer">&nbsp;</li>
-                            <li><a href="/"><span>04 /</span> Quality Assurance</a></li>
-                            <li><a href="/"><span>05 /</span> DevOps</a></li>
-                            <li><a href="/"><span>06 /</span> UI/UX Design</a></li>
+                            <li class="modal__item"><a href="service-quality-assurance.html"><span>04 /</span> Quality Assurance</a></li>
+                            <li class="modal__item"><a href="service-devops.html"><span>05 /</span> DevOps</a></li>
+                            <li class="modal__item"><a href="service-ui-ux-design.html"><span>06 /</span> UI/UX Design</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -82,7 +81,7 @@
     <section class="section section_top">
         <div class="container">
             <div class="section__content-left">
-                <h1 class="section__title section__title_page">Uniting experts <br>to fulfil important projects</h1>
+                <h1 class="section__title section__title-page">Uniting experts <br>to fulfil important projects</h1>
                 <p class="section__slogan">
                     Since 2002 Azati reliably delivers software engineering services requiring innovated approach, speed, scale, complexity and security. We provide our partners from the Fortune 500 and growing companies with dedicated development teams.
                 </p>
@@ -110,7 +109,7 @@
             <div class="card-outer">
                 <div class="card">
                     <h3 class="card__title">
-                        <a href="/">
+                        <a href="service-custom-software-engineering.html">
                             Custom Software <br>Engineering
                         </a>
                     </h3>
@@ -118,77 +117,77 @@
                         Web and Mobile application development from scratch, legacy solutions maintenance and third-party applications customization
                     </p>
                     <footer class="card__footer">
-                        <a class="card__more" href="/">Learn More <span></span></a>
+                        <a class="card__more" href="service-custom-software-engineering.html">Learn More <span></span></a>
                     </footer>
                 </div><!-- end card #1 -->
 
                 <div class="card">
                     <h3 class="card__title">
-                        <a href="/">
+                        <a href="service-ai-ml.html">
                             Artificial Intelligence/<br>Machine Learning
                         </a>
                     </h3>
                     <p class="card__txt">
-                        Azati offers various scenarios to improve your business by using Artificial intelligenсe
+                        Azati offers various scenarios to improve your business by using Artificial intelligence
                     </p>
                     <footer class="card__footer">
-                        <a class="card__more" href="/">Learn More <span></span></a>
+                        <a class="card__more" href="service-ai-ml.html">Learn More <span></span></a>
                     </footer>
                 </div><!-- end card #2 -->
 
                 <div class="card">
                     <h3 class="card__title">
-                        <a href="/">
+                        <a href="service-document-digitization.html">
                             Document <br>Digitization
                         </a>
                     </h3>
                     <p class="card__txt">
-                        Azati offers various scenarios to improve your business by using Artificial intelligenсe
+                        We solve complex data extraction tasks, enabling our clients to automatically digitize complex documents
                     </p>
                     <footer class="card__footer">
-                        <a class="card__more" href="/">Learn More <span></span></a>
+                        <a class="card__more" href="service-document-digitization.html">Learn More <span></span></a>
                     </footer>
                 </div><!-- end card #3 -->
 
                 <div class="card">
                     <h3 class="card__title">
-                        <a href="/">
+                        <a href="service-quality-assurance.html">
                             Quality <br>Assurance
                         </a>
                     </h3>
                     <p class="card__txt">
-                        Azati combines manual and automated testing techniques to create bug-free software and feature-rich applications.
+                        Azati combines manual and automated testing using smoke testing, regression testing, usability testing and so on
                     </p>
                     <footer class="card__footer">
-                        <a class="card__more" href="/">Learn More <span></span></a>
+                        <a class="card__more" href="service-quality-assurance.html">Learn More <span></span></a>
                     </footer>
                 </div><!-- end card #4 -->
 
                 <div class="card">
                     <h3 class="card__title">
-                        <a href="/">
+                        <a href="service-ui-ux-design.html">
                             UX/UI Design
                         </a>
                     </h3>
                     <p class="card__txt">
-                        Our digital design process was developed from a passion for great User Interfaces (UI) that help drive a powerful User Experience (UX).
+                        Our digital design process was developed from a passion for great User Interfaces (UI) that help drive a powerful User Experience (UX)
                     </p>
                     <footer class="card__footer">
-                        <a class="card__more" href="/">Learn More <span></span></a>
+                        <a class="card__more" href="service-ui-ux-design.html">Learn More <span></span></a>
                     </footer>
                 </div><!-- end card #5 -->
 
                 <div class="card">
                     <h3 class="card__title">
-                        <a href="/">
+                        <a href="service-devops.html">
                             DevOps
                         </a>
                     </h3>
                     <p class="card_txt">
-                        Azati provides various DevOps services from consulting to configuration management
+                        Our company provides various DevOps services from consulting to configuration management
                     </p>
                     <footer class="card__footer">
-                        <a class="card__more" href="/">Learn More <span></span></a>
+                        <a class="card__more" href="service-devops.html">Learn More <span></span></a>
                     </footer>
                 </div><!-- end card #6 -->
             </div>
@@ -197,7 +196,7 @@
     </section><!-- end services section -->
 
 
-    <section class="section section_industries">
+    <section class="section section_toggle">
         <div class="container">
             <h2 class="section__title">Industries</h2>
         </div>
@@ -233,13 +232,13 @@
                                 We solve complex data extraction tasks, enabling our clients to automatically digitize complex documents.
                             </p>
 
-                            <a class="btn-more" href="/">Learn More <span></span></a>
+                            <a class="btn-more" href="case-study.html">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
                             <h3 class="toggle__title">Case study <span>/ 02</span></h3>
                             <p>содержимое вкладки 2</p>
 
-                            <a class="btn-more" href="/">Learn More <span></span></a>
+                            <a class="btn-more" href="case-study.html">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
                             <h3 class="toggle__title">Case study <span>/ 03</span></h3>
@@ -251,37 +250,37 @@
                             <h3 class="toggle__title">Case study <span>/ 04</span></h3>
                             <p>содержимое вкладки 4</p>
 
-                            <a class="btn-more" href="/">Learn More <span></span></a>
+                            <a class="btn-more" href="case-study.html">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
                             <h3 class="toggle__title">Case study <span>/ 05</span></h3>
                             <p>содержимое вкладки 5</p>
 
-                            <a class="btn-more" href="/">Learn More <span></span></a>
+                            <a class="btn-more" href="case-study.html">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
                             <h3 class="toggle__title">Case study <span>/ 06</span></h3>
                             <p>содержимое вкладки 6</p>
 
-                            <a class="btn-more" href="/">Learn More <span></span></a>
+                            <a class="btn-more" href="case-study.html">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
                             <h3 class="toggle__title">Case study <span>/ 07</span></h3>
                             <p>содержимое вкладки 7</p>
 
-                            <a class="btn-more" href="/">Learn More <span></span></a>
+                            <a class="btn-more" href="case-study.html">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
                             <h3 class="toggle__title">Case study <span>/ 08</span></h3>
                             <p>содержимое вкладки 8</p>
 
-                            <a class="btn-more" href="/">Learn More <span></span></a>
+                            <a class="btn-more" href="case-study.html">Learn More <span></span></a>
                         </div>
                         <div class="toggle__content-box">
                             <h3 class="toggle__title">Case study <span>/ 09</span></h3>
                             <p>содержимое вкладки 9</p>
 
-                            <a class="btn-more" href="/">Learn More <span></span></a>
+                            <a class="btn-more" href="case-study.html">Learn More <span></span></a>
                         </div>
                         <div class="toggle__controls">
                             <a href="/" class="btn-arrow btn-arrow_prev" aria-label="Preview Case"><span>&lt; Prev</span></a>
@@ -291,7 +290,7 @@
                 </div>
             </div>
         </div>
-    </section><!-- end industries section -->
+    </section><!-- end toggle section -->
 
 
     <section class="section section_hire">
@@ -364,7 +363,7 @@
                 <li class="company__item"><img class="lazy-img company__logo company__logo_tophotelprojects" data-src="img/company/tophotelprojects-min.svg" alt="TopHotelProjects" width="225" height="78"></li>
                 <li class="company__item"><img class="lazy-img company__logo company__logo_medpro" data-src="img/company/medprogroup.webp" alt="MedPro Group" width="307" height="62"></li>
                 <li class="company__item"><img class="lazy-img company__logo company__logo_auction" data-src="img/company/auction-com-min.svg" alt="Auction.com" width="205" height="30"></li>
-                <li class="company__item"><img class="lazy-img company__logo company__logo_clarivate" data-src="img/company/clarivate-min.svg" alt="Clarivate" width="265" height="79></li>
+                <li class="company__item"><img class="lazy-img company__logo company__logo_clarivate" data-src="img/company/clarivate-min.svg" alt="Clarivate" width="265" height="79"></li>
                 <li class="company__item"><img class="lazy-img company__logo company__logo_aptagen" data-src="img/company/aptagen-min.svg" alt="Aptagen" width="155" height="100"></li>
                 <li class="company__item"><img class="lazy-img company__logo company__logo_venstar" data-src="img/company/venstar-exchange-min.svg" alt="Venstar Exchange" width="260" height="54"></li>
                 <li class="company__item"><img class="lazy-img company__logo company__logo_empyrealstrings" data-src="img/company/empyrealstrings-min.svg" alt="Empyreal Strings" width="160" height="89"></li>
@@ -472,11 +471,11 @@
                 </address>
             </div>
 
-            <nav>
+            <nav aria-label="footer navigation">
                 <ul class="footer__nav">
                     <li><a href="/privacy-policy">Privacy Policy</a></li>
                     <li><a href="/terms-of-use">Terms of Use</a></li>
-                    <li><a href="/cookie-policy">Cookie Policy</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
                 </ul>
             </nav>
         </section><!-- end middle column -->
@@ -484,9 +483,9 @@
         <section class="footer__col">
             <h3>Contact us</h3>
             <address class="address">
-                <span class="icon icon_email"><a href="mailto:info@azati.com">info@azati.com</a></span>
-                <span class="icon icon_telegram"><a href="https://t.me/Azati_bot" target="_blank">telegram</a></span>
-                <span class="icon icon_linkedin"><a href="https://www.linkedin.com/company/azati-corporation" target="_blank">linkedin</a></span>
+                <span class="icon-email"><a href="mailto:info@azati.com">info@azati.com</a></span>
+                <span class="icon-telegram"><a href="https://t.me/Azati_bot" target="_blank">telegram</a></span>
+                <span class="icon-linkedin"><a href="https://www.linkedin.com/company/azati-corporation" target="_blank">linkedin</a></span>
             </address>
 
             <a class="btn" href="/">Schedule a call</a>
