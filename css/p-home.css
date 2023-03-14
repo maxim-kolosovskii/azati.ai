@@ -263,10 +263,16 @@ Top section
 @media screen and (min-width: 768px) {
   .section_top .btn-outer {
     border-top: 1px solid #e1dfdf;
-    bottom: -60px;
     display: flex;
     position: absolute;
-    width: 100%; }
+    width: 100%; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .section_top .btn-outer {
+      bottom: -48px; } }
+  @media screen and (min-width: 768px) and (min-width: 1024px) {
+    .section_top .btn-outer {
+      bottom: -68px; } }
+@media screen and (min-width: 768px) {
     .section_top .btn-outer .btn {
       margin-top: -1px; } }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -400,9 +406,6 @@ Top section
       .section_services .card-outer + .btn {
         padding-left: 3vw;
         padding-right: 3vw; } }
-    @media screen and (max-width: 1023px) {
-      .section_services .card-outer + .btn {
-        max-width: calc(25% + 3px); } }
     @media screen and (min-width: 1024px) {
       .section_services .card-outer + .btn {
         max-width: calc(25% + 3px); } }
@@ -483,8 +486,7 @@ Top section
       @media screen and (max-width: 767px) {
         .section_toggle .toggle__tabs li {
           font-weight: 700;
-          line-height: 1.12;
-          letter-spacing: 1px; }
+          line-height: 1.12; }
           .section_toggle .toggle__tabs li A {
             border-left: 4px solid #29a2ff;
             display: block;
@@ -495,6 +497,7 @@ Top section
       @media screen and (min-width: 768px) {
         .section_toggle .toggle__tabs li {
           cursor: pointer;
+          padding: 1.7vh 20px 1.8vh 0;
           position: relative; }
           .section_toggle .toggle__tabs li.current:after, .section_toggle .toggle__tabs li:hover A:after {
             content: '';
@@ -505,7 +508,8 @@ Top section
             top: 0;
             bottom: 0; }
           .section_toggle .toggle__tabs li.current {
-            border-bottom: 1px solid #29a2ff; }
+            border-bottom: 1px solid #29a2ff;
+            pointer-events: none; }
             .section_toggle .toggle__tabs li.current:after {
               background-color: #29a2ff; }
           .section_toggle .toggle__tabs li A {
@@ -611,23 +615,22 @@ Top section
     @media screen and (min-width: 768px) {
       .section_toggle .toggle__tabs {
         border-top: 1px solid #e1dfdf;
+        padding-bottom: 5vh;
         max-width: 408px;
         width: 26%; } }
     .section_toggle .toggle__tabs li {
       text-transform: uppercase; }
       @media screen and (max-width: 767px) {
-        .section_toggle .toggle__tabs li:not(:first-child) {
-          margin-top: 5.5vh; } }
+        .section_toggle .toggle__tabs li {
+          letter-spacing: 1px; }
+          .section_toggle .toggle__tabs li:not(:first-child) {
+            margin-top: 5.5vh; } }
       @media screen and (min-width: 768px) {
         .section_toggle .toggle__tabs li {
           border-bottom: 1px solid #fff;
           font-size: 0.9rem;
           line-height: 1.61;
           letter-spacing: 2px; }
-          .section_toggle .toggle__tabs li:not(:first-child) {
-            padding: 3.8vh 20px 1vh 0; }
-          .section_toggle .toggle__tabs li:first-child {
-            padding: 2.6vh 20px 1vh 0; }
           .section_toggle .toggle__tabs li.current:after, .section_toggle .toggle__tabs li:hover A:after {
             right: -14px; } }
       .section_toggle .toggle__tabs li SPAN {

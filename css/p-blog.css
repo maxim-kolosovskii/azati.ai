@@ -264,10 +264,16 @@ Top section
 @media screen and (min-width: 768px) {
   .section_top .btn-outer {
     border-top: 1px solid #e1dfdf;
-    bottom: -60px;
     display: flex;
     position: absolute;
-    width: 100%; }
+    width: 100%; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .section_top .btn-outer {
+      bottom: -48px; } }
+  @media screen and (min-width: 768px) and (min-width: 1024px) {
+    .section_top .btn-outer {
+      bottom: -68px; } }
+@media screen and (min-width: 768px) {
     .section_top .btn-outer .btn {
       margin-top: -1px; } }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -494,9 +500,6 @@ Filter
       .section_blog .card-outer + .btn {
         padding-left: 3vw;
         padding-right: 3vw; } }
-    @media screen and (max-width: 1023px) {
-      .section_blog .card-outer + .btn {
-        max-width: calc(25% + 3px); } }
     @media screen and (min-width: 1024px) {
       .section_blog .card-outer + .btn {
         max-width: calc(25% + 3px); } }

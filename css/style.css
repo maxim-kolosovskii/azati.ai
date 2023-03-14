@@ -559,6 +559,8 @@ header[role="banner"] {
             height: 100%;
             display: flex;
             align-items: center; } }
+        header[role="banner"] nav[role="navigation"] li .nav__item.active {
+          pointer-events: none; }
 
 @media screen and (max-width: 767px) {
   header[role="banner"].sticky #hamburger.open ~ nav[role="navigation"] {
@@ -1222,6 +1224,15 @@ input[type="checkbox"]:checked:after {
 /*
 Buttons
 */
+.btn:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):hover, .btn-icon:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):hover, .btn-arrow:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):hover, .icon-filter:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):hover, .btn-more:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):hover, .btn.btn_empty:hover, .btn_empty.btn-icon:hover, .btn_empty.btn-arrow:hover, .btn-arrow.btn-arrow_prev:hover, .btn-arrow.icon-filter:hover, .icon-filter:hover, .btn_empty.btn-more:hover, .btn-more.icon-filter:hover, .btn.icon-filter:hover, .icon-filter.btn-icon:hover {
+  background-color: #151731;
+  border: 1px solid #151731;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #ff971d;
+  text-decoration: none; }
+
 .btn, .btn-icon, .btn-arrow, .icon-filter, .btn-more {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1245,6 +1256,9 @@ Buttons
   -moz-transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   -o-transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
+  @media screen and (max-width: 374px) {
+    .btn, .btn-icon, .btn-arrow, .icon-filter, .btn-more {
+      width: 100%; } }
   @media screen and (min-width: 375px) {
     .btn, .btn-icon, .btn-arrow, .icon-filter, .btn-more {
       min-width: 240px; } }
@@ -1254,13 +1268,13 @@ Buttons
   @media screen and (max-width: 991px) {
     .btn:not(.btn_small), .btn-icon:not(.btn_small), .btn-arrow:not(.btn_small), .icon-filter:not(.btn_small), .btn-more:not(.btn_small) {
       font-size: 1.25rem; } }
-  @media screen and (max-width: 374px) {
+  @media screen and (max-width: 1023px) {
     .btn:not(.btn_small), .btn-icon:not(.btn_small), .btn-arrow:not(.btn_small), .icon-filter:not(.btn_small), .btn-more:not(.btn_small) {
       font-size: inherit;
       min-height: 48px; } }
-  @media screen and (min-width: 375px) {
+  @media screen and (min-width: 1024px) {
     .btn:not(.btn_small), .btn-icon:not(.btn_small), .btn-arrow:not(.btn_small), .icon-filter:not(.btn_small), .btn-more:not(.btn_small) {
-      min-height: 60px; } }
+      min-height: 68px; } }
   .btn.btn_small, .btn_small.btn-icon, .btn_small.btn-arrow, .btn_small.icon-filter, .btn_small.btn-more {
     font-size: 0.8rem;
     min-height: 48px; }
@@ -1268,9 +1282,6 @@ Buttons
     background-color: #29a2ff;
     border: 1px solid #29a2ff;
     color: #fff; }
-    .btn:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):hover, .btn-icon:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):hover, .btn-arrow:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):hover, .icon-filter:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):hover, .btn-more:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):hover {
-      background-color: #151731;
-      color: #ff971d; }
     .btn:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):disabled, .btn-icon:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):disabled, .btn-arrow:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):disabled, .icon-filter:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):disabled, .btn-more:not(.btn_empty):not(.btn-arrow.btn-arrow_prev):not(.icon-filter):disabled {
       color: #94d0ff; }
   .btn.btn_empty, .btn_empty.btn-icon, .btn_empty.btn-arrow, .btn-arrow.btn-arrow_prev, .icon-filter, .btn_empty.btn-more {
@@ -1287,14 +1298,6 @@ Buttons
       float: right;
       margin-left: auto;
       max-width: max-content; } }
-  .btn:hover, .btn-icon:hover, .btn-arrow:hover, .icon-filter:hover, .btn-more:hover {
-    background-color: #151731;
-    border: 1px solid #151731;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    color: #ff971d;
-    text-decoration: none; }
   .btn:focus, .btn-icon:focus, .btn-arrow:focus, .icon-filter:focus, .btn-more:focus {
     outline: 3px solid #97d2ff; }
   .btn.disabled, .disabled.btn-icon, .disabled.btn-arrow, .disabled.icon-filter, .disabled.btn-more, .btn:disabled, .btn-icon:disabled, .btn-arrow:disabled, .icon-filter:disabled, .btn-more:disabled {
@@ -1306,22 +1309,16 @@ Buttons
   background-position: 50%;
   min-height: auto;
   min-width: auto; }
-  @media screen and (max-width: 1399px) {
-    .btn-icon, .btn-arrow, .icon-filter {
-      height: 48px; } }
-  @media screen and (min-width: 1400px) {
-    .btn-icon, .btn-arrow, .icon-filter {
-      height: 68px; } }
 
 /* Button without text, only arrow */
 .btn-arrow {
   background-repeat: no-repeat;
   -webkit-background-size: 50%;
   background-size: 50%; }
-  @media screen and (max-width: 1399px) {
+  @media screen and (max-width: 1023px) {
     .btn-arrow {
       width: 48px; } }
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1024px) {
     .btn-arrow {
       width: 68px; } }
   .btn-arrow.btn-arrow_prev {
