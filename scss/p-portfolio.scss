@@ -99,37 +99,26 @@
       @include transition(all $transition-duration $transition-timing-function);
 
       @include media-netbook-mx {
-        padding: 0 1vw 13vh 3vw;
+        padding: 0 1vw 8vh 3vw;
         width: 70%;
       }
       @include media-phablet-mx {
-        padding: 0 2vw 9vh 3vw;
+        padding: 0 2vw 6vh 3vw;
       }
       @include media-netbook-mn {
-        padding: 0 1vw 17vh calc(4vw - var(--lg));
+        //padding: 0 1vw 10vh calc(4vw - 1px);
+        padding: 0 1vw 10vh 1.7vw;
         width: calc(100% - 150px);
       }
       @include media-laptop-mn {
-        padding: 0 1vw 21vh calc(4vw - var(--lg));
+        //padding: 0 1vw 12vh calc(4vw - var(--lg));
+        padding-bottom: 12vh;
         width: calc(100% - 272px);
       }
     }
 
     &:hover {
       background-color: transparent;
-
-      @include media-netbook-mx {
-        padding-bottom: 5vh;
-      }
-      @include media-phablet-mx {
-        padding-bottom: 3vh;
-      }
-      @include media-netbook-mn {
-        padding-bottom: 7vh;
-      }
-      @include media-laptop-mn {
-        padding-bottom: 9vh;
-      }
 
       .card__content {
         background-color: $color-blue-dark;
@@ -141,11 +130,13 @@
           padding: 3vh 2vw 3vh 3vw;
         }
         @include media-netbook-mn {
-          //padding: 4vh 1vw 6vh 4vw;
-          padding: 4vh 1vw 6vh calc(4vw - var(--lg));
+          //padding: 4vh 1vw 6vh calc(4vw - 1px);
+          padding: 4vh 1vw 6vh 1.7vw;
         }
         @include media-laptop-mn {
-          padding: 5vh 1vw 7vh calc(4vw - var(--lg));
+          //padding: 5vh 1vw 7vh calc(4vw - var(--lg));
+          padding-top: 5vh;
+          padding-bottom: 7vh;
         }
       }
     }
@@ -154,9 +145,12 @@
 
       .card__content {
         @include media-netbook-mn {
-          left: var(--lg);
-          padding-left: 4vw;
+        //  left: 1px;
+          left: 1.7vw;
         }
+        //@include media-laptop-mn {
+        //  left: var(--lg);
+        //}
       }
 
       .card__img {
@@ -168,6 +162,9 @@
   }
 
   .card__title {
+    A {
+      color: $color-orange !important;
+    }
 
     @include media-netbook-mx {
       @include title_3;
@@ -195,6 +192,7 @@
   }
 
   .card__img {
+    background-color: $color-blue;
     height: 100%;
     overflow: hidden;
     position: absolute;

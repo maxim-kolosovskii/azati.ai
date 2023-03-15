@@ -127,20 +127,15 @@
     margin-top: 4vh;
   }
 
-  //OL.toggle__subtitle {
-  //  font-family: $font-family-accent;
-  //  padding: 0 0 0 51px;
-  //}
-
-  .toggle__subtitle_big {
+  .toggle__subtitle-big {
     @include title_2;
   }
 
-  .toggle__subtitle_medium {
+  .toggle__subtitle-medium {
     @include title_3;
   }
 
-  .toggle__subtitle_small {
+  .toggle__subtitle-small {
     @include title_4;
   }
 

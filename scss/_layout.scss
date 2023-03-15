@@ -106,8 +106,8 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.title {
+h6 {
+//.title {
   font-family: $font-family-accent;
   @include reset;
   @include transition(all $transition-duration $transition-timing-function);

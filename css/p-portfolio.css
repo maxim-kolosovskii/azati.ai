@@ -169,8 +169,8 @@ Top section
       left: 50%; } }
 .section_top .section__title-page {
   font-size: clamp(40px, calc(29px + 4vw), 96px);
-  line-height: 1.18;
-  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
+  font-weight: 700;
+  line-height: 1.01; }
   @media screen and (min-width: 768px) {
     .section_top .section__title-page {
       max-width: 10em; } }
@@ -349,7 +349,7 @@ Filter
       min-width: 170px;
       padding: 25px 1.6vw; } }
 
-.filter_clear {
+.filter__clear {
   background: transparent;
   border: 0 none;
   color: #29a2ff;
@@ -370,9 +370,9 @@ Filter
   -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
-  .filter_clear:hover {
+  .filter__clear:hover {
     color: #000; }
-  .filter_clear:before {
+  .filter__clear:before {
     content: '×';
     font-size: 28px;
     font-weight: 400;
@@ -510,9 +510,9 @@ Filter
     .section_portfolio .card:hover {
       background-color: #151731;
       color: #fff; }
-      .section_portfolio .card:hover .card__title a {
+      .section_portfolio .card:hover .card__title A {
         color: #ff971d; }
-        .section_portfolio .card:hover .card__title a:hover {
+        .section_portfolio .card:hover .card__title A:hover {
           color: #e97e00; }
       .section_portfolio .card:hover .card__more {
         color: #ff971d; }
@@ -533,8 +533,8 @@ Filter
   .section_portfolio .card__img {
     width: 100%; }
     .section_portfolio .card__img IMG {
-      width: 100%;
-      display: block; }
+      display: block;
+      width: 100%; }
   .section_portfolio .card__title {
     font-weight: 800;
     line-height: 1.315; }
@@ -619,33 +619,21 @@ Filter
       transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
       @media screen and (max-width: 1199px) {
         .section_portfolio .card .card__content {
-          padding: 0 1vw 13vh 3vw;
+          padding: 0 1vw 8vh 3vw;
           width: 70%; } }
       @media screen and (max-width: 767px) {
         .section_portfolio .card .card__content {
-          padding: 0 2vw 9vh 3vw; } }
+          padding: 0 2vw 6vh 3vw; } }
       @media screen and (min-width: 1200px) {
         .section_portfolio .card .card__content {
-          padding: 0 1vw 17vh calc(4vw - var(--lg));
+          padding: 0 1vw 10vh 1.7vw;
           width: calc(100% - 150px); } }
       @media screen and (min-width: 1400px) {
         .section_portfolio .card .card__content {
-          padding: 0 1vw 21vh calc(4vw - var(--lg));
+          padding-bottom: 12vh;
           width: calc(100% - 272px); } }
     .section_portfolio .card:hover {
       background-color: transparent; }
-      @media screen and (max-width: 1199px) {
-        .section_portfolio .card:hover {
-          padding-bottom: 5vh; } }
-      @media screen and (max-width: 767px) {
-        .section_portfolio .card:hover {
-          padding-bottom: 3vh; } }
-      @media screen and (min-width: 1200px) {
-        .section_portfolio .card:hover {
-          padding-bottom: 7vh; } }
-      @media screen and (min-width: 1400px) {
-        .section_portfolio .card:hover {
-          padding-bottom: 9vh; } }
       .section_portfolio .card:hover .card__content {
         background-color: #151731; }
         @media screen and (max-width: 1199px) {
@@ -656,17 +644,19 @@ Filter
             padding: 3vh 2vw 3vh 3vw; } }
         @media screen and (min-width: 1200px) {
           .section_portfolio .card:hover .card__content {
-            padding: 4vh 1vw 6vh calc(4vw - var(--lg)); } }
+            padding: 4vh 1vw 6vh 1.7vw; } }
         @media screen and (min-width: 1400px) {
           .section_portfolio .card:hover .card__content {
-            padding: 5vh 1vw 7vh calc(4vw - var(--lg)); } }
+            padding-top: 5vh;
+            padding-bottom: 7vh; } }
     @media screen and (min-width: 1200px) {
       .section_portfolio .card:nth-child(even) .card__content {
-        left: var(--lg);
-        padding-left: 4vw; } }
+        left: 1.7vw; } }
     @media screen and (min-width: 1200px) {
       .section_portfolio .card:nth-child(even) .card__img {
         width: calc(100% - var(--lg)); } }
+  .section_portfolio .card__title A {
+    color: #ff971d !important; }
   @media screen and (max-width: 1199px) {
     .section_portfolio .card__title {
       font-size: clamp(28px, calc(12px + 3vw), 40px);
@@ -700,6 +690,7 @@ Filter
       .section_portfolio .card__tag {
         margin: 0 0 3vh; } }
   .section_portfolio .card__img {
+    background-color: #29a2ff;
     height: 100%;
     overflow: hidden;
     position: absolute;

@@ -129,9 +129,7 @@ Top section
   }
 
   .section__title-page {
-    font-size: clamp(40px, calc(29px + 4vw), 96px);
-    line-height: 1.18;
-    transition: all $transition-duration $transition-timing-function;
+    @include title_1;
 
     @include media-phablet-mn {
       max-width: 10em;

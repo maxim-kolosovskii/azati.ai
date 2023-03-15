@@ -110,7 +110,7 @@ Small top section
       .section_top-small .section__title-page {
         max-width: 14em; } }
     @media screen and (max-width: 1399px) {
-      .section_top-small .section__title-page br {
+      .section_top-small .section__title-page BR {
         display: none; } }
   @media screen and (min-width: 768px) {
     .section_top-small .section__slogan {
@@ -122,12 +122,12 @@ Small top section
         display: block; } }
     @media screen and (min-width: 768px) {
       .section_top-small .section__img {
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        bottom: 0;
         height: 100%;
         object-fit: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
         width: 100%; } }
 
 /*

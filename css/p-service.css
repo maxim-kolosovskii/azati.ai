@@ -169,8 +169,8 @@ Top section
       left: 50%; } }
 .section_top .section__title-page {
   font-size: clamp(40px, calc(29px + 4vw), 96px);
-  line-height: 1.18;
-  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
+  font-weight: 700;
+  line-height: 1.01; }
   @media screen and (min-width: 768px) {
     .section_top .section__title-page {
       max-width: 10em; } }
@@ -438,27 +438,27 @@ Tag Block
       font-size: clamp(36px, calc(29px + 4vw), 90px);
       line-height: 1.065;
       margin-top: 4vh; }
-    .section_toggle .toggle__content .toggle__subtitle_big {
+    .section_toggle .toggle__content .toggle__subtitle-big {
       font-size: clamp(30px, calc(13px + 5vw), 72px);
       font-weight: 700; }
       @media screen and (max-width: 991px) {
-        .section_toggle .toggle__content .toggle__subtitle_big {
+        .section_toggle .toggle__content .toggle__subtitle-big {
           line-height: 1.1; } }
       @media screen and (min-width: 992px) {
-        .section_toggle .toggle__content .toggle__subtitle_big {
+        .section_toggle .toggle__content .toggle__subtitle-big {
           line-height: 1.195; } }
-    .section_toggle .toggle__content .toggle__subtitle_medium {
+    .section_toggle .toggle__content .toggle__subtitle-medium {
       font-size: clamp(28px, calc(12px + 3vw), 40px);
       font-weight: 800;
       line-height: 1.2; }
-    .section_toggle .toggle__content .toggle__subtitle_small {
+    .section_toggle .toggle__content .toggle__subtitle-small {
       font-weight: 800;
       line-height: 1.315; }
       @media screen and (max-width: 991px) {
-        .section_toggle .toggle__content .toggle__subtitle_small {
+        .section_toggle .toggle__content .toggle__subtitle-small {
           font-size: 1.5rem; } }
       @media screen and (min-width: 992px) {
-        .section_toggle .toggle__content .toggle__subtitle_small {
+        .section_toggle .toggle__content .toggle__subtitle-small {
           font-size: clamp(24px, calc(10px + 2vw), 32px); } }
     .section_toggle .toggle__content DL {
       margin: 0;
@@ -758,9 +758,9 @@ Benefits section
     .section_benefits .card:hover {
       background-color: #151731;
       color: #fff; }
-      .section_benefits .card:hover .card__title a {
+      .section_benefits .card:hover .card__title A {
         color: #ff971d; }
-        .section_benefits .card:hover .card__title a:hover {
+        .section_benefits .card:hover .card__title A:hover {
           color: #e97e00; }
       .section_benefits .card:hover .card__more {
         color: #ff971d; }
@@ -781,8 +781,8 @@ Benefits section
   .section_benefits .card__img {
     width: 100%; }
     .section_benefits .card__img IMG {
-      width: 100%;
-      display: block; }
+      display: block;
+      width: 100%; }
   .section_benefits .card__title {
     font-weight: 800;
     line-height: 1.315; }
@@ -931,9 +931,9 @@ Benefits section
     .section_featured .card:hover {
       background-color: #151731;
       color: #fff; }
-      .section_featured .card:hover .card__title a {
+      .section_featured .card:hover .card__title A {
         color: #ff971d; }
-        .section_featured .card:hover .card__title a:hover {
+        .section_featured .card:hover .card__title A:hover {
           color: #e97e00; }
       .section_featured .card:hover .card__more {
         color: #ff971d; }
@@ -954,8 +954,8 @@ Benefits section
   .section_featured .card__img {
     width: 100%; }
     .section_featured .card__img IMG {
-      width: 100%;
-      display: block; }
+      display: block;
+      width: 100%; }
   .section_featured .card__title {
     font-weight: 800;
     line-height: 1.315; }
@@ -1123,7 +1123,7 @@ Benefits section
       .section_tabs .filter__bar-item {
         min-width: 170px;
         padding: 25px 1.6vw; } }
-  .section_tabs .filter_clear {
+  .section_tabs .filter__clear {
     background: transparent;
     border: 0 none;
     color: #29a2ff;
@@ -1144,9 +1144,9 @@ Benefits section
     -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
-    .section_tabs .filter_clear:hover {
+    .section_tabs .filter__clear:hover {
       color: #000; }
-    .section_tabs .filter_clear:before {
+    .section_tabs .filter__clear:before {
       content: '×';
       font-size: 28px;
       font-weight: 400;

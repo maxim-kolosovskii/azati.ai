@@ -47,7 +47,7 @@
     background-color: $color-blue-dark;
     color: #fff;
 
-    .card__title a {
+    .card__title A {
       color: $color-orange;
 
       &:hover {
@@ -85,9 +85,9 @@
   width: 100%;
 
   IMG {
+    display: block;
     //max-width: 100%;
     width: 100%;
-    display: block;
   }
 }
 

@@ -19,7 +19,6 @@ Small top section
 
     @include media-phablet-mx {
       padding: 3vh 0 0;
-
     }
     @include media-phablet-mn {
       padding: 7vh 0;
@@ -31,12 +30,12 @@ Small top section
 
   .section__title-page {
     @include title_2;
+
     @include media-phablet-mn {
       max-width: 14em;
     }
-
     @include media-laptop-mx {
-      br {
+      BR {
         display: none;
       }
     }
@@ -56,13 +55,12 @@ Small top section
     }
 
     @include media-phablet-mn {
-      position: absolute;
-      top: 0;
-      z-index: -1;
-
-      bottom: 0;
       height: 100%;
       object-fit: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
       width: 100%;
     }
   }
