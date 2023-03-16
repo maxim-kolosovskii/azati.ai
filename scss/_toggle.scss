@@ -1,5 +1,4 @@
 /* Tabs with arrow */
-
 .toggle {
 
   @include media-phablet-mn {
@@ -80,13 +79,8 @@
     position: relative;
 
     &:before {
-      content: '';
-      background-color: $color-grey-light;
-      position: absolute;
-      top: 0;
+      @include bg-grey;
       left: -100vw;
-      height: 100%;
-      width: 100vw;
     }
 
     .section__title {
@@ -98,7 +92,6 @@
 
 
 .toggle__content {
-
   padding-right: 3vw;
   position: relative;
   //width: 74%;
@@ -129,14 +122,17 @@
 
   .toggle__subtitle-big {
     @include title_2;
+    margin-top: 4vh;
   }
 
   .toggle__subtitle-medium {
     @include title_3;
+    margin-top: 4vh;
   }
 
   .toggle__subtitle-small {
     @include title_4;
+    margin-top: 4vh;
   }
 
   DL {

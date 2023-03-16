@@ -45,26 +45,11 @@ main[role="main"] {
 
     &:after {
       content: '';
-      //background-color: $color-grey-light;
-      //height: 100%;
       position: absolute;
       top: 0;
       bottom: 0;
       z-index: -1;
-      //width: 50vw;
     }
-    &.container-fluid_right {
-      &:after {
-        right: 0;
-      }
-    }
-    &.container-fluid_left {
-      &:after {
-        left: 0;
-      }
-    }
-  @include media-laptop-mn {
-  }
 }
 
 .container {
@@ -107,12 +92,8 @@ h3,
 h4,
 h5,
 h6 {
-//.title {
-  font-family: $font-family-accent;
-  @include reset;
-  @include transition(all $transition-duration $transition-timing-function);
+  @include title;
 }
-
 .title_1 {
   @include title_1;
 }

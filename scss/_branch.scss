@@ -53,7 +53,6 @@
     LI {
       font-weight: $font-weight-800;
       font-size: 0.9rem; //18px;
-      //line-height: 24px;
       padding-bottom: 18px;
     }
   }
@@ -70,13 +69,9 @@
   .branch__box {
     @include media-tablet-v-mn {
       border-top: 1px solid $color-grey-medium;
-      width: 33%;
-    //}
-
-    //@include media-tablet-v-mn {
       padding: 4vh 16px 2vh;
+      width: 33%;
     }
-
     @include media-laptop-mn {
       padding: 6vh 32px 8vh;
     }

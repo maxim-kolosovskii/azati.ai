@@ -236,10 +236,6 @@ main[role="main"] {
     top: 0;
     bottom: 0;
     z-index: -1; }
-  .container-fluid.container-fluid_right:after {
-    right: 0; }
-  .container-fluid.container-fluid_left:after {
-    left: 0; }
 
 .container {
   -webkit-box-sizing: border-box;
@@ -294,11 +290,25 @@ h6 {
   transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
 
 .title_1 {
+  font-family: "Work Sans", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   font-size: clamp(40px, calc(29px + 4vw), 96px);
   font-weight: 700;
   line-height: 1.01; }
 
 .title_2 {
+  font-family: "Work Sans", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   font-size: clamp(30px, calc(13px + 5vw), 72px);
   font-weight: 700; }
   @media screen and (max-width: 991px) {
@@ -309,11 +319,25 @@ h6 {
       line-height: 1.195; } }
 
 .title_3 {
+  font-family: "Work Sans", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   font-size: clamp(28px, calc(12px + 3vw), 40px);
   font-weight: 800;
   line-height: 1.2; }
 
 .title_4 {
+  font-family: "Work Sans", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   font-weight: 800;
   line-height: 1.315; }
   @media screen and (max-width: 991px) {
@@ -324,6 +348,13 @@ h6 {
       font-size: clamp(24px, calc(10px + 2vw), 32px); } }
 
 .title_5 {
+  font-family: "Work Sans", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   font-weight: 800;
   line-height: 1.33; }
   @media screen and (max-width: 991px) {
@@ -334,6 +365,13 @@ h6 {
       font-size: 1.2rem; } }
 
 .title_6 {
+  font-family: "Work Sans", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   font-weight: 800;
   line-height: 1.45; }
   @media screen and (max-width: 991px) {
@@ -558,7 +596,7 @@ header[role="banner"] {
             height: 100%;
             display: flex;
             align-items: center; } }
-        header[role="banner"] nav[role="navigation"] li .nav__item.active {
+        header[role="banner"] nav[role="navigation"] li .nav__item:not(.nav__item_parent).active {
           pointer-events: none; }
 
 @media screen and (max-width: 767px) {
@@ -803,56 +841,9 @@ footer[role="contentinfo"] {
     @media screen and (min-width: 1400px) {
       footer[role="contentinfo"] .container {
         grid-template-columns: 383px 1fr 1fr; } }
-  footer[role="contentinfo"] .footer__title {
-    font-size: clamp(30px, calc(13px + 5vw), 72px);
-    font-weight: 700; }
-    @media screen and (max-width: 991px) {
-      footer[role="contentinfo"] .footer__title {
-        line-height: 1.1; } }
-    @media screen and (min-width: 992px) {
-      footer[role="contentinfo"] .footer__title {
-        line-height: 1.195; } }
-    @media screen and (min-width: 1400px) {
-      footer[role="contentinfo"] .footer__title {
-        max-width: 6em; } }
-  footer[role="contentinfo"] h3 {
-    display: inline-block;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    position: relative;
-    text-transform: uppercase; }
-    @media screen and (max-width: 991px) {
-      footer[role="contentinfo"] h3 {
-        font-size: 1.25rem;
-        margin-bottom: 16px; } }
-    @media screen and (min-width: 992px) {
-      footer[role="contentinfo"] h3 {
-        font-size: inherit;
-        margin-bottom: 19px; } }
-    footer[role="contentinfo"] h3:after {
-      content: '';
-      background-color: #e1dfdf;
-      display: block;
-      height: 1px;
-      position: absolute;
-      right: 0;
-      left: 0; }
-      @media screen and (max-width: 991px) {
-        footer[role="contentinfo"] h3:after {
-          bottom: -9px;
-          width: 43px; } }
-      @media screen and (min-width: 992px) {
-        footer[role="contentinfo"] h3:after {
-          bottom: -11px;
-          width: 66%; } }
-    footer[role="contentinfo"] h3 a {
-      font-weight: initial;
-      font-family: "Open Sans", "Arial", sans-serif;
-      letter-spacing: initial;
-      text-transform: initial; }
-  footer[role="contentinfo"] a {
+  footer[role="contentinfo"] A {
     color: #29a2ff; }
-    footer[role="contentinfo"] a:hover {
+    footer[role="contentinfo"] A:hover {
       color: #151731; }
   footer[role="contentinfo"] .btn, footer[role="contentinfo"] .btn-icon, footer[role="contentinfo"] .btn-arrow, footer[role="contentinfo"] .icon-filter, footer[role="contentinfo"] .btn-more {
     max-width: 100%; }
@@ -864,8 +855,23 @@ footer[role="contentinfo"] {
         margin-top: 3.5vh; } }
 
 .footer__title {
+  font-family: "Work Sans", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  font-size: clamp(30px, calc(13px + 5vw), 72px);
+  font-weight: 700;
   grid-area: head;
   transition: padding 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
+  @media screen and (max-width: 991px) {
+    .footer__title {
+      line-height: 1.1; } }
+  @media screen and (min-width: 992px) {
+    .footer__title {
+      line-height: 1.195; } }
   @media screen and (max-width: 1199px) {
     .footer__title {
       border-bottom: 1px solid #e1dfdf;
@@ -889,6 +895,45 @@ footer[role="contentinfo"] {
   @media screen and (min-width: 1200px) {
     .footer__title {
       padding-top: 14vh; } }
+  @media screen and (min-width: 1400px) {
+    .footer__title {
+      max-width: 6em; } }
+
+.footer__subtitle {
+  display: inline-block;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  position: relative;
+  text-transform: uppercase; }
+  @media screen and (max-width: 991px) {
+    .footer__subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 16px; } }
+  @media screen and (min-width: 992px) {
+    .footer__subtitle {
+      font-size: inherit;
+      margin-bottom: 19px; } }
+  .footer__subtitle:after {
+    content: '';
+    background-color: #e1dfdf;
+    display: block;
+    height: 1px;
+    position: absolute;
+    right: 0;
+    left: 0; }
+    @media screen and (max-width: 991px) {
+      .footer__subtitle:after {
+        bottom: -9px;
+        width: 43px; } }
+    @media screen and (min-width: 992px) {
+      .footer__subtitle:after {
+        bottom: -11px;
+        width: 66%; } }
+  .footer__subtitle A {
+    font-weight: initial;
+    font-family: "Open Sans", "Arial", sans-serif;
+    letter-spacing: initial;
+    text-transform: initial; }
 
 .footer__col:not(:last-child) {
   grid-area: col1; }
@@ -930,17 +975,17 @@ footer[role="contentinfo"] {
     border-left: 1px solid #e1dfdf;
     padding: 14vh 2vw 10vh; } }
 
-.address {
+.footer__address {
   font-style: normal;
   max-width: 19em;
   padding-bottom: 2.8vh; }
   @media screen and (max-width: 991px) {
-    .address {
+    .footer__address {
       line-height: 26px; } }
   @media screen and (min-width: 992px) {
-    .address {
+    .footer__address {
       line-height: 32px; } }
-  .address SPAN {
+  .footer__address SPAN {
     padding-top: 1px;
     padding-bottom: 2px; }
 

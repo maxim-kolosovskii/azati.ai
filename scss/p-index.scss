@@ -1,0 +1,312 @@
+@import 'variables';
+
+@import "section";
+
+@import "section-top";
+
+
+/* Services section */
+.section_services {
+  //display: none;
+
+  @import "card";
+
+  .card-outer {
+    border-top: 1px solid $color-grey-medium;
+  }
+
+  .card {
+    display: block;
+
+    &:hover {
+
+      //.card__title A {
+      //  color: $color-orange;
+      //
+      //  &:hover {
+      //    color: darken($color-orange, 10%);
+      //  }
+      //}
+
+      .card__title {
+        color: $color-orange;
+      }
+
+      .card__more {
+        color: $color-blue-dark;
+
+        span {
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI1IDE2IiB2aWV3Qm94PSIwIDAgMjUgMTYiPjxwYXRoIGQ9Ik0xNi4yIDIuMWMtLjQtLjQtLjQtMS4xIDAtMS42LjQtLjQgMS4xLS40IDEuNiAwbDYuNyA2LjdjLjQuNC40IDEuMSAwIDEuNmwtNi43IDYuN2MtLjQuNC0xLjEuNC0xLjYgMC0uNC0uNC0uNC0xLjEgMC0xLjZMMjEgOS4xSDEuNEMuOCA5LjEuMyA4LjYuMyA4cy41LTEuMSAxLjEtMS4xaDE5LjVsLTQuNy00Ljh6IiBzdHlsZT0iZmlsbDojZmY5NzFkIi8+PC9zdmc+"); //orange icon
+        }
+      }
+    }
+  }
+
+  .card__more {
+    color: $color-blue-dark;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: $font-family-accent;
+    font-weight: $font-weight-700;
+    letter-spacing: 2px;
+    line-height: 1.9;
+    margin-left: auto;
+    padding: 5px;
+    text-transform: uppercase;
+
+    @include media-tablet-v-mn {
+      font-size: 0.8rem; //16px;
+    }
+
+    span {
+      background: url("../img/icons/i-arrow-min.svg") no-repeat;
+      margin-left: calc(var(--md) + 2px);
+      width: 25px;
+      height: 16px;
+      transition: all $transition-duration-fast $transition-timing-function;
+    }
+
+    //&:hover {
+    //  span {
+    //    @include transform(translateX(5px));
+    //  }
+    //}
+  }
+
+  @include media-phablet-mx {
+
+    .btn_right {
+      margin-top: -1px;
+    }
+  }
+  @include media-phablet-mn {
+
+    .btn_right {
+      margin-left: auto;
+      max-width: 50%;
+      padding-left: 4vw;
+      padding-right: 4vw;
+    }
+  }
+  @include media-tablet-h-mn {
+
+    .btn_right {
+      max-width: calc(25% + 3px);
+    }
+  }
+}
+
+
+/* Toggle section */
+.section_toggle {
+  overflow: hidden;
+  @include media-desktop-mn {
+    padding-bottom: 70px;
+  }
+  //display: none;
+
+  .section__img-outer {
+    @include transition(all $transition-duration $transition-timing-function);
+
+    @include media-netbook-mx {
+      display: none;
+    }
+    @include media-netbook-mn {
+      border-left: 1px solid $color-grey-medium;
+      display: flex;
+      align-items: flex-end;
+      max-width: 24vw;
+      min-height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+
+      IMG {
+        @include box-shadow(0 0 8px 0 rgba(0, 0, 0, 0.05));
+        display: block;
+        object-fit: cover;
+        margin-top: auto;
+        width: 100%;
+        transition: all $transition-duration $transition-timing-function;
+      }
+    }
+    @include media-laptop-mn {
+      max-width: 28vw;
+    }
+    @include media-desktop-mn {
+      max-width: 30vw;
+
+      IMG {
+        margin-bottom: -63px;
+      }
+    }
+  }
+
+  @import "toggle";
+
+  .toggle__tabs {
+    background-color: #fff;
+
+    @include media-phablet-mn {
+      border-top: 1px solid $color-grey-medium;
+      padding-bottom: 5vh;
+      max-width: 408px;
+      width: 26%;
+    }
+
+    li {
+      text-transform: uppercase;
+
+      @include media-phablet-mx {
+        letter-spacing: 1px;
+
+        &:not(:first-child) {
+          margin-top: 5.5vh;
+        }
+      }
+
+      @include media-phablet-mn {
+        border-bottom: 1px solid #fff;
+        font-size: 0.9rem; //18px;
+        line-height: 1.61;  //26px;
+        letter-spacing: 2px;
+
+        &.current,
+        &:hover A {
+
+          &:after {
+            right: -14px;
+          }
+        }
+      }
+
+      SPAN {
+        color: $color-grey-dark;
+      }
+    }
+  }
+
+  .toggle__content {
+    padding-left: 3vw;
+    width: 74%;
+
+    &:after {
+      @include bg-grey;
+      border-top: 1px solid $color-grey-medium;
+      border-bottom: 1px solid #e1dfdf;
+      right: -100vw;
+      top: -1px;
+    }
+
+    @include media-phablet-mx {
+      display: none;
+    }
+    @include media-phablet-mn {
+      background-color: $color-grey-light;
+      border: 1px solid $color-grey-medium;
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+
+      .toggle__content-box {
+
+        &.visible {
+
+          @include media-netbook-mn {
+            max-width: 35vw;
+          }
+        }
+      }
+
+      .toggle__title {
+
+        SPAN {
+          padding-left: 16px;
+        }
+      }
+    }
+    @include media-netbook-mn {
+      padding-top: 11vh;
+      padding-bottom: 11vh;
+    }
+    @include media-desktop-mn {
+      min-height: 710px;
+      padding-bottom: 27vh;
+    }
+  }
+}
+
+
+/* Hire section */
+.section_hire {
+  overflow: hidden;
+  //display: none;
+
+  .container {
+    @include media-laptop-mn {
+      display: flex;
+    }
+  }
+
+  .section__title {
+    background-color: $color-blue;
+    color: #fff;
+    margin: 0;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    position: relative;
+
+    &:before {
+      @include bg-blue;
+      left: -100vw;
+    }
+
+    SPAN {
+      width: 20em;
+    }
+
+    @include media-laptop-mn {
+      min-width: fit-content;
+      padding-right: 3.5vw;
+    }
+  }
+
+  @import "numbers";
+}
+
+
+/* Company section */
+.section_company {
+  background-color: $color-grey-light;
+  overflow-x: hidden;
+  //display: none;
+
+  @include media-phablet-mx {
+    padding: 4.5vh 0 3vh;
+  }
+  @include media-phablet-mn {
+    padding: 4.5vh 0;
+  }
+
+  .section__title {
+
+    @include media-phablet-mn {
+      background-color: $color-grey-light;
+      background: linear-gradient(90deg, rgba(244,244,245,0) 0%, rgba(244,244,245,1) 10%, rgba(244,244,245,1) 90%, rgba(244,244,245,0) 100%);
+      margin-left: -50px;
+      max-width: fit-content;
+      padding: 3vh 99px 5vh 50px;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  @import "company";
+}
+
+
+@import "section-reviews";
+
+
+@import "section-form";

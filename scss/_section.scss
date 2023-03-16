@@ -17,9 +17,7 @@ General Landing styles
 }
 
 .section__title {
-  font-size: clamp(30px, calc(13px + 5vw), 72px);
-  line-height: 1.175;
-  transition: all $transition-duration $transition-timing-function;
+  @include title_2;
 
   @include media-phablet-mx {
     padding-right: 3vw;

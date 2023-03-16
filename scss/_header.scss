@@ -240,7 +240,7 @@ header[role="banner"] {
         //  }
         //}
 
-        &.active {
+        &:not(.nav__item_parent).active {
           pointer-events: none;
         //  &:after {
         //    width: 100%;

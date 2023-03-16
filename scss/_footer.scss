@@ -33,58 +33,7 @@ footer[role="contentinfo"] {
     }
   }
 
-  .footer__title {
-    @include title_2;
-
-    @include media-laptop-mn {
-      max-width: 6em;
-    }
-  }
-
-  h3 {
-    display: inline-block;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    position: relative;
-    text-transform: uppercase;
-
-    @include media-tablet-v-mx {
-      font-size: 1.25rem; //20px
-      margin-bottom: 16px;
-    }
-    @include media-tablet-v-mn {
-      font-size: inherit;
-      margin-bottom: 19px;
-    }
-
-    &:after {
-      content: '';
-      background-color: $color-grey-medium;
-      display: block;
-      height: 1px;
-      position: absolute;
-      right: 0;
-      left: 0;
-
-      @include media-tablet-v-mx {
-        bottom: -9px;
-        width: 43px;
-      }
-      @include media-tablet-v-mn {
-        bottom: -11px;
-        width: 66%;
-      }
-    }
-
-    a {
-      font-weight: initial;
-      font-family: $font-family-base;
-      letter-spacing: initial;
-      text-transform: initial;
-    }
-  }
-
-  a {
+  A {
     color: $color-blue;
 
     &:hover {
@@ -105,6 +54,7 @@ footer[role="contentinfo"] {
 }
 
 .footer__title {
+  @include title_2;
   grid-area: head;
   transition: padding $transition-duration $transition-timing-function;
 
@@ -135,6 +85,52 @@ footer[role="contentinfo"] {
   }
   @include media-netbook-mn {
     padding-top: 14vh;
+  }
+  @include media-laptop-mn {
+    max-width: 6em;
+  }
+}
+
+.footer__subtitle {
+  display: inline-block;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  position: relative;
+  text-transform: uppercase;
+
+  @include media-tablet-v-mx {
+    font-size: 1.25rem; //20px
+    margin-bottom: 16px;
+  }
+  @include media-tablet-v-mn {
+    font-size: inherit;
+    margin-bottom: 19px;
+  }
+
+  &:after {
+    content: '';
+    background-color: $color-grey-medium;
+    display: block;
+    height: 1px;
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    @include media-tablet-v-mx {
+      bottom: -9px;
+      width: 43px;
+    }
+    @include media-tablet-v-mn {
+      bottom: -11px;
+      width: 66%;
+    }
+  }
+
+  A {
+    font-weight: initial;
+    font-family: $font-family-base;
+    letter-spacing: initial;
+    text-transform: initial;
   }
 }
 
@@ -190,7 +186,7 @@ footer[role="contentinfo"] {
   }
 }
 
-.address {
+.footer__address {
   font-style: normal;
   max-width: 19em;
   padding-bottom: 2.8vh;

@@ -53,9 +53,21 @@ General Landing styles
       margin: 18vh 0; } }
 
 .section__title {
+  font-family: "Work Sans", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   font-size: clamp(30px, calc(13px + 5vw), 72px);
-  line-height: 1.175;
-  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
+  font-weight: 700; }
+  @media screen and (max-width: 991px) {
+    .section__title {
+      line-height: 1.1; } }
+  @media screen and (min-width: 992px) {
+    .section__title {
+      line-height: 1.195; } }
   @media screen and (max-width: 767px) {
     .section__title {
       padding-right: 3vw;
@@ -168,6 +180,13 @@ Top section
     .section_top .section__content-left:after {
       left: 50%; } }
 .section_top .section__title-page {
+  font-family: "Work Sans", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   font-size: clamp(40px, calc(29px + 4vw), 96px);
   font-weight: 700;
   line-height: 1.01; }
@@ -404,6 +423,13 @@ Filter
     .section_portfolio .tag__col:not(:first-child) {
       margin-left: 4vw; } }
   .section_portfolio .tag__title {
+    font-family: "Work Sans", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     font-weight: 800;
     line-height: 1.33;
     margin-bottom: 1.7vh; }
@@ -508,16 +534,13 @@ Filter
       .section_portfolio .card {
         padding: 7vh 5.5vw 6vh 2.5vw; } }
     .section_portfolio .card:hover {
-      background-color: #151731;
-      color: #fff; }
+      background-color: #151731; }
       .section_portfolio .card:hover .card__title A {
         color: #ff971d; }
         .section_portfolio .card:hover .card__title A:hover {
           color: #e97e00; }
-      .section_portfolio .card:hover .card__more {
-        color: #ff971d; }
-        .section_portfolio .card:hover .card__more span {
-          background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI1IDE2IiB2aWV3Qm94PSIwIDAgMjUgMTYiPjxwYXRoIGQ9Ik0xNi4yIDIuMWMtLjQtLjQtLjQtMS4xIDAtMS42LjQtLjQgMS4xLS40IDEuNiAwbDYuNyA2LjdjLjQuNC40IDEuMSAwIDEuNmwtNi43IDYuN2MtLjQuNC0xLjEuNC0xLjYgMC0uNC0uNC0uNC0xLjEgMC0xLjZMMjEgOS4xSDEuNEMuOCA5LjEuMyA4LjYuMyA4cy41LTEuMSAxLjEtMS4xaDE5LjVsLTQuNy00Ljh6IiBzdHlsZT0iZmlsbDojZmY5NzFkIi8+PC9zdmc+"); }
+      .section_portfolio .card:hover .card__txt {
+        color: #fff; }
   .section_portfolio .card__content {
     display: flex;
     flex-direction: column; }
@@ -536,6 +559,13 @@ Filter
       display: block;
       width: 100%; }
   .section_portfolio .card__title {
+    font-family: "Work Sans", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     font-weight: 800;
     line-height: 1.315; }
     @media screen and (max-width: 991px) {
@@ -553,32 +583,6 @@ Filter
       .section_portfolio .card__txt {
         font-size: clamp(0.75rem, calc(5px + 1vw), 20px);
         padding-bottom: 2vh; } }
-  .section_portfolio .card__footer {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: auto; }
-  .section_portfolio .card__more {
-    display: flex;
-    align-items: center;
-    font-family: "Work Sans", "Arial", sans-serif;
-    font-weight: 700;
-    letter-spacing: 2px;
-    line-height: 1.9;
-    padding: 5px;
-    text-transform: uppercase; }
-    @media screen and (min-width: 992px) {
-      .section_portfolio .card__more {
-        font-size: 0.8rem; } }
-    .section_portfolio .card__more span {
-      background: url("../img/icons/i-arrow-min.svg") no-repeat;
-      margin-left: calc(var(--md) + 2px);
-      width: 25px;
-      height: 16px;
-      transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
-    .section_portfolio .card__more:hover span {
-      -webkit-transform: translateX(5px);
-      -ms-transform: translateX(5px);
-      transform: translateX(5px); }
   .section_portfolio .card-outer + .btn {
     margin-top: -1px; }
     @media screen and (min-width: 768px) {
@@ -659,11 +663,25 @@ Filter
     color: #ff971d !important; }
   @media screen and (max-width: 1199px) {
     .section_portfolio .card__title {
+      font-family: "Work Sans", "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
       font-size: clamp(28px, calc(12px + 3vw), 40px);
       font-weight: 800;
       line-height: 1.2; } }
   @media screen and (min-width: 1200px) and (max-width: 1699px) {
     .section_portfolio .card__title {
+      font-family: "Work Sans", "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
       font-weight: 800;
       line-height: 1.315; } }
   @media screen and (min-width: 1200px) and (max-width: 1699px) and (max-width: 991px) {
@@ -675,6 +693,13 @@ Filter
 
   @media screen and (min-width: 1700px) {
     .section_portfolio .card__title {
+      font-family: "Work Sans", "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
       font-size: clamp(28px, calc(12px + 3vw), 40px);
       font-weight: 800;
       line-height: 1.2; } }

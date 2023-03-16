@@ -61,13 +61,39 @@
   }
 }
 
+@mixin bg-blue {
+  content: '';
+  background-color: $color-blue;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+}
+
+@mixin bg-grey {
+  content: '';
+  background-color: $color-grey-light;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+}
+
+@mixin title {
+  font-family: $font-family-accent;
+  @include reset;
+  @include transition(all $transition-duration $transition-timing-function);
+}
+
 @mixin title_1 {
+  @include title;
   font-size: clamp(40px, calc(29px + 4vw), 96px);
   font-weight: $font-weight-700;
   line-height: 1.01; //98px;
 }
 
 @mixin title_2 {
+  @include title;
   font-size: clamp(30px, calc(13px + 5vw), 72px);
   font-weight: $font-weight-700;
 
@@ -80,6 +106,7 @@
 }
 
 @mixin title_3 {
+  @include title;
   font-size: clamp(28px, calc(12px + 3vw), 40px);
   font-weight: $font-weight-800;
   line-height: 1.2; //48px;
@@ -93,6 +120,7 @@
 }
 
 @mixin title_4 {
+  @include title;
   font-weight: $font-weight-800;
   line-height: 1.315; //42px;
 
@@ -105,6 +133,7 @@
 }
 
 @mixin title_5 {
+  @include title;
   font-weight: $font-weight-800;
   line-height: 1.33; //32px;
 
@@ -117,6 +146,7 @@
 }
 
 @mixin title_6 {
+  @include title;
   font-weight: $font-weight-800;
   line-height: 1.45; //26px;
 
