@@ -113,22 +113,21 @@ h6 {
   @include title_6;
 }
 
-ul,
-ol {
+UL,
+OL {
   @include reset;
 }
 
-nav ul {
+NAV UL {
   list-style: none;
 }
 
 *::selection {
-  background: $color-blue;
-  //background: $color-orange;
+  background: $color-orange;
   color: #fff;
 }
 
-a {
+A {
   color: $font-color-base;
   cursor: pointer;
   text-decoration: none;
@@ -141,10 +140,18 @@ a {
   a:focus,
   &:active,
   &:hover {
-    color: $color-blue;
+    //color: $color-blue;
     outline: none;
     //text-decoration: none;
     //text-decoration: underline;
+  }
+}
+
+P A {
+  a:focus,
+  &:active,
+  &:hover {
+    color: $color-blue;
   }
 }
 
@@ -163,7 +170,7 @@ sup {
   @include box-sizing;
 }
 
-hr {
+HR {
   border: none;
   border-top: 1px solid $color-grey-medium;
   height: 0;

@@ -12,7 +12,8 @@ Top section
   //animation-name: sectionTop;
 
   @include media-phablet-mn {
-    margin-bottom: 68px;
+    //margin-bottom: 68px;
+    padding-bottom: 68px;
     min-height: 700px;
   }
 
@@ -142,9 +143,6 @@ Top section
   }
 
   .section__slogan {
-    @include media-phablet-mx {
-      padding: 2vh 3vw 1vh 0;
-    }
     @include media-phablet-mn {
       max-width: 22em;
     }

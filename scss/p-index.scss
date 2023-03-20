@@ -32,6 +32,10 @@
         color: $color-orange;
       }
 
+      .card__txt {
+        color: #fff;
+      }
+
       .card__more {
         color: $color-blue-dark;
 
@@ -100,7 +104,7 @@
 
 /* Toggle section */
 .section_toggle {
-  overflow: hidden;
+  //overflow: hidden;
   @include media-desktop-mn {
     padding-bottom: 70px;
   }
@@ -240,7 +244,7 @@
 
 /* Hire section */
 .section_hire {
-  overflow: hidden;
+  //overflow: hidden;
   //display: none;
 
   .container {
@@ -279,7 +283,7 @@
 /* Company section */
 .section_company {
   background-color: $color-grey-light;
-  overflow-x: hidden;
+  //overflow-x: hidden;
   //display: none;
 
   @include media-phablet-mx {

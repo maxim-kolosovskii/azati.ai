@@ -148,39 +148,39 @@
             <div class="container">
                 <picture class="section__img-outer">
                     <source srcset="img/bg-form.webp" type="image/webp">
-                    <img src="img/bg-form-min.jpg" alt="">
+                    <img class="lazy-img" data-src="img/bg-form-min.jpg" alt="">
                 </picture>
 
                 <form method="post" id="main-form" class="form">
-                    <fieldset class="form__group form__group_reverse">
+                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
                         <input class="form__control" id="form-first" type="text" name="firstname" placeholder="" required>
                         <label class="form__label" for="form-first">First Name<sup>*</sup></label>
                     </fieldset>
 
-                    <fieldset class="form__group form__group_reverse">
+                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
                         <input class="form__control" id="form-last" type="text" name="lastname" placeholder="" required>
                         <label class="form__label" for="form-last">Last Name<sup>*</sup></label>
                     </fieldset>
 
-                    <fieldset class="form__group form__group_reverse">
+                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
                         <input class="form__control" id="form-email" type="email" name="email" placeholder="" required>
                         <label class="form__label" for="form-email">Email<sup>*</sup></label>
                     </fieldset>
 
-                    <fieldset class="form__group form__group_reverse">
+                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
                         <textarea  id="form-message" name="form-message" rows ="3" cols="30" placeholder=""></textarea>
                         <label class="form__label" for="form-message">Type your message here<sup>*</sup></label>
                     </fieldset>
 
-                    <fieldset class="form__group form__group_checkbox">
-                        <label class="form__checkbox">
-                            <input type="checkbox" name="accept" required>
+                    <fieldset class="form__group form__group_checkbox" data-aos="fade-left" data-aos-duration="500">
+                        <label class="form__checkbox" for="form-checkbox">
+                            <input id="form-checkbox" type="checkbox" required>
                             <span class="checkmark"></span>
                         </label>
                         <span class="form__checkbox-txt">I permit to collect my data according to <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms-of-use" target="_blank" rel="noopener noreferrer">Terms of Use</a>.</span>
                     </fieldset>
 
-                    <fieldset class="form__group">
+                    <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
                         <input class="btn btn_right" type="submit" value="Send message">
                     </fieldset>
                 </form>
@@ -306,6 +306,13 @@
             header.classList.remove("sticky");
         }
     }
+</script>
+
+<!-- Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
 </script>
 
 </body>

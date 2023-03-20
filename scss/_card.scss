@@ -53,10 +53,6 @@
         color: darken($color-orange, 10%);
       }
     }
-
-    .card__txt {
-      color: #fff;
-    }
   }
 }
 
@@ -81,7 +77,6 @@
 
   IMG {
     display: block;
-    //max-width: 100%;
     width: 100%;
   }
 }

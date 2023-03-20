@@ -381,19 +381,19 @@ h6 {
     .title_6 {
       font-size: 0.9rem; } }
 
-ul,
-ol {
+UL,
+OL {
   margin: 0;
   padding: 0; }
 
-nav ul {
+NAV UL {
   list-style: none; }
 
 *::selection {
-  background: #29a2ff;
+  background: #ff971d;
   color: #fff; }
 
-a {
+A {
   color: #151731;
   cursor: pointer;
   text-decoration: none;
@@ -401,9 +401,11 @@ a {
   -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
-  a a:focus, a:active, a:hover {
-    color: #29a2ff;
+  A a:focus, A:active, A:hover {
     outline: none; }
+
+P A a:focus, P A:active, P A:hover {
+  color: #29a2ff; }
 
 blockquote {
   margin: 0; }
@@ -419,7 +421,7 @@ sup {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-hr {
+HR {
   border: none;
   border-top: 1px solid #e1dfdf;
   height: 0;

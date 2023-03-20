@@ -3,9 +3,11 @@ General Landing styles
 */
 .section {
   @include margin-auto;
+  position: relative;
   @include transition(all $transition-duration-fast $transition-timing-function);
 
   &:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form) {
+    overflow: hidden;
 
     @include media-phablet-mx {
       margin: 10vh 0;
@@ -32,6 +34,9 @@ General Landing styles
   line-height: 1.59;
   margin: 0;
 
+  @include media-phablet-mx {
+    padding: 2vh 3vw 1vh 0;
+  }
   @include media-phablet-mn {
     padding: 4.5vh 0 0;
   }

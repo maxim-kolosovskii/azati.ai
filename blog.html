@@ -101,7 +101,7 @@
     </section><!-- end top section -->
 
 
-    <section class="section section_blog">
+    <section class="section section_blog" data-aos="fade-up">
         <div class="container">
             <div itemscope itemtype="http://schema.org/Blog" class="filter">
                 <div class="filter__bar">
@@ -166,7 +166,7 @@
                                     Oil&Gas / AI/ML
                                 </p>
                                 <p itemprop="articleBody" class="card__txt card__txt_overflow">
-                                    With the development of artificial intelligence, people introduced it into many areas: healthcare, oil&gas, insurance, etc. Now, this thriving technology is making its contribution to weather forecasting.If you are interested – stay with us.
+                                    With the development of artificial intelligence, people introduced it into many areas: healthcare, oil&gas, insurance, etc. Now, this thriving technology is making its contribution to weather forecasting.If you are interested — stay with us.
                                 </p>
                             </div>
                         </div><!-- end card #3 -->
@@ -185,7 +185,7 @@
                                     Oil&Gas / AI/ML
                                 </p>
                                 <p itemprop="articleBody" class="card__txt card__txt_overflow">
-                                    With the development of artificial intelligence, people introduced it into many areas: healthcare, oil&gas, insurance, etc. Now, this thriving technology is making its contribution to weather forecasting.If you are interested – stay with us.
+                                    With the development of artificial intelligence, people introduced it into many areas: healthcare, oil&gas, insurance, etc. Now, this thriving technology is making its contribution to weather forecasting.If you are interested — stay with us.
                                 </p>
                             </div>
                         </div><!-- end card #4 -->
@@ -210,10 +210,10 @@
                         </div><!-- end card #5 -->
 
                         <div itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="card">
-                            <a class="card__img">
+                            <a class="card__img" href="blog-internal.html">
                                 <img itemprop="image" class="lazy-img" data-src="img/to_delete/tmp-blog-03.webp" alt="">
                             </a>
-                            <div class="card__content" href="blog-internal.html">
+                            <div class="card__content">
                                 <h3 itemprop="headline" class="card__title">
                                     <a href="blog-internal.html">
                                         Artificial Intelligence in Meteorology Industry 2022
@@ -228,7 +228,7 @@
                             </div>
                         </div><!-- end card #6 -->
                     </div>
-                    <a class="btn btn_empty btn_right" href="/">Load More</a>
+                    <a class="btn btn_empty btn_right" href="/" data-aos="fade-left">Load More</a>
                 </div>
 
                 <div id="Technology" class="filter__content" style="display:none">
@@ -286,38 +286,35 @@
                 </picture>
 
                 <form method="post" id="main-form" class="form">
-                    <fieldset class="form__group form__group_reverse">
+                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
                         <input class="form__control" id="form-first" type="text" name="firstname" placeholder="" required>
                         <label class="form__label" for="form-first">First Name<sup>*</sup></label>
                     </fieldset>
 
-                    <fieldset class="form__group form__group_reverse">
+                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
                         <input class="form__control" id="form-last" type="text" name="lastname" placeholder="" required>
                         <label class="form__label" for="form-last">Last Name<sup>*</sup></label>
                     </fieldset>
 
-                    <fieldset class="form__group form__group_reverse">
+                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
                         <input class="form__control" id="form-email" type="email" name="email" placeholder="" required>
                         <label class="form__label" for="form-email">Email<sup>*</sup></label>
                     </fieldset>
 
-                    <fieldset class="form__group form__group_reverse">
+                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
                         <textarea  id="form-message" name="form-message" rows ="3" cols="30" placeholder=""></textarea>
                         <label class="form__label" for="form-message">Type your message here<sup>*</sup></label>
                     </fieldset>
 
-                    <fieldset class="form__group form__group_checkbox">
-<!--                        <label class="form__checkbox" for="form-checkbox">-->
-                        <label class="form__checkbox">
-                            <!--<input id="form-radio" type="radio" name="form-checkbox" required>-->
-<!--                            <input id="form-checkbox" type="checkbox" name="form-checkbox" required>-->
-                            <input type="checkbox" required>
+                    <fieldset class="form__group form__group_checkbox" data-aos="fade-left" data-aos-duration="500">
+                        <label class="form__checkbox" for="form-checkbox">
+                            <input id="form-checkbox" type="checkbox" required>
                             <span class="checkmark"></span>
                         </label>
                         <span class="form__checkbox-txt">I permit to collect my data according to <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms-of-use" target="_blank" rel="noopener noreferrer">Terms of Use</a>.</span>
                     </fieldset>
 
-                    <fieldset class="form__group">
+                    <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
                         <input class="btn btn_right" type="submit" value="Send message">
                     </fieldset>
                 </form>
@@ -470,9 +467,16 @@
     (function(){
         var cut = document.getElementsByClassName('card__txt_overflow');
         for( var i = 0; i < cut.length; i++ ){
-            cut[i].innerText = cut[i].innerText.slice(0,120) + '...';
+            cut[i].innerText = cut[i].innerText.slice(0,130) + '...';
         }
     })();
+</script>
+
+<!-- Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
 </script>
 
 </body>
