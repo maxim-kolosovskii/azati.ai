@@ -125,12 +125,12 @@
                     <span class="tag__item">Human resources</span>
                     <span class="tag__item">Entertainment</span>
                     <span class="tag__item">Marketing</span>
-                    <span class="tag__item active">AI/ML</span>
+                    <span class="tag__item">AI/ML</span>
                     <span class="tag__item">Document Digitization</span>
                     <span class="tag__item">DevOps</span>
                     <span class="tag__item">UX/UI</span>
                     <span class="tag__item">Quality Assurance</span>
-                    <span class="tag__item active">Finance</span>
+                    <span class="tag__item">Finance</span>
                     <span class="tag__item">Custom Software Engineering</span>
                 </div>
 
@@ -376,76 +376,17 @@
 </script>
 
 <!-- Tag active -->
-<!--<script type="text/javascript">-->
-<!--    var tagitem = document.getElementsByClassName("tag__item");-->
-
-<!--    tagitem.onclick = function() {-->
-<!--        if (tagitem.classList.contains("active")) {-->
-<!--            tagitem.classList.remove("active");-->
-<!--        } else {-->
-<!--            tagitem.classList.add("active");-->
-<!--        }-->
-<!--    }-->
-<!--</script>-->
-
-<!--<script type="text/javascript">-->
-<!--    var tagitem = document.getElementsByClassName(-->
-<!--        "tag__item","span",document.getElementById("photo_wrap")-->
-<!--    );-->
-<!--    for (var i=0; i < tagitem.length; i++) {-->
-<!--        tagitem[i].onclick = function(){-->
-<!--            alert("Finaly!");-->
-<!--        }-->
-<!--    };-->
-<!--</script>-->
-
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>-->
-<!--<script type="text/javascript">-->
-<!--    document.querySelector('.tag__item').addEventListener('click', function(event) {-->
-<!--        event.preventDefault();-->
-<!--        var tagitem = document.querySelector('.tag__item');-->
-<!--        if (tagitem.classList.contains('active')) {-->
-<!--            tagitem.classList.remove('active');-->
-<!--        } else {-->
-<!--            tagitem.classList.add('active');-->
-<!--        }-->
-<!--    });-->
-<!--</script>-->
-
-<!--<script type="text/javascript">-->
-<!--    const elements = document.querySelectorAll('.tag__item');-->
-<!--    elements.forEach((element) => {-->
-<!--        element.classList.add('italic');-->
-<!--    });-->
-<!--</script>-->
-
-<!--<script type="text/javascript">-->
-<!--    var tagitem = document.getElementsByClassName('tag__item');-->
-
-<!--    for (var i = 0; i < tagitem.length; i++) {-->
-<!--        tagitem[i].addEventListener('click', function () {-->
-<!--            // tagitem.classList.add('active');-->
-<!--            alert("Finaly!");-->
-<!--        });-->
-<!--    }-->
-<!--</script>-->
-
 <script type="text/javascript">
-    var tagitem = document.getElementsByClassName('tag__item');
+    const boxes = Array.from(document.getElementsByClassName("tag__item"));
 
-    for (var i = 0; i < tagitem.length; i++) {
-        tagitem[i].addEventListener('click', function () {
-            alert("Finaly!");
-            // tagitem.classList.add('active');
+    boxes.forEach(box => {
+        box.addEventListener("click", function handleClick(event) {
+            console.log("box clicked", event);
+
+            box.classList.add("active");
         });
-    }
+    });
 </script>
-
-<!--<script type="text/javascript">-->
-<!--    document.getElementsByClassName('tag__item').onclick = function(){-->
-<!--        alert("Finaly!");-->
-<!--    }-->
-<!--</script>-->
 
 <!-- Sticky header -->
 <script>

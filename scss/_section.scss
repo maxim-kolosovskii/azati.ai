@@ -6,7 +6,7 @@ General Landing styles
   position: relative;
   @include transition(all $transition-duration-fast $transition-timing-function);
 
-  &:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form) {
+  &:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form):not(.section_career) {
     overflow: hidden;
 
     @include media-phablet-mx {

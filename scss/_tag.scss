@@ -27,12 +27,7 @@ Tag Block
   border: 1px solid $color-grey-medium;
   display: inline-flex;
   align-items: center;
-  font-family: $font-family-accent;
-  font-size: 0.8rem;
-  font-weight: $font-weight-500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  white-space: nowrap;
+  @include title_7;
   @include transition(all $transition-duration $transition-timing-function);
 
   @include media-tablet-v-mx {
