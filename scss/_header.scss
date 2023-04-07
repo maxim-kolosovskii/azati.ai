@@ -9,26 +9,12 @@ header[role="banner"] {
   align-items: stretch;
   @include sticky;
   top: 0;
-  //margin-top: 1px;
-  //position: fixed;
-  //left: 0;
-  //right: 0;
   z-index: 9;
   height: var(--header-height);
 
   @include transition(all $transition-duration $transition-timing-function);
 
   &.sticky {
-    //@include media-phablet-mx {
-    //  height: calc(var(--header-height) - 10px);
-    //}
-    //@include media-phablet-mn {
-    //  height: calc(var(--header-height) - 12px);
-    //}
-    //@include media-netbook-mn {
-    //  height: calc(var(--header-height) - 40px);
-    //}
-
     height: var(--header-height-sticky);
   }
 
@@ -38,12 +24,9 @@ header[role="banner"] {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
     text-align: center;
     transition: all $transition-duration $transition-timing-function;
-
-    //@include media-netbook-mn {
-      position: relative;
-    //}
   }
 
   .logo-azati {
@@ -81,7 +64,6 @@ header[role="banner"] {
 /* Main navigation menu */
 
   nav[role="navigation"] {
-
     @include media-netbook-mn {
       height: 100%;
     }
@@ -182,12 +164,6 @@ header[role="banner"] {
 
       .nav__item {
         color: $font-color-base;
-        //font-family: $font-family-accent;
-        //font-weight: $font-weight-500;
-        //position: relative;
-        //text-transform: uppercase;
-        //white-space: nowrap;
-
         @include underline_link;
 
         @include media-netbook-mx {
@@ -203,55 +179,13 @@ header[role="banner"] {
           align-items: center;
         }
 
-        //&:after {
-        //  content: '';
-        //  background-color: $color-blue;
-        //  @include margin-auto;
-        //  position: absolute;
-        //  right: 0;
-        //  bottom: 0;
-        //  left: 0;
-        //  width: 0;
-        //  //width: 100%;
-        //
-        //  @include media-netbook-mx {
-        //    height: 3px;
-        //  }
-        //  @include media-netbook-mn {
-        //    height: 5px;
-        //  }
-        //}
-
-        //&:hover {
-        //  &:after {
-        //    width: 100%;
-        //
-        //    // Animation
-        //    @include x-animation(widthScale .25s $transition-timing-function both);
-        //    animation-delay: .15s;
-        //  }
-        //}
-
         &:not(.nav__item_parent).active {
           pointer-events: none;
-        //  &:after {
-        //    width: 100%;
-        //  }
         }
       }
     }
   }
 }
-
-
-//#hamburger ~ nav UL {
-//  @include media-netbook-mx {
-//    display: none;
-//  }
-//  @include media-netbook-mn {
-//    display: flex;
-//  }
-//}
 
 
 header[role="banner"].sticky #hamburger.open ~ nav[role="navigation"] {

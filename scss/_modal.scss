@@ -25,37 +25,32 @@
   animation-duration: 0.4s;
   -webkit-animation-name: animateTop;
   animation-name: animateTop;
+}
 
-  /* Modal close button */
-  .close {
-    color: $font-color-base;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    //font-size: 2.4rem; //48px;
-    //right: 0;
-    //height: 1em;
-    //width: 1em;
-    font-size: 48px;
-    width: 48px;
-    height: 48px;
-    @include transition(all $transition-duration $transition-timing-function);
+/* Modal close button */
+.close {
+  color: $font-color-base;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  position: absolute;
+  top: 0;
+  height: 48px;
+  width: 48px;
+  @include transition(all $transition-duration $transition-timing-function);
 
-    @media only screen and (max-width: 399px) {
-      right: 0;
-    }
+  @media only screen and (max-width: 399px) {
+    right: 0;
+  }
+  @media only screen and (min-width: 400px) {
+    right: -14px;
+  }
 
-    @media only screen and (min-width: 400px) {
-      right: -14px;
-    }
-
-    &:hover,
-    &:focus {
-      color: $color-orange;
-      cursor: pointer;
-      text-decoration: none;
-    }
+  &:hover,
+  &:focus {
+    color: $color-orange;
+    cursor: pointer;
+    text-decoration: none;
   }
 }

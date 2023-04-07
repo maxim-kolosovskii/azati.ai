@@ -2,8 +2,8 @@
 
 @import "section-top";
 
-
 @import "tag";
+
 .tag {
   border-top: 1px solid $color-grey-medium;
   flex-wrap: wrap;
@@ -105,7 +105,6 @@
   .toggle__content-box {
 
     &.visible {
-
       @include media-phablet-mx {
         padding-top: 6vh;
       }
@@ -127,13 +126,11 @@
 @import "text";
 
 
-/* Benefits section */
 @import "section-benefits";
 
 
 /* Featured section */
 .section_featured {
-  //position: relative;
 
   .section__title {
     background-color: $color-blue;
@@ -144,7 +141,6 @@
     position: relative;
 
     @include media-laptop-mn {
-      //min-width: fit-content;
       padding-right: 1vw;
     }
 
@@ -157,7 +153,6 @@
   @import "card";
 
   .card-outer {
-
     @include media-netbook-mx {
       gap: 16px;
     }
@@ -179,7 +174,6 @@
     padding-left: 0;
 
     @include media-desktop-mn {
-
       &:nth-child(2), &:nth-child(3) {
         padding-bottom: 0;
       }
@@ -229,7 +223,6 @@
 
 /* Tabs section */
 .section_tabs {
-  //overflow: hidden;
 
   @import "filter";
 
@@ -306,4 +299,4 @@
 @import "section-reviews";
 
 
-@import "img-left";
+@import "section-form";

@@ -88,12 +88,12 @@ main[role="main"] {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+H1,
+H2,
+H3,
+H4,
+H5,
+H6 {
   @include title;
 }
 .title_1 {
@@ -133,7 +133,6 @@ A {
   color: $font-color-base;
   cursor: pointer;
   text-decoration: none;
-  //text-decoration: underline;
   @include transition(all $transition-duration $transition-timing-function);
 
   &:link,
@@ -142,10 +141,7 @@ A {
   a:focus,
   &:active,
   &:hover {
-    //color: $color-blue;
     outline: none;
-    text-decoration: none;
-    //text-decoration: underline;
   }
 }
 
@@ -153,18 +149,18 @@ P A {
   @include text_link;
 }
 
-blockquote {
+BLOCKQUOTE {
   margin: 0;
 }
 
-sub, sup {
+SUB, SUP {
   font-size: 88%;
 }
-sup {
+SUP {
   top: -0.1em;
 }
 
-*:not(hr) {
+*:not(HR) {
   @include box-sizing;
 }
 

@@ -10,13 +10,12 @@
   }
 }
 
-.custom-select select {
+.custom-select SELECT {
   display: none; /*hide original SELECT element: */
 }
 
 .select-selected {
   border: 1px solid $color-grey-medium;
-  //@include b-radius(var(--bdrs));
   @include box-sizing;
   color: $color-grey-dark;
   cursor: pointer;
@@ -39,7 +38,6 @@
 }
 .select-selected.select-arrow-active {
   border: 1px solid #bcbcbc;
-  //border-radius: var(--bdrs) var(--bdrs) 0 0;
 }
 
 /* Style the arrow inside the select element: */
@@ -62,7 +60,6 @@
 .select-items {
   background-color: #fff;
   border: 1px solid #bcbcbc;
-  //@include b-radius(0 0 var(--bdrs) var(--bdrs));
   @include box-sizing;
   max-height: 10rem;
   overflow-y: auto;

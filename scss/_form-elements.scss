@@ -26,7 +26,7 @@ Form elements
   }
 }
 
-fieldset,
+FIELDSET,
 .form__group {
   border: 0;
   display: flex;
@@ -98,14 +98,14 @@ fieldset,
   }
 }
 
-textarea {
+TEXTAREA {
   @extend .form__control;
   line-height: 1.25;
   overflow: auto;
   resize: none;
 }
 
-label:not(.form__checkbox),
+LABEL:not(.form__checkbox),
 .form__label {
   cursor: text;
   opacity: .4;
@@ -126,7 +126,7 @@ label.form__checkbox {
   margin: -3px 0 3px;
 }
 
-input[type="checkbox"] {
+INPUT[type="checkbox"] {
   border: 1px solid $color-grey-medium;
   cursor: pointer;
   height: 30px;
@@ -137,10 +137,10 @@ input[type="checkbox"] {
   transition: all $transition-duration-fast $transition-timing-function;
 }
 
-input[type="checkbox"]:checked {
+INPUT[type="checkbox"]:checked {
   border: 1px solid #bcbcbc;
 }
-input[type="checkbox"]:checked:after {
+INPUT[type="checkbox"]:checked:after {
   content: '';
   position: absolute;
   left: 10px;

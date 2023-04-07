@@ -9,8 +9,8 @@
 .section_blog {
   //display: none;
 
-  @include media-phablet-mx {
-    .filter__bar {
+  .filter__bar {
+    @include media-phablet-mx {
       padding-bottom: 2vh;
     }
   }
@@ -116,4 +116,4 @@
 }
 
 
-@import "img-left";
+@import "section-form";
