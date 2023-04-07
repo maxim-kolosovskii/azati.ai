@@ -13,11 +13,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon//apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon//favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon//favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon//safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- Fonts -->
@@ -34,8 +34,8 @@
 
 <header role="banner" id="stickyHeader">
     <div class="container">
-        <a class="logo-azati" href="index.html">
-            <img src="./img/logo-azati-min.svg" alt="Azati" width="122" height="33">
+        <a itemprop="logo" itemscope itemtype="https://schema.org/ImageObject" class="logo-azati" href="index.html">
+            <img itemprop="contentUrl" src="./img/logo-azati-min.svg" alt="Azati" width="122" height="33">
         </a>
 
         <div id="hamburger">
@@ -75,17 +75,18 @@
     </div>
 </header>
 
-<main itemscope itemtype="http://schema.org/Article" role="main">
+<main role="main">
     <section class="section section_career section_aside">
         <div class="container">
-            <div class="career">
-                <article itemprop="articleBody" class="career__content career__content_top">
-                    <h1 class="section__title">
-                        <span>Middle</span>
+
+            <div itemscope itemtype="http://schema.org/Article" class="career">
+                <article itemscope itemtype="http://schema.org/Product" class="career__top-content">
+                    <h1 itemprop="name" class="section__title">
                         Front-end Engineer
                     </h1>
-                    <p>3+ years expierence / English B2</p>
-                    <div class="tip">Hot!</div>
+                    <h2 class="section__subtitle">Middle</h2>
+                    <span itemprop="description" class="section__slogan">3+ years expierence <span class="spacer">/</span> English B2</span>
+                    <span class="hot">Hot!</span>
                 </article>
 
                 <article itemprop="articleBody" class="career__content" data-aos="fade-up">
@@ -135,7 +136,7 @@
                     </ul>
                 </article>
 
-                <article itemprop="articleBody" class="career__content career__content_blue" data-aos="fade-up">
+                <article itemprop="articleBody" class="career__blue-content" data-aos="fade-up">
                     <h2 class="section__subtitle">Why Choose Azati</h2>
                     <p class="section__subtitle-middle">Azati is a team of professionals who are always open to new experiences and challenges. We are happy to invite a motivated employee who contributes to the company’s growth.</p>
                 </article>

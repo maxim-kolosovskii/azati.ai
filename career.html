@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1"><![endif]-->
-    <title itemprop="headline">Portfolio - New Azati</title>
+    <title itemprop="headline">Career - New Azati</title>
     <!-- Microdata's attribute -->
     <meta itemprop="description" name="description" content="Azati is the team of bright-minded software developers, architects, designers and project managers not scared of sophisticated challenges.">
     <meta itemprop="keywords" name="keywords" content="development">
@@ -27,7 +27,8 @@
     <!-- CSS styles -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/p-portfolio.css">
+<!--    <link rel="stylesheet" href="css/p-text.css">-->
+    <link rel="stylesheet" href="css/p-career.css">
 </head>
 
 <body>
@@ -46,9 +47,9 @@
             <ul class="nav">
                 <li><a itemprop="url" class="nav__item" href="index.html">About Azati</a></li>
                 <li><a itemprop="url" class="nav__item nav__item_parent" id="myBtn" href="/">Services</a><!-- Trigger/Open The Modal --></li>
-                <li><a itemprop="url" class="nav__item active" href="/">Portfolio</a></li>
+                <li><a itemprop="url" class="nav__item" href="portfolio.html">Portfolio</a></li>
                 <li><a itemprop="url" class="nav__item" href="blog.html">Blog</a></li>
-                <li><a itemprop="url" class="nav__item" href="career.html">Career</a></li>
+                <li><a itemprop="url" class="nav__item active" href="career.html">Career</a></li>
                 <li><a itemprop="url" class="nav__item" href="/">Contact Us</a></li>
             </ul>
         </nav>
@@ -79,9 +80,13 @@
     <section class="section section_top">
         <div class="container">
             <div class="section__content-left">
-                <h1 class="section__title-page">Meet Our <br>Work</h1>
+                <h1 class="section__title-page">Welcome to <br>Azati Team</h1>
                 <p class="section__slogan">
-                    Azati has been developing complex and robust solutions since 2002. Discover our case studies how our customers have embraced the benefits of the Azati Team.
+                    Become a part of our team and let's develop innovative projects together!
+                    You'll work with an experienced team who apply dev-friendly processes.
+                </p>
+                <p class="section__slogan">
+                    Find your perfect position!
                 </p>
             </div>
         </div>
@@ -101,128 +106,256 @@
     </section><!-- end top section -->
 
 
-    <section class="section section_portfolio">
+    <section class="section section_tabs">
         <div class="container">
-
             <div class="filter">
                 <div class="filter__bar">
                     <div>
-                        <button class="filter__bar-item active" type="button" onclick="openTab(event,'All')">All</button>
-                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Industries')">Industries</button>
-                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Services')">Services</button>
+                        <button class="filter__bar-item active" type="button" onclick="openTab(event,'All')">All <span>/ 32</span></button>
+                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Senior')">Senior <span>/ 8</span></button>
+                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Middle')">Middle <span>/ 10</span></button>
+                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Junior')">Junior <span>/ 10</span></button>
+                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Trainee')">Trainee <span>/ 4</span></button>
                     </div>
-                    <button  class="icon-filter active" type="button"><span>Filter Options</span></button>
-                </div>
-
-                <button type="button" class="filter__clear">Clear Choice</button>
-
-                <div class="tag" data-aos="fade-up">
-                    <span class="tag__item">Oil&Gas</span>
-                    <span class="tag__item">Insurance</span>
-                    <span class="tag__item active">E-commerce</span>
-                    <span class="tag__item">Life Sciences/Biotech</span>
-                    <span class="tag__item">Real Estate</span>
-                    <span class="tag__item">Human resources</span>
-                    <span class="tag__item">Entertainment</span>
-                    <span class="tag__item">Marketing</span>
-                    <span class="tag__item">AI/ML</span>
-                    <span class="tag__item">Document Digitization</span>
-                    <span class="tag__item">DevOps</span>
-                    <span class="tag__item">UX/UI</span>
-                    <span class="tag__item">Quality Assurance</span>
-                    <span class="tag__item">Finance</span>
-                    <span class="tag__item">Custom Software Engineering</span>
                 </div>
 
                 <div id="All" class="filter__content">
-                    <div class="card-outer">
-                        <div itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="card" data-aos="fade-up">
+                    <div>
+                        <a itemscope itemtype="http://schema.org/Product" class="card" href="career-internal.html">
                             <div class="card__content">
-                                <h2 itemprop="description" class="card__tag">
-                                    Oil&Gas / AI/ML
+                                <h2 itemprop="name" class="card__title">
+                                    <span class="hot">Hot!</span> Front-end Engineer
                                 </h2>
-                                <h3 itemprop="headline" class="card__title">
-                                    <a href="case-study.html">
-                                        Oil&Gas meters processing with AI and Computer Vision
-                                    </a>
-                                </h3>
+                                <p class="section__subtitle">
+                                    Middle <span class="spacer">/</span> 3+ years expierence <span class="spacer">/</span> English B2
+                                </p>
+                                <ul itemprop="description" class="tag">
+                                    <li class="tag__col">
+                                        <span class="tag__item">Python</span>
+                                        <span class="tag__item">Swift</span>
+                                        <span class="tag__item">Java</span>
+                                        <span class="tag__item">CSS</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <a class="card__img" href="case-study.html">
-                                <img itemprop="image" src="img/to_delete/bg-portfolio-2-tmp.webp" alt="">
-                            </a>
-                        </div><!-- end card #1 -->
+                            <footer class="card__more">
+                                Read More <span></span>
+                            </footer>
+                        </a><!-- end card #1 -->
 
-                        <div itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="card" data-aos="fade-up">
+                        <a itemscope itemtype="http://schema.org/Product" class="card" href="career-internal.html">
                             <div class="card__content">
-                                <h2 itemprop="description" class="card__tag">
-                                    Life Sciences/Biotech / DevOps
+                                <h2 itemprop="name" class="card__title">
+                                    Front-end Engineer + Backend Engineer
                                 </h2>
-                                <h3 itemprop="headline" class="card__title">
-                                    <a href="case-study.html">
-                                        AI Calorie Calculator and Food Recognition
-                                    </a>
-                                </h3>
+                                <p class="section__subtitle">
+                                    Middle <span class="spacer">/</span> 3+ years expierence <span class="spacer">/</span> English B2
+                                </p>
+                                <ul itemprop="description" class="tag">
+                                    <li class="tag__col">
+                                        <span class="tag__item">Python</span>
+                                        <span class="tag__item">Swift</span>
+                                        <span class="tag__item">Java</span>
+                                        <span class="tag__item">CSS</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <a class="card__img" href="case-study.html">
-                                <img itemprop="image" class="lazy-img" data-src="img/to_delete/bg-portfolio-2-tmp.webp" alt="">
-                            </a>
-                        </div><!-- end card #2 -->
+                            <footer class="card__more">
+                                Read More <span></span>
+                            </footer>
+                        </a><!-- end card #2 -->
 
-                        <div itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="card" data-aos="fade-up">
+                        <a itemscope itemtype="http://schema.org/Product" class="card" href="career-internal.html">
                             <div class="card__content">
-                                <h2 itemprop="description" class="card__tag">
-                                    Oil&Gas / AI/ML
+                                <h2 itemprop="name" class="card__title">
+                                    Front-end Engineer
                                 </h2>
-                                <h3 itemprop="headline" class="card__title">
-                                    <a href="case-study.html">
-                                        Oil&Gas meters processing with AI and Computer Vision
-                                    </a>
-                                </h3>
+                                <p class="section__subtitle">
+                                    Middle <span class="spacer">/</span> 3+ years expierence <span class="spacer">/</span> English B2
+                                </p>
+                                <ul itemprop="description" class="tag">
+                                    <li class="tag__col">
+                                        <span class="tag__item">Python</span>
+                                        <span class="tag__item">Swift</span>
+                                        <span class="tag__item">Java</span>
+                                        <span class="tag__item">CSS</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <a class="card__img" href="case-study.html">
-                                <img itemprop="image" class="lazy-img" data-src="img/to_delete/bg-portfolio-2-tmp.webp" alt="">
-                            </a>
-                        </div><!-- end card #3 -->
+                            <footer class="card__more">
+                                Read More <span></span>
+                            </footer>
+                        </a><!-- end card #3 -->
 
-                        <div itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="card" data-aos="fade-up">
+                        <a itemscope itemtype="http://schema.org/Product" class="card" href="career-internal.html">
                             <div class="card__content">
-                                <h2 itemprop="description" class="card__tag">
-                                    Life Sciences/Biotech / DevOps
+                                <h2 itemprop="name" class="card__title">
+                                    Front-end Engineer + Backend Engineer
                                 </h2>
-                                <h3 itemprop="headline" class="card__title">
-                                    <a href="case-study.html">
-                                        AI Calorie Calculator and Food Recognition
-                                    </a>
-                                </h3>
+                                <p class="section__subtitle">
+                                    Middle <span class="spacer">/</span> 3+ years expierence <span class="spacer">/</span> English B2
+                                </p>
+                                <ul itemprop="description" class="tag">
+                                    <li class="tag__col">
+                                        <span class="tag__item">Python</span>
+                                        <span class="tag__item">Swift</span>
+                                        <span class="tag__item">Java</span>
+                                        <span class="tag__item">CSS</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <a class="card__img" href="case-study.html">
-                                <img itemprop="image" class="lazy-img" data-src="img/to_delete/bg-portfolio-2-tmp.webp" alt="">
-                            </a>
-                        </div><!-- end card #4 -->
+                            <footer class="card__more">
+                                Read More <span></span>
+                            </footer>
+                        </a><!-- end card #4 -->
                     </div>
-                    <a class="btn btn_right btn_empty" href="/">Load More</a>
+                    <a class="btn btn_empty btn_right" href="/" data-aos="fade-left">Load More</a>
                 </div>
 
-                <div id="Industries" class="filter__content" style="display:none">
-                    <div class="card-outer">
-                        <div class="card">1</div>
-                        <div class="card">2</div>
-                        <div class="card">3</div>
-                        <div class="card">4</div>
-                    </div>
-                    <a class="btn btn_right btn_empty" href="/">Load More</a>
+
+
+
+
+                <div id="Senior" class="filter__content" style="display:none">
+                    <p>
+                        Senior content
+                    </p>
                 </div>
 
-                <div id="Services" class="filter__content" style="display:none">
-                    <div class="card-outer">
-                        <div class="card">1</div>
-                        <div class="card">2</div>
-                    </div>
-                    <a class="btn btn_right btn_empty" href="/">Load More</a>
+                <div id="Middle" class="filter__content" style="display:none">
+                    <p>
+                        Middle content
+                    </p>
+                </div>
+
+                <div id="Junior" class="filter__content" style="display:none">
+                    <p>
+                        Junior content
+                    </p>
+                </div>
+
+                <div id="Trainee" class="filter__content" style="display:none">
+                    <p>
+                        Trainee content
+                    </p>
                 </div>
             </div>
         </div>
-    </section><!-- end portfolio section -->
+    </section><!-- end  tabs section -->
+
+
+    <section class="section section_offer section_offer">
+        <div class="container">
+            <h2 class="section__title">We Offer</h2>
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <picture class="section__img-outer">
+                    <source srcset="img/bg-offer.webp" type="image/webp">
+                    <img class="lazy-img" data-src="img/bg-offer-min.jpg" alt="">
+                </picture>
+
+                <div class="numbers" data-aos="fade-left">
+                    <div class="numbers__item">
+                        <h3 class="numbers__title">Personal bonus program</h3>
+                        <p>01 /</p>
+                    </div>
+                    <div class="numbers__item">
+                        <h3 class="numbers__title">Corporate discount program</h3>
+                        <p>02 /</p>
+                    </div>
+                    <div class="numbers__item">
+                        <h3 class="numbers__title">Foreign languages courses</h3>
+                        <p>03 /</p>
+                    </div>
+                    <div class="numbers__item">
+                        <h3 class="numbers__title">Remote work from any point of the world or office</h3>
+                        <p>04 /</p>
+                    </div>
+                    <div class="numbers__item">
+                        <h3 class="numbers__title">Tuition Reimbursement</h3>
+                        <p>05 /</p>
+                    </div>
+                    <div class="numbers__item">
+                        <h3 class="numbers__title">Social package — <br>medical & family care</h3>
+                        <p>06 /</p>
+                    </div>
+                    <div class="numbers__item">
+                        <h3 class="numbers__title">Flexible work schedule</h3>
+                        <p>07 /</p>
+                    </div>
+                    <div class="numbers__item">
+                        <h3 class="numbers__title">And more +</h3>
+                        <p>08 /</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- end offer section -->
+
+
+    <section itemscope itemtype="http://schema.org/Review" class="section section_slideshow" data-aos="fade-up">
+        <div class="container">
+            <h2 itemprop="name" class="section__title">What is Azati <br>for our <br>employee?</h2>
+
+            <div class="slideshow-container">
+                <div class="toggle__content">
+                    <div class="toggle__number"><span>01</span> / 06</div>
+                    <div class="toggle__content-box">
+                        <h3 itemprop="author" class="toggle__title">Pavel</h3>
+                        <h4 class="toggle__subtitle-small">Senior Java Engineer</h4>
+                        <p itemprop="name">
+                            Everyday Challenges! <img src="img/to_delete/tmp-emoji-min.svg" alt="">
+                        </p>
+                    </div>
+                </div>
+
+                <div class="toggle__content">
+                    <div class="toggle__number"><span>02</span> / 06</div>
+                    <div class="toggle__content-box">
+                        <h3 itemprop="author" class="toggle__title">Kurt</h3>
+                        <h4 class="toggle__subtitle-small">Senior Human Engineer</h4>
+                        <p itemprop="name">
+                            There, there! <br>There, there!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="toggle__content">
+                    <div class="toggle__number"><span>03</span> / 06</div>
+                    <div class="toggle__content-box">
+                        <p itemprop="name">Caption Three</p>
+                    </div>
+                </div>
+
+                <div class="toggle__content">
+                    <div class="toggle__number"><span>04</span> / 06</div>
+                    <div class="toggle__content-box">
+                        <p itemprop="name">Caption Four</p>
+                    </div>
+                </div>
+
+                <div class="toggle__content">
+                    <div class="toggle__number"><span>05</span> / 06</div>
+                    <div class="toggle__content-box">
+                        <p itemprop="name">Caption Five</p>
+                    </div>
+                </div>
+
+                <div class="toggle__content">
+                    <div class="toggle__number"><span>06</span> / 06</div>
+                    <div class="toggle__content-box">
+                        <p itemprop="name">Caption Six</p>
+                    </div>
+                </div>
+
+                <div class="toggle__controls">
+                    <a class="btn-arrow btn-arrow_prev" onclick="plusSlides(-1)" aria-label="Preview Case"><span>❮ Prev</span></a>
+                    <a class="btn-arrow btn-arrow_next" onclick="plusSlides(1)" aria-label="Next Case"><span>Next ❯</span></a>
+                </div>
+            </div>
+        </div>
+    </section><!-- end slideshow section -->
 
 
     <section class="section section_form">
@@ -375,19 +508,6 @@
     }
 </script>
 
-<!-- Tag active -->
-<script type="text/javascript">
-    const boxes = Array.from(document.getElementsByClassName("tag__item"));
-
-    boxes.forEach(box => {
-        box.addEventListener("click", function handleClick(event) {
-            console.log("box clicked", event);
-
-            box.classList.add("active");
-        });
-    });
-</script>
-
 <!-- Sticky header -->
 <script>
     // When the user scrolls the page, execute myFunction
@@ -423,6 +543,31 @@
         }
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
+    }
+</script>
+
+<!-- Slideshow -->
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("toggle__content");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
     }
 </script>
 
