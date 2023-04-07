@@ -94,6 +94,8 @@ Buttons
   }
 
   &.btn_right {
+    margin-top: -1px;
+
     @include media-phablet-mx {
       width: 100%;
     }
@@ -139,6 +141,7 @@ Buttons
   @extend .btn-icon;
   background-repeat: no-repeat;
   @include background-size(50%);
+  user-select: none;
 
   @include media-tablet-h-mx {
     width: 48px;

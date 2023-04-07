@@ -53,6 +53,14 @@
         color: darken($color-orange, 10%);
       }
     }
+
+    .card__more {
+      color: $color-blue-dark;
+
+      SPAN {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI1IDE2IiB2aWV3Qm94PSIwIDAgMjUgMTYiPjxwYXRoIGQ9Ik0xNi4yIDIuMWMtLjQtLjQtLjQtMS4xIDAtMS42LjQtLjQgMS4xLS40IDEuNiAwbDYuNyA2LjdjLjQuNC40IDEuMSAwIDEuNmwtNi43IDYuN2MtLjQuNC0xLjEuNC0xLjYgMC0uNC0uNC0uNC0xLjEgMC0xLjZMMjEgOS4xSDEuNEMuOCA5LjEuMyA4LjYuMyA4cy41LTEuMSAxLjEtMS4xaDE5LjVsLTQuNy00Ljh6IiBzdHlsZT0iZmlsbDojZmY5NzFkIi8+PC9zdmc+"); //orange icon
+      }
+    }
   }
 }
 
@@ -104,7 +112,7 @@
 //}
 
 .card-outer + .btn {
-  margin-top: -1px;
+  //margin-top: -1px;
 
   @include media-phablet-mn {
     padding-left: 3vw;
@@ -112,5 +120,32 @@
   }
   @include media-tablet-h-mn {
     max-width: calc(25% + 3px);
+  }
+}
+
+.card__more {
+  color: $color-blue-dark;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: $font-family-accent;
+  font-weight: $font-weight-700;
+  letter-spacing: 2px;
+  line-height: 1.9;
+  margin-left: auto;
+  padding: 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @include media-tablet-v-mn {
+    font-size: 0.8rem; //16px;
+  }
+
+  SPAN {
+    background: url("../img/icons/i-arrow-min.svg") no-repeat;
+    margin-left: calc(var(--md) + 2px);
+    width: 25px;
+    height: 16px;
+    transition: all $transition-duration-fast $transition-timing-function;
   }
 }

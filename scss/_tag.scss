@@ -7,7 +7,7 @@ Tag Block
   list-style: none;
   margin-bottom: 5vh;
 
-  @include media-phone-mn {
+  @include media-phablet-mn {
     display: flex;
   }
 }

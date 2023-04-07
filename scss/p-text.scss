@@ -1,14 +1,14 @@
-@import 'variables';
-
 @import "section";
 
 @import "section-top-small";
 
 @import "tag";
 
+
 :root {
   --mg: 2vh; //1.55em;
 }
+
 
 %article {
   .section__subtitle {
@@ -36,8 +36,6 @@
 
   .section__subtitle-small {
     @include title_5;
-    //margin-top: 1em;
-    //margin-bottom: -.6em;
     margin-top:calc(var(--mg) + 2vh);
     margin-bottom: var(--mg);
   }
@@ -74,16 +72,17 @@
   }
 }
 
+
 /* Text section */
 .section_txt {
-  //@include media-desktop-mx {
-  //  margin-bottom: 0vh;
-  //}
   @include media-netbook-mx {
     margin-bottom: 8vh;
   }
+  @include media-netbook-mn {
+    margin-bottom: -2vh;
+  }
   @include media-desktop-mn {
-    margin-bottom: 6vh;
+    margin-bottom: 0;
   }
 }
 
@@ -97,12 +96,6 @@
 
   &:not(.content-txt_table) {
 
-    //@include media-phablet-mn {
-    //  max-width: 67em;
-    //  width: 70%;
-    //}
-
-
     HR {
       margin-bottom: 6vh;
     }
@@ -110,7 +103,6 @@
 
   &.content-txt_table:last-child {
     .table-row__right {
-      //@include media-phablet-mn {
       @include media-netbook-mn {
         padding-bottom: 10vh;
       }
@@ -118,7 +110,6 @@
   }
 
   %border {
-    //background-color: #fff;
     border: 1px solid $color-grey-medium;
 
     @include media-phablet-mx {
@@ -165,6 +156,7 @@
   }
 }
 
+
 .section_col-left {
   @include media-netbook-mx {
     margin-bottom: 8vh;
@@ -181,12 +173,60 @@
   }
 }
 
+
+.table-row {
+  border-top: 1px solid $color-grey-medium;
+
+  @include media-phablet-mn {
+    display: flex;
+  }
+
+  .section__subtitle {
+    @include media-phablet-mn {
+      width: 30%;
+    }
+    @include media-desktop-mn {
+      max-width: 375px;
+    }
+  }
+
+  .table-row__right {
+    @include media-phablet-mx {
+      padding: 0 0 4vh;
+    }
+    @include media-phablet-mn {
+      border-left: 1px solid $color-grey-medium;
+      padding: calc(2.5vh + var(--mg)) 0 5vh 2.5vw;
+      width: 70%;
+    }
+  }
+}
+
+.table-row_grey {
+
+  .table-row__right {
+    @include media-phablet-mn {
+      padding: 5vh 0 5vh 5vw;
+    }
+  }
+
+  IMG {
+    border: 4px solid #383535;
+    @include b-radius(8px);
+    @include box-shadow(0 4px 25px rgba(0,0,0,0.05));
+    margin: 2vh 0;
+    max-width: 100%;
+  }
+}
+
+
 /* Aside */
 .section_aside {
 
   .container {
     @include media-phablet-mn {
       display: flex;
+      align-items: start;
     }
   }
 
@@ -194,21 +234,18 @@
 }
 
 ASIDE {
-
   @include media-phablet-mx {
     display: none;
   }
   @include media-phablet-mn {
-    //float: right;
     margin-left: auto;
-    position: sticky;
-    top: var(--header-height);
+    @include sticky;
+    top: calc(var(--header-height) + 1vh);
     width: 30%;
   }
 }
 
 .feed {
-
   @include media-phablet-mn {
     padding-left: 4vw;
   }
@@ -251,66 +288,20 @@ ASIDE {
   }
 }
 
-.table-row {
-  border-top: 1px solid $color-grey-medium;
-  //background-color: yellow;
-
-  @include media-phablet-mn {
-    display: flex;
-  }
-
-  .section__subtitle {
-    //width: 100%;
-
-    @include media-phablet-mn {
-      //max-width: 21vw;
-      //width: 21vw;
-      width: 30%;
-    }
-    @include media-desktop-mn {
-      max-width: 375px;
-      //width: 375px;
-    }
-  }
-
-  .table-row__right {
-
-    @include media-phablet-mx {
-      padding: 0 0 4vh;
-    }
-    @include media-phablet-mn {
-      border-left: 1px solid $color-grey-medium;
-      padding: calc(2.5vh + var(--mg)) 0 5vh 2.5vw;
-      width: 70%;
-    }
-  }
-}
-
-.table-row_grey {
-
-  .table-row__right {
-    @include media-phablet-mn {
-      padding: 5vh 0 5vh 5vw;
-    }
-  }
-
-  IMG {
-    border: 4px solid #383535;
-    @include b-radius(8px);
-    @include box-shadow(0 4px 25px rgba(0,0,0,0.05));
-    margin: 2vh 0;
-    max-width: 100%;
-  }
-}
-
 
 /* Intenal Career Page */
 .section_career {
-  @include media-phablet-mx {
-    margin: 10vh 0;
+  @include media-phone-mx {
+    margin-top: 5vh;
   }
-  @include media-phablet-mn {
-    margin: 10vh 0 18px;
+  @include media-phone-mn {
+    margin-top: 10vh;
+  }
+  @include media-netbook-mn {
+    margin-bottom: 10vh;
+  }
+  @include media-desktop-mn {
+    margin-bottom: 28vh;
   }
 }
 
@@ -322,31 +313,65 @@ ASIDE {
   }
 }
 
-.career__content_top {
+.career__top-content {
   border-bottom: 1px solid $color-grey-medium;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  padding-bottom: 2vh;
+
+  @include media-phone-mx {
+    padding-bottom: 2vh;
+  }
+  @include media-phone-mn {
+    padding-bottom: 4.75vh;
+  }
+  @include media-phablet-mn {
+    padding-right: 10px;
+  }
 
   .section__title {
+    margin-bottom: 0;
+
+    @include media-phablet-mx {
+      padding-right: 0;
+    }
+
     SPAN {
       @include title_3;
       display: block;
     }
   }
-}
 
-.career__content {
+  .section__subtitle {
+    @include title_3;
+    order: -1;
+  }
 
-  .tag {
-    margin: 0;
-    padding: 6vh 0;
+  .section__slogan {
+    padding-top: 1.8vh;
   }
 }
 
-.career__content_blue {
+.career__content {
+  @include media-phablet-mn {
+    padding-right: var(--lg);
+  }
+
+  .tag {
+    padding: 0;
+
+    @include media-phone-mx {
+      margin: 2vh 0 6vh;
+    }
+    @include media-phone-mn {
+      margin: 5vh 0 5.5vh;
+    }
+  }
+}
+
+.career__blue-content {
   background-color: $color-blue;
   color: #fff;
-  margin-top: 10vh;
   position: relative;
 
   &:before {
@@ -366,6 +391,12 @@ ASIDE {
       margin-top: var(--lg);
     }
   }
+  @include media-phablet-mx {
+    margin-top: 5vh;
+  }
+  @include media-phablet-mn {
+    margin-top: 9.5vh;
+  }
   @include media-netbook-mn {
     display: flex;
     align-items: center;
@@ -382,25 +413,18 @@ ASIDE {
   }
 }
 
-.tip {
-  background-color: $color-orange;
-  color: #fff;
-  @include title_7;
-  position: absolute;
-  top: 0;
+.hot {
+  @include hot;
 
-  @include media-tablet-v-mx {
-    padding: 5px 10px;
-  }
-  @include media-phablet-mx {
+  @include media-phone-mn {
+    position: absolute;
+    top: 0;
     right: 0;
   }
-  @include media-phablet-mn {
+  @include media-laptop-mn {
     right: 2.5vw;
-  }
-  @include media-tablet-v-mn {
-    padding: 10px 19px;
   }
 }
 
-@import "section-form";
+
+@import "img-left";

@@ -14,6 +14,10 @@
 }
 
 
+@mixin spacer {
+  padding: 0 12px 0 10px;
+}
+
 
 // ------------ Components ------------
 
@@ -61,6 +65,7 @@
   }
 }
 
+
 @mixin bg-blue {
   content: '';
   background-color: $color-blue;
@@ -70,6 +75,7 @@
   width: 100vw;
 }
 
+
 @mixin bg-grey {
   content: '';
   background-color: $color-grey-light;
@@ -78,6 +84,7 @@
   height: 100%;
   width: 100vw;
 }
+
 
 @mixin title {
   font-family: $font-family-accent;
@@ -94,7 +101,8 @@
 
 @mixin title_2 {
   @include title;
-  font-size: clamp(30px, calc(13px + 5vw), 72px);
+  //font-size: clamp(30px, calc(13px + 5vw), 72px);
+  font-size: clamp(32px, calc(13px + 5vw), 72px);
   font-weight: $font-weight-700;
 
   @include media-tablet-v-mx {
@@ -107,16 +115,10 @@
 
 @mixin title_3 {
   @include title;
-  font-size: clamp(28px, calc(12px + 3vw), 40px);
+  //font-size: clamp(28px, calc(12px + 3vw), 40px);
+  font-size: clamp(26px, calc(12px + 3vw), 40px);
   font-weight: $font-weight-800;
   line-height: 1.2; //48px;
-
-  //@include media-tablet-v-mx {
-  //  line-height: 1.28;
-  //}
-  //@include media-tablet-v-mn {
-    //line-height: 1.35; //54px;
-  //}
 }
 
 @mixin title_4 {
@@ -128,7 +130,8 @@
     font-size: 1.5rem; //24px;
   }
   @include media-tablet-v-mn {
-    font-size: clamp(24px, calc(10px + 2vw), 32px);
+    //font-size: clamp(24px, calc(10px + 2vw), 32px);
+    font-size: clamp(22px, calc(10px + 2vw), 32px);
   }
 }
 
@@ -171,6 +174,58 @@
   }
   @include media-tablet-v-mn {
     font-size: 0.9rem; //18px;
+  }
+}
+
+
+@mixin slogan {
+  line-height: 1.59;
+  margin: 0;
+
+  @include media-tablet-v-mn {
+    font-size: clamp(0.8rem, calc(7px + 1vw), 24px);
+  }
+}
+
+
+@mixin numeric_list {
+  color: $color-blue;
+  font-family: $font-family-accent;
+  font-size: clamp(24px, calc(16px + 2vw), 48px);
+  font-weight: $font-weight-400;
+  line-height: 1.55; //56px;
+  margin: 0;
+  white-space: nowrap;
+  @include transition(all $transition-duration $transition-timing-function);
+}
+
+
+@mixin text_link {
+  &:link,
+  &:visited {
+    text-decoration: underline;
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+
+@mixin hot {
+  background-color: $color-orange;
+  color: #fff;
+  @include title_7;
+  height: fit-content;
+  max-width: fit-content;
+
+  @include media-laptop-mx {
+    padding: 5px 10px;
+  }
+  @include media-laptop-mn {
+    padding: 10px 19px;
   }
 }
 
@@ -301,4 +356,11 @@
   -moz-transition: $x;
   -o-transition: $x;
   transition: $x;
+}
+
+
+// Sticky
+@mixin sticky() {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
 }

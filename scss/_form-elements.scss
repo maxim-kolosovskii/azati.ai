@@ -8,6 +8,9 @@ Form elements
   @include media-desktop-mx {
     padding-bottom: 5vh;
   }
+  @include media-phablet-mn {
+    padding-top: 3.5vh;
+  }
   @include media-phablet-netbook {
     padding-right: 5vw;
     padding-left: 5vw;
@@ -153,7 +156,7 @@ input[type="checkbox"]:checked:after {
   font-size: 0.8rem; //16px
 
   A {
-    text-decoration: underline;
+    @include text_link;
   }
 }
 

@@ -7,9 +7,9 @@ header[role="banner"] {
   border-bottom: 1px solid $color-grey-medium;
   display: flex;
   align-items: stretch;
-  //margin-top: 1px;
-  position: sticky;
+  @include sticky;
   top: 0;
+  //margin-top: 1px;
   //position: fixed;
   //left: 0;
   //right: 0;
@@ -115,14 +115,6 @@ header[role="banner"] {
         &:first-child {
           padding-right: 1.88vw;
         }
-      }
-      @include media-desktop-mn {
-        &:not(:first-child):not(:last-child) {
-          //padding: 0 2vw;
-        }
-        //&:first-child {
-        //  padding-right: 2vw;
-        //}
       }
 
       // Animation

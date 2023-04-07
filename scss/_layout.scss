@@ -26,6 +26,8 @@ body {
 
 main[role="main"] {
   //flex: 1;
+  //overflow: hidden;
+  overflow: clip;
   position: relative;
 
   //&:before {
@@ -142,17 +144,13 @@ A {
   &:hover {
     //color: $color-blue;
     outline: none;
-    //text-decoration: none;
+    text-decoration: none;
     //text-decoration: underline;
   }
 }
 
 P A {
-  a:focus,
-  &:active,
-  &:hover {
-    color: $color-blue;
-  }
+  @include text_link;
 }
 
 blockquote {
@@ -188,4 +186,8 @@ HR {
 
 .blue {
   color: $color-blue;
+}
+
+.spacer {
+  @include spacer;
 }

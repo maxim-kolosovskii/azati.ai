@@ -1,0 +1,36 @@
+/*
+Offer section
+*/
+.section_offer {
+  @import "img-left";
+  //display: none;
+
+  /* Custom CSS only offer section */
+  .section__title {
+    @include media-desktop-mn {
+      padding-left: 3.5vw;
+    }
+  }
+
+  .container-fluid {
+
+    .container {
+      @include media-phablet-mn {
+        padding-top: 3.5vh;
+        padding-bottom: 8vh;
+      }
+      @include media-laptop-mn {
+        padding-bottom: 12vh;
+      }
+    }
+  }
+
+  .section__img-outer {
+
+    IMG {
+      @include media-netbook-mn {
+        top: -145px;
+      }
+    }
+  }
+}

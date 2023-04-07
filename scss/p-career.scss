@@ -1,0 +1,218 @@
+@import "section";
+
+@import "section-top";
+
+.hot {
+  @include hot;
+  max-width: fit-content;
+
+  @include media-phablet-mx {
+    display: block;
+    //max-width: fit-content;
+  }
+  @include media-phablet-mn {
+    margin-right: 16px;
+  }
+}
+
+
+.section_tabs {
+  //display: none;
+
+  @import "filter";
+
+  @import "card";
+
+  .card {
+    border-left: 0 none;
+    flex-direction: row;
+    justify-content: center;
+
+    @include media-phablet-mx {
+      border-right: 0 none;
+    }
+    @include media-phone-mx {
+      padding: 2.5vh 15px 2.5vh;
+    }
+    @include media-phone-mn {
+      padding: 3.3vh 2.3vw 2.5vh 1.7vw;
+    }
+
+    &:hover {
+      color: #fff;
+
+      .card__title {
+        color: $color-orange;
+      }
+    }
+  }
+
+  .card__title {
+    @include title_3;
+
+    @include media-phablet-mx {
+      margin: 0 0 25px;
+    }
+    @include media-phablet-mn {
+      display: flex;
+      align-items: center;
+      margin: 5px 0 30px;
+    }
+  }
+
+  .card__content {
+    width: 100%;
+  }
+
+  .card__more {
+    @include media-laptop-mx {
+      text-indent: -10000px;
+    }
+    @include media-phablet-mx {
+      display: none;
+    }
+  }
+
+  @import "tag";
+
+  .tag {
+    margin-bottom: 0;
+  }
+
+  .section__subtitle {
+    order: -1;
+  }
+}
+
+
+/* Offer section */
+
+@import "section-offer";
+
+.section_offer {
+  //display: none;
+
+  @import "numbers";
+
+  /* Custom CSS for numbers of Career page */
+  .numbers__item {
+    @include media-phone-mn {
+      width: 50%;
+    }
+    @include media-phablet-mx {
+      padding: 2vh 10px 3vh 0;
+    }
+    @include media-phablet-mn {
+      padding-top: 2vh;
+      padding-right: 10px;
+      padding-bottom: 2vh;
+    }
+    @include media-netbook-mn {
+      padding-left: 2.5vw;
+    }
+    @include media-laptop-mn {
+      &:nth-child(odd) {
+        width: 21.5em;
+      }
+      &:nth-child(even) {
+        width: calc(100% - 21.5em);
+
+        .numbers__title {
+          width: 13.5em;
+        }
+      }
+    }
+    @include media-desktop-mn {
+      padding-bottom: 2.8vh;
+      padding-left: 3.5vw;
+    }
+  }
+}
+
+/* Slideshow section */
+.section_slideshow {
+  //display: none;
+
+  .container {
+    @include media-netbook-mn {
+      border-top: 1px solid $color-grey-medium;
+      display: flex;
+    }
+  }
+
+  .section__title {
+    margin-top: 3vh;
+
+    @include media-netbook-mx {
+      BR {
+        display: none;
+      }
+    }
+    @include media-netbook-mn {
+      width: 50%;
+    }
+    @include media-desktop-mn {
+      width: 33.33%;
+    }
+  }
+
+  @import "toggle";
+
+  /* Custom CSS for toggle of Career page */
+  .toggle__content-box {
+    display: block;
+    padding: 14.5vh 7.3vw;
+
+    @include media-netbook-mn {
+      min-height: 500px;
+    }
+
+    .toggle__title {
+      @include title_3;
+      font-weight: $font-weight-700;
+      padding-bottom: 5px;
+    }
+
+    .toggle__subtitle-small {
+      color: $color-grey-dark;
+      @include title_4;
+      font-weight: $font-weight-400;
+      padding-bottom: 5vh;
+    }
+
+    P {
+      display: flex;
+      align-items: center;
+      font-size: 2.4rem; // 48px;
+      line-height: 1.2;
+      max-width: 36em;
+      @include reset;
+
+      IMG {
+        max-width: 36px;
+        margin: 0 1em;
+      }
+    }
+  }
+}
+
+.slideshow-container {
+  border-right: 1px solid $color-grey-medium;
+  border-bottom: 1px solid $color-grey-medium;
+  border-left: 1px solid $color-grey-medium;
+  margin-left: auto;
+  position: relative;
+
+  @include media-netbook-mx {
+    border-top: 1px solid $color-grey-medium;
+  }
+  @include media-netbook-mn {
+    width: 50%;
+  }
+  @include media-desktop-mn {
+    width: 66.66%;
+  }
+}
+
+
+@import "section-form";

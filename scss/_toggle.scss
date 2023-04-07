@@ -1,4 +1,4 @@
-/* Tabs with arrow */
+/* Toggle tabs with arrow */
 .toggle {
 
   @include media-phablet-mn {
@@ -97,53 +97,11 @@
   //width: 74%;
   transition: all $transition-duration $transition-timing-function;
 
-  .toggle__content-box {
-    display: none;
-
-    &.visible {
-      display: block;
-    }
-  }
-
-  .toggle__title {
-    font-size: clamp(28px, calc(16px + 2vw), 48px);
-
-    SPAN {
-      color: $color-grey-dark;
-      font-weight: $font-weight-400;
-    }
-  }
-
-  .toggle__subtitle {
-    font-size: clamp(36px, calc(29px + 4vw), 90px);
-    line-height: 1.065;
-    margin-top: 4vh;
-  }
-
-  .toggle__subtitle-big {
-    @include title_2;
-    margin-top: 4vh;
-  }
-
-  .toggle__subtitle-medium {
-    @include title_3;
-    margin-top: 4vh;
-  }
-
-  .toggle__subtitle-small {
-    @include title_4;
-    margin-top: 4vh;
-  }
-
   DL {
     @include reset;
 
     DT {
-      color: $color-blue;
-      font-family: $font-family-accent;
-      font-weight: $font-weight-400;
-      font-size: 2.4rem; //48px;
-      line-height: 56px;
+      @include numeric_list;
 
       &:not(:first-child) {
         border-top: 1px solid $color-grey-medium;
@@ -160,7 +118,12 @@
     }
 
     DD {
-      margin: 0;
+      &:not(.toggle__subtitle-small) {
+        margin: 0;
+      }
+      &.toggle__subtitle-small {
+        margin: 1vh 0 0;
+      }
     }
   }
 
@@ -175,12 +138,56 @@
     @include media-phablet-mx {
       padding-top: 2vh;
     }
-    @include media-phablet-mn {
-      padding-left: var(--lg);
-    }
+    //@include media-phablet-mn {
+    //  padding-left: var(--lg);
+    //}
   }
 }
 
+.toggle__content-box {
+  display: none;
+
+  // Animation
+  @include x-animation(fade 0.5s ease-in forwards);
+
+  @include media-phablet-mn {
+    padding-left: var(--lg);
+  }
+
+  &.visible {
+    display: block;
+  }
+}
+
+.toggle__title {
+  font-size: clamp(28px, calc(16px + 2vw), 48px);
+
+  SPAN {
+    color: $color-grey-dark;
+    font-weight: $font-weight-400;
+  }
+}
+
+.toggle__subtitle {
+  font-size: clamp(36px, calc(29px + 4vw), 90px);
+  line-height: 1.065;
+  margin-top: 4vh;
+}
+
+.toggle__subtitle-big {
+  @include title_2;
+  margin-top: 4vh;
+}
+
+.toggle__subtitle-medium {
+  @include title_3;
+  margin-top: 4vh;
+}
+
+.toggle__subtitle-small {
+  @include title_4;
+  margin-top: 4vh;
+}
 
 .toggle__controls {
   @include media-phablet-mx {
@@ -196,5 +203,21 @@
 
   SPAN {
     display: none;
+  }
+}
+
+.toggle__number {
+  color: $color-grey-medium;
+  font-family: $font-family-accent;
+  font-size: 0.9rem;
+  font-weight: $font-weight-500;
+  letter-spacing: 2px;
+  padding: 8px 26px 0 0;
+  position: absolute;
+  top: 68px;
+  right: 0;
+
+  SPAN {
+    color: $font-color-base;
   }
 }

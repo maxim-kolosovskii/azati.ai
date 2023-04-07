@@ -1,5 +1,3 @@
-@import 'variables';
-
 @import "section";
 
 @import "section-top";
@@ -155,10 +153,6 @@
   }
 
   .card__title {
-    //A {
-      //color: $color-orange !important;
-    //}
-
     @include media-netbook-mx {
       @include title_3;
     }
@@ -199,4 +193,4 @@
 }
 
 
-@import "section-form";
+@import "img-left";

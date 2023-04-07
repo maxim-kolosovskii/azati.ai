@@ -168,6 +168,16 @@ Animation
     opacity: 0; }
   100% {
     opacity: 1; } }
+@-webkit-keyframes fade {
+  0% {
+    opacity: .4; }
+  100% {
+    opacity: 1; } }
+@keyframes fade {
+  0% {
+    opacity: .4; }
+  100% {
+    opacity: 1; } }
 @-webkit-keyframes widthScale {
   0% {
     width: 0; }
@@ -226,6 +236,7 @@ body {
 @font-face {
   font-display: swap; }
 main[role="main"] {
+  overflow: clip;
   position: relative; }
 
 .container-fluid {
@@ -309,7 +320,7 @@ h6 {
   -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-  font-size: clamp(30px, calc(13px + 5vw), 72px);
+  font-size: clamp(32px, calc(13px + 5vw), 72px);
   font-weight: 700; }
   @media screen and (max-width: 991px) {
     .title_2 {
@@ -326,7 +337,7 @@ h6 {
   -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-  font-size: clamp(28px, calc(12px + 3vw), 40px);
+  font-size: clamp(26px, calc(12px + 3vw), 40px);
   font-weight: 800;
   line-height: 1.2; }
 
@@ -345,7 +356,7 @@ h6 {
       font-size: 1.5rem; } }
   @media screen and (min-width: 992px) {
     .title_4 {
-      font-size: clamp(24px, calc(10px + 2vw), 32px); } }
+      font-size: clamp(22px, calc(10px + 2vw), 32px); } }
 
 .title_5 {
   font-family: "Work Sans", "Arial", sans-serif;
@@ -402,9 +413,12 @@ A {
   -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
   A a:focus, A:active, A:hover {
-    outline: none; }
+    outline: none;
+    text-decoration: none; }
 
-P A a:focus, P A:active, P A:hover {
+P A:link, P A:visited {
+  text-decoration: underline; }
+P A:focus, P A:active, P A:hover {
   color: #29a2ff; }
 
 blockquote {
@@ -437,6 +451,9 @@ HR {
 .blue {
   color: #29a2ff; }
 
+.spacer {
+  padding: 0 12px 0 10px; }
+
 /*
 Header elements
 */
@@ -445,6 +462,8 @@ header[role="banner"] {
   border-bottom: 1px solid #e1dfdf;
   display: flex;
   align-items: stretch;
+  position: -webkit-sticky;
+  /* Safari */
   position: sticky;
   top: 0;
   z-index: 9;
@@ -864,7 +883,7 @@ footer[role="contentinfo"] {
   -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-  font-size: clamp(30px, calc(13px + 5vw), 72px);
+  font-size: clamp(32px, calc(13px + 5vw), 72px);
   font-weight: 700;
   grid-area: head;
   transition: padding 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
@@ -1035,6 +1054,9 @@ Form elements
   @media screen and (max-width: 1699px) {
     .form {
       padding-bottom: 5vh; } }
+  @media screen and (min-width: 768px) {
+    .form {
+      padding-top: 3.5vh; } }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     .form {
       padding-right: 5vw;
@@ -1165,8 +1187,10 @@ input[type="checkbox"]:checked:after {
 
 .form__checkbox-txt {
   font-size: 0.8rem; }
-  .form__checkbox-txt A {
+  .form__checkbox-txt A:link, .form__checkbox-txt A:visited {
     text-decoration: underline; }
+  .form__checkbox-txt A:focus, .form__checkbox-txt A:active, .form__checkbox-txt A:hover {
+    color: #29a2ff; }
 
 /* Select */
 /* The container must be positioned relative: */
@@ -1336,14 +1360,16 @@ Buttons
     color: #151731; }
     .btn.btn_empty:disabled, .btn_empty.btn-icon:disabled, .btn_empty.btn-arrow:disabled, .btn-arrow.btn-arrow_prev:disabled, .icon-filter:disabled, .btn_empty.btn-more:disabled {
       color: #94d0ff; }
-  @media screen and (max-width: 767px) {
-    .btn.btn_right, .btn_right.btn-icon, .btn_right.btn-arrow, .btn_right.icon-filter, .btn_right.btn-more {
-      width: 100%; } }
-  @media screen and (min-width: 768px) {
-    .btn.btn_right, .btn_right.btn-icon, .btn_right.btn-arrow, .btn_right.icon-filter, .btn_right.btn-more {
-      float: right;
-      margin-left: auto;
-      max-width: max-content; } }
+  .btn.btn_right, .btn_right.btn-icon, .btn_right.btn-arrow, .btn_right.icon-filter, .btn_right.btn-more {
+    margin-top: -1px; }
+    @media screen and (max-width: 767px) {
+      .btn.btn_right, .btn_right.btn-icon, .btn_right.btn-arrow, .btn_right.icon-filter, .btn_right.btn-more {
+        width: 100%; } }
+    @media screen and (min-width: 768px) {
+      .btn.btn_right, .btn_right.btn-icon, .btn_right.btn-arrow, .btn_right.icon-filter, .btn_right.btn-more {
+        float: right;
+        margin-left: auto;
+        max-width: max-content; } }
   .btn:focus, .btn-icon:focus, .btn-arrow:focus, .icon-filter:focus, .btn-more:focus {
     outline: 3px solid #97d2ff; }
   .btn.disabled, .disabled.btn-icon, .disabled.btn-arrow, .disabled.icon-filter, .disabled.btn-more, .btn:disabled, .btn-icon:disabled, .btn-arrow:disabled, .icon-filter:disabled, .btn-more:disabled {
@@ -1360,7 +1386,8 @@ Buttons
 .btn-arrow {
   background-repeat: no-repeat;
   -webkit-background-size: 50%;
-  background-size: 50%; }
+  background-size: 50%;
+  user-select: none; }
   @media screen and (max-width: 1023px) {
     .btn-arrow {
       width: 48px; } }
