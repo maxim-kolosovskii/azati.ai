@@ -21,6 +21,19 @@
 
   @import "filter";
 
+  .filter {
+    @media only screen and (max-width: 399px) {
+      margin-left: -16px;
+      margin-right: -16px;
+      //width: calc(100% + 32px);
+    }
+    @media only screen and (max-width: 299px) {
+      margin-left: -8px;
+      margin-right: -8px;
+    }
+  }
+
+
   @import "card";
 
   .card {
@@ -32,7 +45,13 @@
       border-right: 0 none;
     }
     @include media-phone-mx {
-      padding: 2.5vh 15px 2.5vh;
+      padding: 2.5vh 15px;
+    }
+    @media only screen and (max-width: 399px) {
+      padding: 2vh 16px;
+    }
+    @media only screen and (max-width: 299px) {
+      padding: 1vh 8px;
     }
     @include media-phone-mn {
       padding: 3.3vh 2.3vw 2.5vh 1.7vw;
@@ -85,49 +104,8 @@
 }
 
 
-/* Offer section */
-
 @import "section-offer";
 
-.section_offer {
-  //display: none;
-
-  @import "numbers";
-
-  /* Custom CSS for numbers of Career page */
-  .numbers__item {
-    @include media-phone-mn {
-      width: 50%;
-    }
-    @include media-phablet-mx {
-      padding: 2vh 10px 3vh 0;
-    }
-    @include media-phablet-mn {
-      padding-top: 2vh;
-      padding-right: 10px;
-      padding-bottom: 2vh;
-    }
-    @include media-netbook-mn {
-      padding-left: 2.5vw;
-    }
-    @include media-laptop-mn {
-      &:nth-child(odd) {
-        width: 21.5em;
-      }
-      &:nth-child(even) {
-        width: calc(100% - 21.5em);
-
-        .numbers__title {
-          width: 13.5em;
-        }
-      }
-    }
-    @include media-desktop-mn {
-      padding-bottom: 2.8vh;
-      padding-left: 3.5vw;
-    }
-  }
-}
 
 /* Slideshow section */
 .section_slideshow {
@@ -161,10 +139,16 @@
   /* Custom CSS for toggle of Career page */
   .toggle__content-box {
     display: block;
-    padding: 14.5vh 7.3vw;
 
+    @include media-netbook-mx {
+      padding: 9vh 7.3vw;
+    }
     @include media-netbook-mn {
       min-height: 500px;
+      padding: 11vh 7.3vw;
+    }
+    @include media-laptop-mn {
+      padding: 14.5vh 7.3vw;
     }
 
     .toggle__title {
@@ -181,8 +165,8 @@
     }
 
     P {
-      display: flex;
-      align-items: center;
+      //display: flex;
+      //align-items: center;
       font-size: 2.4rem; // 48px;
       line-height: 1.2;
       max-width: 36em;
@@ -190,7 +174,7 @@
 
       IMG {
         max-width: 36px;
-        margin: 0 1em;
+        //margin-left: 1em;
       }
     }
   }

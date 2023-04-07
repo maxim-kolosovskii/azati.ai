@@ -46,14 +46,14 @@ General Landing styles
   -moz-transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   -o-transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
-  .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form):not(.section_career) {
+  .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_career) {
     overflow: hidden; }
     @media screen and (max-width: 767px) {
-      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form):not(.section_career) {
+      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_career) {
         margin: 10vh 0; } }
     @media screen and (min-width: 768px) {
-      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form):not(.section_career) {
-        margin: 18vh 0; } }
+      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_career) {
+        margin: 16vh 0; } }
 
 .section__title {
   font-family: "Work Sans", "Arial", sans-serif;
@@ -432,7 +432,7 @@ Tag Block
       @media screen and (min-width: 768px) {
         .section_toggle .toggle__tabs li {
           cursor: pointer;
-          padding: 1.7vh 20px 1.8vh 0;
+          padding: 1.75vh 20px 1.8vh 0;
           position: relative; }
           .section_toggle .toggle__tabs li.current:after, .section_toggle .toggle__tabs li:hover A:after {
             content: '';
@@ -507,9 +507,6 @@ Tag Block
     display: none;
     -webkit-animation: fade 0.5s ease-in forwards;
     animation: fade 0.5s ease-in forwards; }
-    @media screen and (min-width: 768px) {
-      .section_toggle .toggle__content-box {
-        padding-left: var(--lg); } }
     .section_toggle .toggle__content-box.visible {
       display: block; }
   .section_toggle .toggle__title {
@@ -567,18 +564,14 @@ Tag Block
     @media screen and (min-width: 992px) {
       .section_toggle .toggle__subtitle-small {
         font-size: clamp(22px, calc(10px + 2vw), 32px); } }
-  @media screen and (max-width: 767px) {
-    .section_toggle .toggle__controls {
-      display: none; } }
-  @media screen and (min-width: 768px) {
-    .section_toggle .toggle__controls {
-      display: flex;
-      position: absolute;
-      right: -1px;
-      top: -1px;
-      z-index: 1; } }
-  .section_toggle .toggle__controls SPAN {
-    display: none; }
+  .section_toggle .toggle__controls {
+    display: flex;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    z-index: 1; }
+    .section_toggle .toggle__controls SPAN {
+      display: none; }
   .section_toggle .toggle__number {
     color: #e1dfdf;
     font-family: "Work Sans", "Arial", sans-serif;
@@ -587,8 +580,13 @@ Tag Block
     letter-spacing: 2px;
     padding: 8px 26px 0 0;
     position: absolute;
-    top: 68px;
     right: 0; }
+    @media screen and (max-width: 1023px) {
+      .section_toggle .toggle__number {
+        top: 48px; } }
+    @media screen and (min-width: 1024px) {
+      .section_toggle .toggle__number {
+        top: 68px; } }
     .section_toggle .toggle__number SPAN {
       color: #151731; }
   @media screen and (min-width: 768px) {
@@ -867,7 +865,8 @@ Benefits section
         .section_benefits .card:hover .card__title A:hover {
           color: #e97e00; }
       .section_benefits .card:hover .card__more {
-        color: #151731; }
+        color: #151731;
+        text-indent: -10000px; }
         .section_benefits .card:hover .card__more SPAN {
           background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI1IDE2IiB2aWV3Qm94PSIwIDAgMjUgMTYiPjxwYXRoIGQ9Ik0xNi4yIDIuMWMtLjQtLjQtLjQtMS4xIDAtMS42LjQtLjQgMS4xLS40IDEuNiAwbDYuNyA2LjdjLjQuNC40IDEuMSAwIDEuNmwtNi43IDYuN2MtLjQuNC0xLjEuNC0xLjYgMC0uNC0uNC0uNC0xLjEgMC0xLjZMMjEgOS4xSDEuNEMuOCA5LjEuMyA4LjYuMyA4cy41LTEuMSAxLjEtMS4xaDE5LjVsLTQuNy00Ljh6IiBzdHlsZT0iZmlsbDojZmY5NzFkIi8+PC9zdmc+"); }
   .section_benefits .card__content {
@@ -915,10 +914,11 @@ Benefits section
   @media screen and (min-width: 768px) {
     .section_benefits .card-outer + .btn {
       padding-left: 3vw;
-      padding-right: 3vw; } }
+      padding-right: 3vw;
+      min-width: 50%; } }
   @media screen and (min-width: 1024px) {
     .section_benefits .card-outer + .btn {
-      max-width: calc(25% + 3px); } }
+      min-width: calc(25% + 6px); } }
   .section_benefits .card__more {
     color: #151731;
     display: flex;
@@ -1039,7 +1039,8 @@ Benefits section
         .section_featured .card:hover .card__title A:hover {
           color: #e97e00; }
       .section_featured .card:hover .card__more {
-        color: #151731; }
+        color: #151731;
+        text-indent: -10000px; }
         .section_featured .card:hover .card__more SPAN {
           background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI1IDE2IiB2aWV3Qm94PSIwIDAgMjUgMTYiPjxwYXRoIGQ9Ik0xNi4yIDIuMWMtLjQtLjQtLjQtMS4xIDAtMS42LjQtLjQgMS4xLS40IDEuNiAwbDYuNyA2LjdjLjQuNC40IDEuMSAwIDEuNmwtNi43IDYuN2MtLjQuNC0xLjEuNC0xLjYgMC0uNC0uNC0uNC0xLjEgMC0xLjZMMjEgOS4xSDEuNEMuOCA5LjEuMyA4LjYuMyA4cy41LTEuMSAxLjEtMS4xaDE5LjVsLTQuNy00Ljh6IiBzdHlsZT0iZmlsbDojZmY5NzFkIi8+PC9zdmc+"); }
   .section_featured .card__content {
@@ -1087,10 +1088,11 @@ Benefits section
   @media screen and (min-width: 768px) {
     .section_featured .card-outer + .btn {
       padding-left: 3vw;
-      padding-right: 3vw; } }
+      padding-right: 3vw;
+      min-width: 50%; } }
   @media screen and (min-width: 1024px) {
     .section_featured .card-outer + .btn {
-      max-width: calc(25% + 3px); } }
+      min-width: calc(25% + 6px); } }
   .section_featured .card__more {
     color: #151731;
     display: flex;

@@ -2,8 +2,8 @@
 Offer section
 */
 .section_offer {
-  @import "img-left";
   //display: none;
+  @import "img-left";
 
   /* Custom CSS only offer section */
   .section__title {
@@ -31,6 +31,42 @@ Offer section
       @include media-netbook-mn {
         top: -145px;
       }
+    }
+  }
+
+  @import "numbers";
+
+  /* Custom CSS for numbers of Career page */
+  .numbers__item {
+    @include media-phone-mn {
+      width: 50%;
+    }
+    @include media-phablet-mx {
+      padding: 2vh 10px 3vh 0;
+    }
+    @include media-phablet-mn {
+      padding-top: 2vh;
+      padding-right: 10px;
+      padding-bottom: 2vh;
+    }
+    @include media-netbook-mn {
+      padding-left: 2.5vw;
+    }
+    @include media-laptop-mn {
+      &:nth-child(odd) {
+        width: 21.5em;
+      }
+      &:nth-child(even) {
+        width: calc(100% - 21.5em);
+
+        .numbers__title {
+          width: 13.5em;
+        }
+      }
+    }
+    @include media-desktop-mn {
+      padding-bottom: 2.8vh;
+      padding-left: 3.5vw;
     }
   }
 }

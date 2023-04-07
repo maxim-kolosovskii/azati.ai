@@ -1,5 +1,5 @@
-/* Toggle tabs with arrow */
-.toggle {
+/* Tabs with arrow */
+.tab {
 
   @include media-phablet-mn {
     display: flex;
@@ -7,8 +7,7 @@
 }
 
 
-.toggle__tabs {
-  list-style: none;
+.tab__bar {
   position: relative;
   z-index: 1;
 
@@ -18,36 +17,35 @@
     //width: 26%;
   }
 
-  li {
+  .tab__bar-item {
+    background-color: transparent;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
     font-family: $font-family-accent;
+    text-align: left;
+    width: 100%;
     @include transition(all $transition-duration $transition-timing-function);
 
     @include media-phablet-mx {
+      border-left: 4px solid $color-blue;
+      display: block;
       font-weight: $font-weight-700;
       line-height: 1.12; //18px;
-
-      A {
-        border-left: 4px solid $color-blue;
-        display: block;
-        padding: 5px 0 5px 10px;
-      }
+      padding: 5px 0 5px 10px;
 
       &:hover {
-
-        A {
-          color: $font-color-base;
-          border-left: 4px solid $color-blue-dark;
-        }
+        color: $font-color-base;
+        border-left: 4px solid $color-blue-dark;
       }
     }
 
     @include media-phablet-mn {
-      cursor: pointer;
       padding: 1.75vh 20px 1.8vh 0;
       position: relative;
 
-      &.current,
-      &:hover A {
+      &.active,
+      &:hover {
 
         &:after {
           content: '';
@@ -60,17 +58,13 @@
         }
       }
 
-      &.current {
+      &.active {
         border-bottom: 1px solid $color-blue;
         pointer-events: none;
 
         &:after {
           background-color: $color-blue;
         }
-      }
-
-      A {
-        pointer-events: none;
       }
     }
   }
@@ -91,10 +85,10 @@
 }
 
 
-.toggle__content {
-  padding-right: 3vw;
+.tab__content {
+  //padding-right: 3vw;
   position: relative;
-  //width: 74%;
+  width: 74%;
   transition: all $transition-duration $transition-timing-function;
 
   DL {
@@ -138,26 +132,20 @@
     @include media-phablet-mx {
       padding-top: 2vh;
     }
-    //@include media-phablet-mn {
-    //  padding-left: var(--lg);
-    //}
   }
 }
 
+
 .toggle__content-box {
-  display: none;
 
   // Animation
   @include x-animation(fade 0.5s ease-in forwards);
 
-  //@include media-phablet-mn {
-  //  padding-left: var(--lg);
-  //}
-
-  &.visible {
-    display: block;
+  @include media-phablet-mn {
+    padding-left: var(--lg);
   }
 }
+
 
 .toggle__title {
   font-size: clamp(28px, calc(16px + 2vw), 48px);
@@ -165,8 +153,10 @@
   SPAN {
     color: $color-grey-dark;
     font-weight: $font-weight-400;
+    white-space: nowrap;
   }
 }
+
 
 .toggle__subtitle {
   font-size: clamp(36px, calc(29px + 4vw), 90px);
@@ -189,6 +179,7 @@
   margin-top: 4vh;
 }
 
+
 .toggle__controls {
   display: flex;
   position: absolute;
@@ -200,6 +191,7 @@
     display: none;
   }
 }
+
 
 .toggle__number {
   color: $color-grey-medium;

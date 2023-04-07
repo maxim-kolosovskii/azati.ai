@@ -45,13 +45,13 @@ main[role="main"] {
 .container-fluid {
   position: relative;
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      z-index: -1;
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 }
 
 .container {
@@ -63,8 +63,8 @@ main[role="main"] {
     padding: 0 16px;
     width: 100%;
   }
-    @media only screen and (max-width: 299px) {
-      padding: 0 8px;
+  @media only screen and (max-width: 299px) {
+    padding: 0 8px;
   }
   @media only screen and (min-width: 400px) {
     max-width: calc(90% - 50px);

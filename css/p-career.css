@@ -46,14 +46,14 @@ General Landing styles
   -moz-transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   -o-transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
-  .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form):not(.section_career) {
+  .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_career) {
     overflow: hidden; }
     @media screen and (max-width: 767px) {
-      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form):not(.section_career) {
+      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_career) {
         margin: 10vh 0; } }
     @media screen and (min-width: 768px) {
-      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form):not(.section_career) {
-        margin: 18vh 0; } }
+      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_career) {
+        margin: 16vh 0; } }
 
 .section__title {
   font-family: "Work Sans", "Arial", sans-serif;
@@ -440,6 +440,14 @@ Top section
       font-weight: 400;
       line-height: 1;
       margin: -1px 1.5vw 0 0; }
+  @media only screen and (max-width: 399px) {
+    .section_tabs .filter {
+      margin-left: -16px;
+      margin-right: -16px; } }
+  @media only screen and (max-width: 299px) {
+    .section_tabs .filter {
+      margin-left: -8px;
+      margin-right: -8px; } }
   .section_tabs .card-outer {
     display: grid; }
     @media screen and (max-width: 767px) {
@@ -487,7 +495,8 @@ Top section
         .section_tabs .card:hover .card__title A:hover {
           color: #e97e00; }
       .section_tabs .card:hover .card__more {
-        color: #151731; }
+        color: #151731;
+        text-indent: -10000px; }
         .section_tabs .card:hover .card__more SPAN {
           background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI1IDE2IiB2aWV3Qm94PSIwIDAgMjUgMTYiPjxwYXRoIGQ9Ik0xNi4yIDIuMWMtLjQtLjQtLjQtMS4xIDAtMS42LjQtLjQgMS4xLS40IDEuNiAwbDYuNyA2LjdjLjQuNC40IDEuMSAwIDEuNmwtNi43IDYuN2MtLjQuNC0xLjEuNC0xLjYgMC0uNC0uNC0uNC0xLjEgMC0xLjZMMjEgOS4xSDEuNEMuOCA5LjEuMyA4LjYuMyA4cy41LTEuMSAxLjEtMS4xaDE5LjVsLTQuNy00Ljh6IiBzdHlsZT0iZmlsbDojZmY5NzFkIi8+PC9zdmc+"); }
   .section_tabs .card__content {
@@ -535,10 +544,11 @@ Top section
   @media screen and (min-width: 768px) {
     .section_tabs .card-outer + .btn {
       padding-left: 3vw;
-      padding-right: 3vw; } }
+      padding-right: 3vw;
+      min-width: 50%; } }
   @media screen and (min-width: 1024px) {
     .section_tabs .card-outer + .btn {
-      max-width: calc(25% + 3px); } }
+      min-width: calc(25% + 6px); } }
   .section_tabs .card__more {
     color: #151731;
     display: flex;
@@ -570,7 +580,13 @@ Top section
         border-right: 0 none; } }
     @media screen and (max-width: 575px) {
       .section_tabs .card {
-        padding: 2.5vh 15px 2.5vh; } }
+        padding: 2.5vh 15px; } }
+    @media only screen and (max-width: 399px) {
+      .section_tabs .card {
+        padding: 2vh 16px; } }
+    @media only screen and (max-width: 299px) {
+      .section_tabs .card {
+        padding: 1vh 8px; } }
     @media screen and (min-width: 576px) {
       .section_tabs .card {
         padding: 3.3vh 2.3vw 2.5vh 1.7vw; } }
@@ -676,13 +692,14 @@ Top section
   .section_tabs .section__subtitle {
     order: -1; }
 
-/* Offer section */
 /*
 Offer section
 */
 .section_offer {
   /* Block with a floating background image to left of content */
-  /* Custom CSS only offer section */ }
+  /* Custom CSS only offer section */
+  /* Numbers */
+  /* Custom CSS for numbers of Career page */ }
   @media screen and (min-width: 1200px) and (max-width: 1399px) {
     .section_offer .container {
       display: grid;
@@ -746,10 +763,6 @@ Offer section
   @media screen and (min-width: 1200px) {
     .section_offer .section__img-outer IMG {
       top: -145px; } }
-
-.section_offer {
-  /* Numbers */
-  /* Custom CSS for numbers of Career page */ }
   .section_offer .numbers {
     display: flex;
     flex-wrap: wrap; }
@@ -872,7 +885,7 @@ Offer section
       @media screen and (min-width: 768px) {
         .section_slideshow .toggle__tabs li {
           cursor: pointer;
-          padding: 1.7vh 20px 1.8vh 0;
+          padding: 1.75vh 20px 1.8vh 0;
           position: relative; }
           .section_slideshow .toggle__tabs li.current:after, .section_slideshow .toggle__tabs li:hover A:after {
             content: '';
@@ -947,9 +960,6 @@ Offer section
     display: none;
     -webkit-animation: fade 0.5s ease-in forwards;
     animation: fade 0.5s ease-in forwards; }
-    @media screen and (min-width: 768px) {
-      .section_slideshow .toggle__content-box {
-        padding-left: var(--lg); } }
     .section_slideshow .toggle__content-box.visible {
       display: block; }
   .section_slideshow .toggle__title {
@@ -1007,18 +1017,14 @@ Offer section
     @media screen and (min-width: 992px) {
       .section_slideshow .toggle__subtitle-small {
         font-size: clamp(22px, calc(10px + 2vw), 32px); } }
-  @media screen and (max-width: 767px) {
-    .section_slideshow .toggle__controls {
-      display: none; } }
-  @media screen and (min-width: 768px) {
-    .section_slideshow .toggle__controls {
-      display: flex;
-      position: absolute;
-      right: -1px;
-      top: -1px;
-      z-index: 1; } }
-  .section_slideshow .toggle__controls SPAN {
-    display: none; }
+  .section_slideshow .toggle__controls {
+    display: flex;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    z-index: 1; }
+    .section_slideshow .toggle__controls SPAN {
+      display: none; }
   .section_slideshow .toggle__number {
     color: #e1dfdf;
     font-family: "Work Sans", "Arial", sans-serif;
@@ -1027,16 +1033,27 @@ Offer section
     letter-spacing: 2px;
     padding: 8px 26px 0 0;
     position: absolute;
-    top: 68px;
     right: 0; }
+    @media screen and (max-width: 1023px) {
+      .section_slideshow .toggle__number {
+        top: 48px; } }
+    @media screen and (min-width: 1024px) {
+      .section_slideshow .toggle__number {
+        top: 68px; } }
     .section_slideshow .toggle__number SPAN {
       color: #151731; }
   .section_slideshow .toggle__content-box {
-    display: block;
-    padding: 14.5vh 7.3vw; }
+    display: block; }
+    @media screen and (max-width: 1199px) {
+      .section_slideshow .toggle__content-box {
+        padding: 9vh 7.3vw; } }
     @media screen and (min-width: 1200px) {
       .section_slideshow .toggle__content-box {
-        min-height: 500px; } }
+        min-height: 500px;
+        padding: 11vh 7.3vw; } }
+    @media screen and (min-width: 1400px) {
+      .section_slideshow .toggle__content-box {
+        padding: 14.5vh 7.3vw; } }
     .section_slideshow .toggle__content-box .toggle__title {
       font-family: "Work Sans", "Arial", sans-serif;
       margin: 0;
@@ -1070,16 +1087,13 @@ Offer section
         .section_slideshow .toggle__content-box .toggle__subtitle-small {
           font-size: clamp(22px, calc(10px + 2vw), 32px); } }
     .section_slideshow .toggle__content-box P {
-      display: flex;
-      align-items: center;
       font-size: 2.4rem;
       line-height: 1.2;
       max-width: 36em;
       margin: 0;
       padding: 0; }
       .section_slideshow .toggle__content-box P IMG {
-        max-width: 36px;
-        margin: 0 1em; }
+        max-width: 36px; }
 
 .slideshow-container {
   border-right: 1px solid #e1dfdf;

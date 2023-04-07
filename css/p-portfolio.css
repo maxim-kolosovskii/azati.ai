@@ -46,14 +46,14 @@ General Landing styles
   -moz-transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   -o-transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
-  .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form):not(.section_career) {
+  .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_career) {
     overflow: hidden; }
     @media screen and (max-width: 767px) {
-      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form):not(.section_career) {
+      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_career) {
         margin: 10vh 0; } }
     @media screen and (min-width: 768px) {
-      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_form):not(.section_career) {
-        margin: 18vh 0; } }
+      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_career) {
+        margin: 16vh 0; } }
 
 .section__title {
   font-family: "Work Sans", "Arial", sans-serif;
@@ -555,7 +555,8 @@ Filter
         .section_portfolio .card:hover .card__title A:hover {
           color: #e97e00; }
       .section_portfolio .card:hover .card__more {
-        color: #151731; }
+        color: #151731;
+        text-indent: -10000px; }
         .section_portfolio .card:hover .card__more SPAN {
           background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI1IDE2IiB2aWV3Qm94PSIwIDAgMjUgMTYiPjxwYXRoIGQ9Ik0xNi4yIDIuMWMtLjQtLjQtLjQtMS4xIDAtMS42LjQtLjQgMS4xLS40IDEuNiAwbDYuNyA2LjdjLjQuNC40IDEuMSAwIDEuNmwtNi43IDYuN2MtLjQuNC0xLjEuNC0xLjYgMC0uNC0uNC0uNC0xLjEgMC0xLjZMMjEgOS4xSDEuNEMuOCA5LjEuMyA4LjYuMyA4cy41LTEuMSAxLjEtMS4xaDE5LjVsLTQuNy00Ljh6IiBzdHlsZT0iZmlsbDojZmY5NzFkIi8+PC9zdmc+"); }
   .section_portfolio .card__content {
@@ -603,10 +604,11 @@ Filter
   @media screen and (min-width: 768px) {
     .section_portfolio .card-outer + .btn {
       padding-left: 3vw;
-      padding-right: 3vw; } }
+      padding-right: 3vw;
+      min-width: 50%; } }
   @media screen and (min-width: 1024px) {
     .section_portfolio .card-outer + .btn {
-      max-width: calc(25% + 3px); } }
+      min-width: calc(25% + 6px); } }
   .section_portfolio .card__more {
     color: #151731;
     display: flex;
