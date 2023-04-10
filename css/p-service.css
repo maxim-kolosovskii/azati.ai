@@ -513,7 +513,8 @@ Tag Block
     font-size: clamp(28px, calc(16px + 2vw), 48px); }
     .section_toggle .toggle__title SPAN {
       color: #aeafbc;
-      font-weight: 400; }
+      font-weight: 400;
+      white-space: nowrap; }
   .section_toggle .toggle__subtitle {
     font-size: clamp(36px, calc(29px + 4vw), 90px);
     line-height: 1.065;

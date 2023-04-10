@@ -966,7 +966,8 @@ Offer section
     font-size: clamp(28px, calc(16px + 2vw), 48px); }
     .section_slideshow .toggle__title SPAN {
       color: #aeafbc;
-      font-weight: 400; }
+      font-weight: 400;
+      white-space: nowrap; }
   .section_slideshow .toggle__subtitle {
     font-size: clamp(36px, calc(29px + 4vw), 90px);
     line-height: 1.065;
@@ -1042,6 +1043,22 @@ Offer section
         top: 68px; } }
     .section_slideshow .toggle__number SPAN {
       color: #151731; }
+  .section_slideshow .toggle {
+    border-right: 1px solid #e1dfdf;
+    border-bottom: 1px solid #e1dfdf;
+    border-left: 1px solid #e1dfdf;
+    display: block;
+    margin-left: auto;
+    position: relative; }
+    @media screen and (max-width: 1199px) {
+      .section_slideshow .toggle {
+        border-top: 1px solid #e1dfdf; } }
+    @media screen and (min-width: 1200px) {
+      .section_slideshow .toggle {
+        width: 50%; } }
+    @media screen and (min-width: 1700px) {
+      .section_slideshow .toggle {
+        width: 66.66%; } }
   .section_slideshow .toggle__content-box {
     display: block; }
     @media screen and (max-width: 1199px) {
@@ -1094,22 +1111,6 @@ Offer section
       padding: 0; }
       .section_slideshow .toggle__content-box P IMG {
         max-width: 36px; }
-
-.slideshow-container {
-  border-right: 1px solid #e1dfdf;
-  border-bottom: 1px solid #e1dfdf;
-  border-left: 1px solid #e1dfdf;
-  margin-left: auto;
-  position: relative; }
-  @media screen and (max-width: 1199px) {
-    .slideshow-container {
-      border-top: 1px solid #e1dfdf; } }
-  @media screen and (min-width: 1200px) {
-    .slideshow-container {
-      width: 50%; } }
-  @media screen and (min-width: 1700px) {
-    .slideshow-container {
-      width: 66.66%; } }
 
 /*
 Bottom form section

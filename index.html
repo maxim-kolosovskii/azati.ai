@@ -23,7 +23,6 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!--    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans:wght@500;700;800&display=swap" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans&family=Roboto:wght@300;400;500;700;900&family=Work+Sans:wght@500;700;800&display=swap" rel="stylesheet">
     <!-- CSS styles -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -183,33 +182,30 @@
     </section><!-- end services section -->
 
 
-    <section class="section section_toggle" data-aos="fade-up">
+    <section class="section section_tabs">
         <div class="container">
             <h2 class="section__title">Industries</h2>
         </div>
 
-        <div class="container-fluid">
-            <picture class="section__img-outer">
-                <source srcset="img/to_delete/tmp-industries.webp" type="image/webp">
-                <img src="img/to_delete/tmp-industries-min.jpg" alt="" data-aos="fade-up">
-            </picture>
+        <div class="container">
+            <div class="tab">
+                <div class="tab__bar">
+                    <button class="tab__bar-item active" type="button" onclick="openTab(event,'Insurance')">Insurance <span>/ 06</span></button>
+                    <button class="tab__bar-item" type="button" onclick="openTab(event,'Life')">Life Sciences/Biotech <span>/ 02</span></button>
+                    <button class="tab__bar-item" type="button" onclick="openTab(event,'Finance')">Finance <span>/ 01</span></button>
+                    <button class="tab__bar-item" type="button" onclick="openTab(event,'Real')">Real Estate <span>/ 01</span></button>
+                    <button class="tab__bar-item" type="button" onclick="openTab(event,'Human')">Human resources <span>/ 01</span></button>
+                    <button class="tab__bar-item" type="button" onclick="openTab(event,'Oil')">Oil&Gas <span>/ 01</span></button>
+                    <button class="tab__bar-item" type="button" onclick="openTab(event,'Marketing')">Marketing <span>/ 01</span></button>
+                    <button class="tab__bar-item" type="button" onclick="openTab(event,'Entertainment')">Entertainment <span>/ 01</span></button>
+                    <button class="tab__bar-item" type="button" onclick="openTab(event,'E-commerce')">E-commerce <span>/ 01</span></button>
+                </div>
 
-            <div class="container">
-                <div class="toggle">
-                    <ul class="toggle__tabs">
-                        <li class="current"><a href="https://azati.ai/">Insurance <span>/ 06</span></a></li>
-                        <li><a href="https://azati.ai/">Life Sciences/Biotech <span>/ 06</span></a></li>
-                        <li><a href="https://azati.ai/">Finance <span>/ 06</span></a></li>
-                        <li><a href="https://azati.ai/">Real Estate <span>/ 06</span></a></li>
-                        <li><a href="https://azati.ai/">Human resources <span>/ 06</span></a></li>
-                        <li><a href="https://azati.ai/">Oil&Gas <span>/ 06</span></a></li>
-                        <li><a href="https://azati.ai/">Marketing <span>/ 06</span></a></li>
-                        <li><a href="https://azati.ai/">Entertainment</a></li>
-                        <li><a href="https://azati.ai/">E-commerce</a></li>
-                    </ul>
+                <div id="Insurance" class="tab__content toggle">
                     <div class="toggle__content">
-                        <div class="toggle__content-box visible">
-                            <h3 class="toggle__title">Case study <span>/ 01</span></h3>
+                        <div class="toggle__number"><span>01</span> / 03</div>
+                        <div class="toggle__content-box">
+                            <h3 itemprop="name" class="toggle__title">Case study <span>/ 01</span></h3>
                             <p>
                                 Custom Software Engineering<br>
                                 Web and Mobile application development from scratch, legacy solutions maintenance and third-party applications customization
@@ -218,48 +214,214 @@
                             <p>
                                 We solve complex data extraction tasks, enabling our clients to automatically digitize complex documents.
                             </p>
-
                             <a class="btn-more" href="case-study.html">Learn More <span data-aos="fade-right"></span></a>
                         </div>
-                        <div class="toggle__content-box">
-                            <h3 class="toggle__title">Case study <span>/ 02</span></h3>
-                            <p>Content of Tab Insurance. Case Study 02</p>
-
-                            <a class="btn-more" href="case-study.html">Learn More <span></span></a>
-                        </div>
-                        <div class="toggle__content-box">
-                            <h3 class="toggle__title">Case study <span>/ 03</span></h3>
-                            <p>Content of Tab Insurance. Case Study 03</p>
-
-                            <a class="btn-more" href="/">Learn More <span></span></a>
-                        </div>
-                        <div class="toggle__content-box">
-                            <h3 class="toggle__title">Case study <span>/ 04</span></h3>
-                            <p>Content of Tab Insurance. Case Study 04</p>
-
-                            <a class="btn-more" href="case-study.html">Learn More <span></span></a>
-                        </div>
-                        <div class="toggle__content-box">
-                            <h3 class="toggle__title">Case study <span>/ 05</span></h3>
-                            <p>Content of Tab Insurance. Case Study 05</p>
-
-                            <a class="btn-more" href="case-study.html">Learn More <span></span></a>
-                        </div>
-                        <div class="toggle__content-box">
-                            <h3 class="toggle__title">Case study <span>/ 06</span></h3>
-                            <p>Content of Tab Insurance. Case Study 06</p>
-
-                            <a class="btn-more" href="case-study.html">Learn More <span></span></a>
-                        </div>
-                        <div class="toggle__controls">
-                            <a href="/" class="btn-arrow btn-arrow_prev" aria-label="Preview Case"><span>❮ Prev</span></a>
-                            <a href="/" class="btn-arrow btn-arrow_next" aria-label="Next Case"><span>Next ❯</span></a>
+                        <div class="section__img-outer">
+                            <picture class="shadow" data-aos="fade-up">
+                                <source srcset="img/to_delete/tmp-industries.webp" type="image/webp">
+                                <img src="img/to_delete/tmp-industries-min.jpg" alt="">
+                            </picture>
                         </div>
                     </div>
-                </div>
+
+                    <div class="toggle__content">
+                        <div class="toggle__number"><span>02</span> / 03</div>
+                        <div class="toggle__content-box">
+                            <h3 itemprop="name" class="toggle__title">Case study <span>/ 02</span></h3>
+                            <p>
+                                Donec eget pretium nisl. Aliquam a condimentum felis. Quisque ante quam, elementum a congue id, iaculis pharetra dui. Curabitur commodo elit velit, in egestas risus ultricies non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum in lacus sed ultrices. Suspendisse at semper sem. Suspendisse sed lectus nunc.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum in lacus sed ultrices. Suspendisse at semper sem. Suspendisse sed lectus nunc.
+                            </p>
+                            <a class="btn-more" href="case-study.html">Learn More <span data-aos="fade-right"></span></a>
+                        </div>
+                        <div class="section__img-outer">
+                            <picture class="shadow" data-aos="fade-up">
+                                <source srcset="img/to_delete/tmp-industries.webp" type="image/webp">
+                                <img src="img/to_delete/tmp-industries-min.jpg" alt="">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="toggle__content">
+                        <div class="toggle__number"><span>03</span> / 03</div>
+                        <div class="toggle__content-box">
+                            <h3 itemprop="name" class="toggle__title">Case study <span>/ 03</span></h3>
+                            <p>
+                                Curabitur ut justo quis libero iaculis consequat. Nam mollis, ligula id sollicitudin sollicitudin, justo orci blandit odio, vitae sagittis urna ex eu neque.
+                            </p>
+                            <p>
+                                Nunc risus tortor, vehicula ut diam eget, tristique lacinia eros. Cras vestibulum odio ac diam ornare facilisis. Sed blandit ante fringilla, laoreet ex eu, dignissim erat. Sed id magna eu velit interdum gravida.
+                            </p>
+                            <p>
+                                Curabitur ut justo quis libero iaculis consequat. Nam mollis, ligula id sollicitudin sollicitudin, justo orci blandit odio, vitae sagittis urna ex eu neque. Nunc risus tortor, vehicula ut diam eget, tristique lacinia eros. Cras vestibulum odio ac diam ornare facilisis.
+                            </p>
+                            <a class="btn-more" href="case-study.html">Learn More <span data-aos="fade-right"></span></a>
+                        </div>
+                        <div class="section__img-outer">
+                            <picture class="shadow" data-aos="fade-up">
+                                <source srcset="img/to_delete/tmp-industries.webp" type="image/webp">
+                                <img src="img/to_delete/tmp-industries-min.jpg" alt="">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="toggle__controls">
+                        <a class="btn-arrow btn-arrow_prev" onclick="plusSlides(-1)" aria-label="Preview Case"></a>
+                        <a class="btn-arrow btn-arrow_next" onclick="plusSlides(1)" aria-label="Next Case"></a>
+                    </div>
+                </div><!-- end insurance tab -->
+
+                <div id="Life" class="tab__content toggle" style="display:none">
+                    <div class="toggle__content">
+                        <div class="toggle__number"><span>01</span> / 02</div>
+                        <div class="toggle__content-box">
+                            <h3 itemprop="name" class="toggle__title">Case study <span>/ 01</span></h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum in lacus sed ultrices. Suspendisse at semper sem. Suspendisse sed lectus nunc.
+                            </p>
+                            <a class="btn-more" href="case-study.html">Learn More <span data-aos="fade-right"></span></a>
+                        </div>
+                        <div class="section__img-outer">
+                            <picture class="shadow" data-aos="fade-up">
+                                <source srcset="img/to_delete/tmp-industries.webp" type="image/webp">
+                                <img src="img/to_delete/tmp-industries-min.jpg" alt="">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="toggle__content">
+                        <div class="toggle__number"><span>02</span> / 02</div>
+                        <div class="toggle__content-box">
+                            <h3 itemprop="name" class="toggle__title">Case study <span>/ 02</span></h3>
+                            <p>
+                                Curabitur ut justo quis libero iaculis consequat. Nam mollis, ligula id sollicitudin sollicitudin, justo orci blandit odio, vitae sagittis urna ex eu neque. Nunc risus tortor, vehicula ut diam eget, tristique lacinia eros. Cras vestibulum odio ac diam ornare facilisis.
+                            </p>
+                            <a class="btn-more" href="case-study.html">Learn More <span data-aos="fade-right"></span></a>
+                        </div>
+                        <div class="section__img-outer">
+                            <picture class="shadow" data-aos="fade-up">
+                                <source srcset="img/to_delete/tmp-industries.webp" type="image/webp">
+                                <img src="img/to_delete/tmp-industries-min.jpg" alt="">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="toggle__controls">
+                        <a class="btn-arrow btn-arrow_prev" onclick="plusSlides(-1)" aria-label="Preview Case"></a>
+                        <a class="btn-arrow btn-arrow_next" onclick="plusSlides(1)" aria-label="Next Case"></a>
+                    </div>
+                </div><!-- end life tab -->
+
+                <div id="Finance" class="tab__content toggle" style="display:none">
+                    <div class="toggle__content-box">
+                        <h3 itemprop="name" class="toggle__title">Case study <span>/ 01</span></h3>
+                        <p>
+                            Curabitur ut justo quis libero iaculis consequat. Nam mollis, ligula id sollicitudin sollicitudin, justo orci blandit odio, vitae sagittis urna ex eu neque. Nunc risus tortor, vehicula ut diam eget, tristique lacinia eros. Cras vestibulum odio ac diam ornare facilisis.
+                        </p>
+                        <a class="btn-more" href="case-study.html">Learn More <span data-aos="fade-right"></span></a>
+                    </div>
+                    <div class="section__img-outer">
+                        <picture class="shadow" data-aos="fade-up">
+                            <source srcset="img/to_delete/tmp-industries.webp" type="image/webp">
+                            <img src="img/to_delete/tmp-industries-min.jpg" alt="">
+                        </picture>
+                    </div>
+                </div><!-- end finance tab -->
+
+                <div id="Real" class="tab__content toggle" style="display:none">
+                    <div class="toggle__content-box">
+                        <h3 itemprop="name" class="toggle__title">Case study <span>/ 01</span></h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo quis libero iaculis consequat. Nam mollis, ligula id sollicitudin sollicitudin, justo orci blandit odio, vitae sagittis urna ex eu neque. Nunc risus tortor, vehicula ut diam eget, tristique lacinia eros. Cras vestibulum odio ac diam ornare facilisis.
+                        </p>
+                        <a class="btn-more" href="case-study.html">Learn More <span data-aos="fade-right"></span></a>
+                    </div>
+                </div><!-- end real tab -->
+
+                <div id="Human" class="tab__content toggle" style="display:none">
+                    <div class="toggle__content-box">
+                        <h3 itemprop="name" class="toggle__title">Case study <span>/ 01</span></h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, ligula id sollicitudin sollicitudin, justo orci blandit odio, vitae sagittis urna ex eu neque. Nunc risus tortor, vehicula ut diam eget, tristique lacinia eros. Cras vestibulum odio ac diam ornare facilisis.
+                        </p>
+                        <a class="btn-more" href="case-study.html">Learn More <span data-aos="fade-right"></span></a>
+                    </div>
+                    <div class="section__img-outer">
+                        <picture class="shadow" data-aos="fade-up">
+                            <source srcset="img/to_delete/tmp-industries.webp" type="image/webp">
+                            <img src="img/to_delete/tmp-industries-min.jpg" alt="">
+                        </picture>
+                    </div>
+                </div><!-- end human tab -->
+
+                <div id="Oil" class="tab__content toggle" style="display:none">
+                    <div class="toggle__content-box">
+                        <h3 itemprop="name" class="toggle__title">Case study <span>/ 01</span></h3>
+                        <p>
+                            Curabitur ut justo quis libero iaculis consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, ligula id sollicitudin sollicitudin, justo orci blandit odio, vitae sagittis urna ex eu neque. Nunc risus tortor, vehicula ut diam eget, tristique lacinia eros. Cras vestibulum odio ac diam ornare facilisis.
+                        </p>
+                        <a class="btn-more" href="case-study.html">Learn More <span data-aos="fade-right"></span></a>
+                    </div>
+                </div><!-- end oil tab -->
+
+                <div id="Marketing" class="tab__content toggle" style="display:none">
+                    <div class="toggle__content-box">
+                        <h3 itemprop="name" class="toggle__title">Case study <span>/ 01</span></h3>
+                        <p>
+                            Cras vestibulum odio ac diam ornare facilisis. Nam mollis, ligula id sollicitudin sollicitudin, justo orci blandit odio, vitae sagittis urna ex eu neque. Nunc risus tortor, vehicula ut diam eget, tristique lacinia eros.
+                        </p>
+                        <p>
+                            Nam mollis, ligula id sollicitudin sollicitudin, justo orci blandit odio, vitae sagittis urna ex eu neque. Nunc risus tortor, vehicula ut diam eget, tristique lacinia eros. Cras vestibulum odio ac diam ornare facilisis.
+                        </p>
+                        <a class="btn-more" href="case-study.html">Learn More <span data-aos="fade-right"></span></a>
+                    </div>
+                    <div class="section__img-outer">
+                        <picture class="shadow" data-aos="fade-up">
+                            <source srcset="img/to_delete/tmp-industries.webp" type="image/webp">
+                            <img src="img/to_delete/tmp-industries-min.jpg" alt="">
+                        </picture>
+                    </div>
+                </div><!-- end marketing tab -->
+
+                <div id="Entertainment" class="tab__content toggle" style="display:none">
+                    <div class="toggle__content-box">
+                        <h3 itemprop="name" class="toggle__title">Case study <span>/ 01</span></h3>
+                        <p>
+                            Nam mollis, ligula id sollicitudin sollicitudin, justo orci blandit odio, vitae sagittis urna ex eu neque. Nunc risus tortor, vehicula ut diam eget, tristique lacinia eros. Cras vestibulum odio ac diam ornare facilisis.
+                        </p>
+                        <p>
+                            Ligula id sollicitudin sollicitudin, justo orci blandit odio, vitae sagittis urna ex eu neque. Nunc risus tortor, vehicula ut diam eget, tristique lacinia eros.
+                        </p>
+                        <a class="btn-more" href="case-study.html">Learn More <span data-aos="fade-right"></span></a>
+                    </div>
+                    <div class="section__img-outer">
+                        <picture class="shadow" data-aos="fade-up">
+                            <source srcset="img/to_delete/tmp-industries.webp" type="image/webp">
+                            <img src="img/to_delete/tmp-industries-min.jpg" alt="">
+                        </picture>
+                    </div>
+                </div><!-- end entertainment tab -->
+
+                <div id="E-commerce" class="tab__content toggle" style="display:none">
+                    <div class="toggle__content-box">
+                        <h3 itemprop="name" class="toggle__title">Case study <span>/ 01</span></h3>
+                        <p>
+                            Orci blandit odio, vitae sagittis urna ex eu neque. Nunc risus tortor, vehicula ut diam eget, tristique lacinia eros.
+                        </p>
+                        <a class="btn-more" href="case-study.html">Learn More <span data-aos="fade-right"></span></a>
+                    </div>
+                    <div class="section__img-outer">
+                        <picture class="shadow" data-aos="fade-up">
+                            <source srcset="img/to_delete/tmp-industries.webp" type="image/webp">
+                            <img src="img/to_delete/tmp-industries-min.jpg" alt="">
+                        </picture>
+                    </div>
+                </div><!-- end e-commerce tab -->
             </div>
         </div>
-    </section><!-- end toggle section -->
+    </section><!-- end  tabs section -->
 
 
     <section class="section section_hire">
@@ -543,30 +705,46 @@
 <script src="js/vendors.min.js" defer="defer"></script>
 <script src="js/company.min.js" defer="defer"></script>
 
-<!-- jQuery. Toggle tab slider with arrows -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!-- Tabs -->
 <script>
-    $(function() {
-        $(".section").each(function(indx, el) {
-            var li = $("li", el),
-                box = $(".toggle__content-box", el),
-                btn = $(".btn-arrow", el),
-                len = li.length - 1,
-                i = 0;
-            $(el).on("click", "li", function() {
-                i = li.index(this);
-                li.removeClass("current").eq(i).addClass("current");
-                box.removeClass("visible").eq(i).addClass("visible")
-            });
-            $(el).on("click", ".btn-arrow", function(event) {
-                event.preventDefault();
-                i += $(this).is(".btn-arrow_prev") ? -1 : 1;
-                i < 0 && (i = len);
-                i > len && (i = 0);
-                li.eq(i).click()
-            })
-        })
-    });
+    function openTab(evt, tabName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("tab__content");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab__bar-item");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+<!-- Slideshow -->
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("toggle__content");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
 </script>
 
 <!-- Textarea autosize -->
