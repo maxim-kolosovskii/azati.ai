@@ -2,6 +2,16 @@
 Form elements
 */
 
+%padding {
+  padding: 1.03rem 1rem .55rem 9px;
+}
+
+%form__label_active {
+  opacity: .25;
+  padding-left: 14px;
+  @include transform(translateY(1.15rem) scale(0.7));
+}
+
 .form {
   background-color: #fff;
 
@@ -13,7 +23,6 @@ Form elements
   }
   @include media-phablet-netbook {
     padding-right: 5vw;
-    padding-left: 5vw;
   }
   @include media-netbook-mn {
     padding-right: 2.5vw;
@@ -33,18 +42,26 @@ FIELDSET,
   @include reset;
   position: relative;
   top: auto; left: auto;
-}
 
-.form__group_reverse {
-  flex-direction: column-reverse;
+  &:not(.form__group_checkbox) {
+    flex-direction: column-reverse;
+  }
 }
 
 .form__group_half-outer {
   @include media-phone-mx {
     display: inline-block;
   }
+  @include media-phone-phablet {
+    display: flex;
+    justify-content: space-between;
+  }
   @include media-phablet-netbook {
     display: inline-block;
+  }
+  @include media-netbook-mn {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -52,10 +69,10 @@ FIELDSET,
   display: flex;
 
   @include media-phone-phablet {
-    width: calc(50% - 3px);
+    width: calc(50% - 20px);
   }
   @include media-netbook-mn {
-    width: calc(50% - 3px);
+    width: calc(50% - 20px);
   }
 }
 
@@ -76,7 +93,8 @@ FIELDSET,
   @include box-sizing;
   display: block;
   outline: none;
-  padding: 1.03rem 1rem .55rem 9px;
+  @extend %padding;
+
   width: 100%;
   transition: all 0.25s ease;
 
@@ -90,22 +108,20 @@ FIELDSET,
   }
 
   &:focus, &:not(:placeholder-shown), &:-webkit-autofill {
-    & + label {
-      opacity: .25;
-      padding-left: 14px;
-      @include transform(translateY(1.15rem) scale(0.7));
+    & + .form__label {
+      @extend %form__label_active;
     }
   }
 }
 
 TEXTAREA {
   @extend .form__control;
+  height: 95px;
   line-height: 1.25;
   overflow: auto;
   resize: none;
 }
 
-LABEL:not(.form__checkbox),
 .form__label {
   cursor: text;
   opacity: .4;
@@ -117,9 +133,64 @@ LABEL:not(.form__checkbox),
 }
 
 
+/* Attach file */
+.form__label-file {
+  border-bottom: 1px solid $color-grey-medium;
+  cursor: pointer;
+  margin-top: 1.4rem;
+  @extend %padding;
+
+  &:after {
+    content: '+';
+    color: $color-blue;
+    border: 1px solid $color-grey-medium;
+    font-size: 1.4rem;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    @include transition(all $transition-duration $transition-timing-function);
+  }
+
+  &:hover {
+    border-bottom-color: $color-grey-dark;
+
+    &:after {
+      border-color: $color-grey-dark;
+    }
+  }
+}
+#file-chosen {
+  opacity: .4;
+  @extend %padding;
+  pointer-events: none;
+  position: absolute;
+
+  &.active {
+    opacity: 1;
+
+    & ~ .form__label {
+      @extend %form__label_active;
+    }
+  }
+}
+
+
 /* Checkbox */
 .form__group_checkbox {
-  padding: 1.55rem 0 1.55rem;
+  @include media-tablet-v-mx {
+    padding: 4vh 0 2vh;
+  }
+  @include media-phablet-mx {
+    padding-bottom: 4vh;
+  }
+  @include media-tablet-v-mn {
+    padding: 7vh 0 2vh;
+  }
 }
 
 label.form__checkbox {

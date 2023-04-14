@@ -1,0 +1,22 @@
+@import "section";
+
+@import "section-form";
+
+.section_form {
+
+  .container-fluid {
+
+    .container {
+      //@include media-phablet-mx {
+      //  padding-bottom: 3vh;
+      //}
+      //@include media-phablet-mn {
+      //  padding-bottom: 60px;
+      //}
+      @include media-desktop-mn {
+        //padding-bottom: 10vh;
+        padding-bottom: 98px;
+      }
+    }
+  }
+}

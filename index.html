@@ -49,7 +49,7 @@
                 <li><a itemprop="url" class="nav__item" href="portfolio.html">Portfolio</a></li>
                 <li><a itemprop="url" class="nav__item" href="blog.html">Blog</a></li>
                 <li><a itemprop="url" class="nav__item" href="career.html">Career</a></li>
-                <li><a itemprop="url" class="nav__item" href="/">Contact Us</a></li>
+                <li><a itemprop="url" class="nav__item" href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -202,7 +202,7 @@
                 </div>
 
                 <div id="Insurance" class="tab__content toggle">
-                    <div class="toggle__content">
+                    <div class="toggle__content toggle__content_1">
                         <div class="toggle__number"><span>01</span> / 03</div>
                         <div class="toggle__content-box">
                             <h3 itemprop="name" class="toggle__title">Case study <span>/ 01</span></h3>
@@ -224,7 +224,7 @@
                         </div>
                     </div>
 
-                    <div class="toggle__content">
+                    <div class="toggle__content toggle__content_1">
                         <div class="toggle__number"><span>02</span> / 03</div>
                         <div class="toggle__content-box">
                             <h3 itemprop="name" class="toggle__title">Case study <span>/ 02</span></h3>
@@ -244,7 +244,7 @@
                         </div>
                     </div>
 
-                    <div class="toggle__content">
+                    <div class="toggle__content toggle__content_1">
                         <div class="toggle__number"><span>03</span> / 03</div>
                         <div class="toggle__content-box">
                             <h3 itemprop="name" class="toggle__title">Case study <span>/ 03</span></h3>
@@ -268,13 +268,13 @@
                     </div>
 
                     <div class="toggle__controls">
-                        <a class="btn-arrow btn-arrow_prev" onclick="plusSlides(-1)" aria-label="Preview Case"></a>
-                        <a class="btn-arrow btn-arrow_next" onclick="plusSlides(1)" aria-label="Next Case"></a>
+                        <a class="btn-arrow btn-arrow_prev" onclick="plusSlides(-1, 0)" aria-label="Preview Case"></a>
+                        <a class="btn-arrow btn-arrow_next" onclick="plusSlides(1, 0)" aria-label="Next Case"></a>
                     </div>
                 </div><!-- end insurance tab -->
 
                 <div id="Life" class="tab__content toggle" style="display:none">
-                    <div class="toggle__content">
+                    <div class="toggle__content toggle__content_2">
                         <div class="toggle__number"><span>01</span> / 02</div>
                         <div class="toggle__content-box">
                             <h3 itemprop="name" class="toggle__title">Case study <span>/ 01</span></h3>
@@ -291,7 +291,7 @@
                         </div>
                     </div>
 
-                    <div class="toggle__content">
+                    <div class="toggle__content toggle__content_2">
                         <div class="toggle__number"><span>02</span> / 02</div>
                         <div class="toggle__content-box">
                             <h3 itemprop="name" class="toggle__title">Case study <span>/ 02</span></h3>
@@ -309,8 +309,8 @@
                     </div>
 
                     <div class="toggle__controls">
-                        <a class="btn-arrow btn-arrow_prev" onclick="plusSlides(-1)" aria-label="Preview Case"></a>
-                        <a class="btn-arrow btn-arrow_next" onclick="plusSlides(1)" aria-label="Next Case"></a>
+                        <a class="btn-arrow btn-arrow_prev" onclick="plusSlides(-1, 1)" aria-label="Preview Case"></a>
+                        <a class="btn-arrow btn-arrow_next" onclick="plusSlides(1, 1)" aria-label="Next Case"></a>
                     </div>
                 </div><!-- end life tab -->
 
@@ -516,47 +516,45 @@
         <div class="container">
             <h2 class="section__title">Drop us a line</h2>
         </div>
-        <div class="container-fluid">
-            <div class="container">
-                <picture class="section__img-outer">
-                    <source srcset="img/bg-form.webp" type="image/webp">
-                    <img class="lazy-img" data-src="img/bg-form-min.jpg" alt="">
-                </picture>
+        <div class="container">
+            <picture class="section__img-outer">
+                <source srcset="img/bg-form.webp" type="image/webp">
+                <img class="lazy-img" data-src="img/bg-form-min.jpg" alt="">
+            </picture>
 
-                <form method="post" id="main-form" class="form">
-                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
-                        <input class="form__control" id="form-first" type="text" name="firstname" placeholder="" required>
-                        <label class="form__label" for="form-first">First Name<sup>*</sup></label>
-                    </fieldset>
+            <form method="post" id="main-form" class="form">
+                <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
+                    <input class="form__control" id="form-first" type="text" name="form-first" placeholder="" required>
+                    <label class="form__label" for="form-first">First Name<sup>*</sup></label>
+                </fieldset>
 
-                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
-                        <input class="form__control" id="form-last" type="text" name="lastname" placeholder="" required>
-                        <label class="form__label" for="form-last">Last Name<sup>*</sup></label>
-                    </fieldset>
+                <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
+                    <input class="form__control" id="form-last" type="text" name="form-last" placeholder="" required>
+                    <label class="form__label" for="form-last">Last Name<sup>*</sup></label>
+                </fieldset>
 
-                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
-                        <input class="form__control" id="form-email" type="email" name="email" placeholder="" required>
-                        <label class="form__label" for="form-email">Email<sup>*</sup></label>
-                    </fieldset>
+                <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
+                    <input class="form__control" id="form-email" type="email" name="email" placeholder="" required>
+                    <label class="form__label" for="form-email">Email<sup>*</sup></label>
+                </fieldset>
 
-                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
-                        <textarea  id="form-message" name="form-message" rows ="3" cols="30" placeholder=""></textarea>
-                        <label class="form__label" for="form-message">Type your message here<sup>*</sup></label>
-                    </fieldset>
+                <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
+                    <textarea  id="form-message" name="form-message" rows="3" cols="30" placeholder=""></textarea>
+                    <label class="form__label" for="form-message">Type your message</label>
+                </fieldset>
 
-                    <fieldset class="form__group form__group_checkbox" data-aos="fade-left" data-aos-duration="500">
-                        <label class="form__checkbox" for="form-checkbox">
-                            <input id="form-checkbox" type="checkbox" required>
-                            <span class="checkmark"></span>
-                        </label>
-                        <span class="form__checkbox-txt">I permit to collect my data according to <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms-of-use" target="_blank" rel="noopener noreferrer">Terms of Use</a>.</span>
-                    </fieldset>
+                <fieldset class="form__group form__group_checkbox" data-aos="fade-left" data-aos-duration="500">
+                    <label class="form__checkbox" for="form-checkbox">
+                        <input id="form-checkbox" type="checkbox" required>
+                        <span class="checkmark"></span>
+                    </label>
+                    <span class="form__checkbox-txt">I permit to collect my data according to <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms-of-use" target="_blank" rel="noopener noreferrer">Terms of Use</a>.</span>
+                </fieldset>
 
-                    <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
-                        <input class="btn btn_right" type="submit" value="Send message">
-                    </fieldset>
-                </form>
-            </div>
+                <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
+                    <input class="btn btn_right" type="submit" value="Send message">
+                </fieldset>
+            </form>
         </div>
     </section><!-- end form section -->
 </main>
@@ -722,28 +720,26 @@
     }
 </script>
 
-<!-- Slideshow -->
+<!-- Multiple Slideshows -->
 <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
+    let slideIndex = [1,1];
+    let slideId = [" toggle__content_1", " toggle__content_2"]
+    showSlides(1, 0);
+    showSlides(1, 1);
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
+    function plusSlides(n, no) {
+        showSlides(slideIndex[no] += n, no);
     }
 
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
+    function showSlides(n, no) {
         let i;
-        let slides = document.getElementsByClassName("toggle__content");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+        let x = document.getElementsByClassName(slideId[no]);
+        if (n > x.length) {slideIndex[no] = 1}
+        if (n < 1) {slideIndex[no] = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
         }
-        slides[slideIndex-1].style.display = "block";
+        x[slideIndex[no]-1].style.display = "block";
     }
 </script>
 

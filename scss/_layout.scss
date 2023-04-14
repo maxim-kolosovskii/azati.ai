@@ -84,7 +84,8 @@ main[role="main"] {
     max-width: 1270px;
   }
   @include media-desktop-mn {
-    max-width: 1602px;
+    //max-width: 1602px;
+    max-width: 1600px;
   }
 }
 

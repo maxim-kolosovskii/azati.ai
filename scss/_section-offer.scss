@@ -12,16 +12,14 @@ Offer section
     }
   }
 
-  .container-fluid {
-
-    .container {
-      @include media-phablet-mn {
-        padding-top: 3.5vh;
-        padding-bottom: 8vh;
-      }
-      @include media-laptop-mn {
-        padding-bottom: 12vh;
-      }
+  .container + .container {
+    @include media-phablet-mn {
+      background-color: $color-grey-light;
+      padding-top: 3.5vh;
+      padding-bottom: 8vh;
+    }
+    @include media-laptop-mn {
+      padding-bottom: 12vh;
     }
   }
 
@@ -38,21 +36,37 @@ Offer section
 
   /* Custom CSS for numbers of Career page */
   .numbers__item {
-    @include media-phone-mn {
-      width: 50%;
-    }
     @include media-phablet-mx {
       padding: 2vh 10px 3vh 0;
     }
+
+    @include media-phone-mn {
+      width: 50%;
+    }
+
     @include media-phablet-mn {
       padding-top: 2vh;
-      padding-right: 10px;
       padding-bottom: 2vh;
     }
+
+    @include media-phablet-netbook {
+      &:nth-child(odd) {
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+      &:nth-child(even) {
+        padding-right: 5vw
+      }
+    }
+
     @include media-netbook-mn {
       padding-left: 2.5vw;
     }
-    @include media-laptop-mn {
+
+    @include media-desktop-mn {
+      padding-bottom: 2.8vh;
+      padding-left: 3.5vw;
+
       &:nth-child(odd) {
         width: 21.5em;
       }
@@ -63,10 +77,6 @@ Offer section
           width: 13.5em;
         }
       }
-    }
-    @include media-desktop-mn {
-      padding-bottom: 2.8vh;
-      padding-left: 3.5vw;
     }
   }
 }

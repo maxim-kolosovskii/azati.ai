@@ -25,7 +25,6 @@
     @media only screen and (max-width: 399px) {
       margin-left: -16px;
       margin-right: -16px;
-      //width: calc(100% + 32px);
     }
     @media only screen and (max-width: 299px) {
       margin-left: -8px;
@@ -200,3 +199,24 @@
 
 
 @import "section-form";
+
+.section_form {
+
+  .container-fluid {
+
+    //.container {
+    //  @include media-desktop-mn {
+    //    padding-bottom: 10vh;
+        //padding-bottom: 98px;
+      //}
+    //}
+
+    //.form {
+    //  @include media-desktop-mn {
+    //    margin-bottom: 0;
+    //    border-bottom: 10vh solid $color-grey-light;
+        //padding-bottom: 98px;
+      //}
+    //}
+  }
+}

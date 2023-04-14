@@ -49,7 +49,7 @@
                 <li><a itemprop="url" class="nav__item" href="portfolio.html">Portfolio</a></li>
                 <li><a itemprop="url" class="nav__item" href="blog.html">Blog</a></li>
                 <li><a itemprop="url" class="nav__item active" href="career.html">Career</a></li>
-                <li><a itemprop="url" class="nav__item" href="/">Contact Us</a></li>
+                <li><a itemprop="url" class="nav__item" href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -241,46 +241,45 @@
         <div class="container">
             <h2 class="section__title">We Offer</h2>
         </div>
-        <div class="container-fluid">
-            <div class="container">
-                <picture class="section__img-outer">
-                    <source srcset="img/bg-offer.webp" type="image/webp">
-                    <img class="lazy-img" data-src="img/bg-offer-min.jpg" alt="">
-                </picture>
 
-                <div class="numbers" data-aos="fade-left">
-                    <div class="numbers__item">
-                        <h3 class="numbers__title">Personal bonus program</h3>
-                        <p>01 /</p>
-                    </div>
-                    <div class="numbers__item">
-                        <h3 class="numbers__title">Corporate discount program</h3>
-                        <p>02 /</p>
-                    </div>
-                    <div class="numbers__item">
-                        <h3 class="numbers__title">Foreign languages courses</h3>
-                        <p>03 /</p>
-                    </div>
-                    <div class="numbers__item">
-                        <h3 class="numbers__title">Remote work from any point of the world or office</h3>
-                        <p>04 /</p>
-                    </div>
-                    <div class="numbers__item">
-                        <h3 class="numbers__title">Tuition Reimbursement</h3>
-                        <p>05 /</p>
-                    </div>
-                    <div class="numbers__item">
-                        <h3 class="numbers__title">Social package — <br>medical & family care</h3>
-                        <p>06 /</p>
-                    </div>
-                    <div class="numbers__item">
-                        <h3 class="numbers__title">Flexible work schedule</h3>
-                        <p>07 /</p>
-                    </div>
-                    <div class="numbers__item">
-                        <h3 class="numbers__title">And more +</h3>
-                        <p>08 /</p>
-                    </div>
+        <div class="container">
+            <picture class="section__img-outer">
+                <source srcset="img/bg-offer.webp" type="image/webp">
+                <img class="lazy-img" data-src="img/bg-offer-min.jpg" alt="">
+            </picture>
+
+            <div class="numbers" data-aos="fade-left">
+                <div class="numbers__item">
+                    <h3 class="numbers__title">Personal bonus program</h3>
+                    <p>01 /</p>
+                </div>
+                <div class="numbers__item">
+                    <h3 class="numbers__title">Corporate discount program</h3>
+                    <p>02 /</p>
+                </div>
+                <div class="numbers__item">
+                    <h3 class="numbers__title">Foreign languages courses</h3>
+                    <p>03 /</p>
+                </div>
+                <div class="numbers__item">
+                    <h3 class="numbers__title">Remote work from any point of the world or office</h3>
+                    <p>04 /</p>
+                </div>
+                <div class="numbers__item">
+                    <h3 class="numbers__title">Tuition Reimbursement</h3>
+                    <p>05 /</p>
+                </div>
+                <div class="numbers__item">
+                    <h3 class="numbers__title">Social package — <br>medical & family care</h3>
+                    <p>06 /</p>
+                </div>
+                <div class="numbers__item">
+                    <h3 class="numbers__title">Flexible work schedule</h3>
+                    <p>07 /</p>
+                </div>
+                <div class="numbers__item">
+                    <h3 class="numbers__title">And more +</h3>
+                    <p>08 /</p>
                 </div>
             </div>
         </div>
@@ -291,7 +290,7 @@
         <div class="container">
             <h2 itemprop="name" class="section__title">What is Azati <br>for our <br>employee?</h2>
 
-            <div class="slideshow-container">
+            <div class="toggle">
                 <div class="toggle__content">
                     <div class="toggle__number"><span>01</span> / 06</div>
                     <div class="toggle__content-box">
@@ -353,49 +352,59 @@
 
     <section class="section section_form">
         <div class="container">
-            <h2 class="section__title">Drop us a line</h2>
+            <h2 class="section__title">How to Join Our Team</h2>
         </div>
-        <div class="container-fluid">
-            <div class="container">
-                <picture class="section__img-outer">
-                    <source srcset="img/bg-form.webp" type="image/webp">
-                    <img class="lazy-img" data-src="img/bg-form-min.jpg" alt="">
-                </picture>
+        <div class="container">
+            <picture class="section__img-outer">
+                <source srcset="img/bg-form.webp" type="image/webp">
+                <img class="lazy-img" data-src="img/bg-form-min.jpg" alt="">
+            </picture>
 
-                <form method="post" id="main-form" class="form">
-                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
-                        <input class="form__control" id="form-first" type="text" name="firstname" placeholder="" required>
-                        <label class="form__label" for="form-first">First Name<sup>*</sup></label>
-                    </fieldset>
+            <form method="post" id="main-form" class="form">
+                <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
+                    <input class="form__control" id="form-name" type="text" name="name" placeholder="" required>
+                    <label class="form__label" for="form-name">Name<sup>*</sup></label>
+                </fieldset>
 
-                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
-                        <input class="form__control" id="form-last" type="text" name="lastname" placeholder="" required>
-                        <label class="form__label" for="form-last">Last Name<sup>*</sup></label>
-                    </fieldset>
+                <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
+                    <input class="form__control" id="form-email" type="email" name="email" placeholder="" required>
+                    <label class="form__label" for="form-email">Email<sup>*</sup></label>
+                </fieldset>
 
-                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
-                        <input class="form__control" id="form-email" type="email" name="email" placeholder="" required>
-                        <label class="form__label" for="form-email">Email<sup>*</sup></label>
-                    </fieldset>
+                <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
+                    <input class="form__control" id="form-phone" type="tel" name="phone" placeholder="" required>
+                    <label class="form__label" for="form-phone">Phone</label>
+                </fieldset>
 
-                    <fieldset class="form__group form__group_reverse" data-aos="fade-left" data-aos-duration="500">
-                        <textarea  id="form-message" name="form-message" rows ="3" cols="30" placeholder=""></textarea>
-                        <label class="form__label" for="form-message">Type your message here<sup>*</sup></label>
-                    </fieldset>
+                <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
+                    <input class="form__control" id="form-country" type="text" name="country" placeholder="" required>
+                    <label class="form__label" for="form-country">Country<sup>*</sup></label>
+                </fieldset>
 
-                    <fieldset class="form__group form__group_checkbox" data-aos="fade-left" data-aos-duration="500">
-                        <label class="form__checkbox" for="form-checkbox">
-                            <input id="form-checkbox" type="checkbox" required>
-                            <span class="checkmark"></span>
-                        </label>
-                        <span class="form__checkbox-txt">I permit to collect my data according to <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms-of-use" target="_blank" rel="noopener noreferrer">Terms of Use</a>.</span>
-                    </fieldset>
+                <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
+                    <span id="file-chosen"></span>
+                    <input type="file" id="form-file" hidden>
+                    <label class="form__label-file" for="form-file"></label>
+                    <span class="form__label">Upload CV<sup>*</sup></span>
+                </fieldset>
 
-                    <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
-                        <input class="btn btn_right" type="submit" value="Send message">
-                    </fieldset>
-                </form>
-            </div>
+                <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
+                    <textarea  id="form-message" name="form-message" rows="3" cols="30" placeholder=""></textarea>
+                    <label class="form__label" for="form-message">Additinal information (optional)</label>
+                </fieldset>
+
+                <fieldset class="form__group form__group_checkbox" data-aos="fade-left" data-aos-duration="500">
+                    <label class="form__checkbox" for="form-checkbox">
+                        <input id="form-checkbox" type="checkbox" required>
+                        <span class="checkmark"></span>
+                    </label>
+                    <span class="form__checkbox-txt">I permit to collect my data according to <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms-of-use" target="_blank" rel="noopener noreferrer">Terms of Use</a>.</span>
+                </fieldset>
+
+                <fieldset class="form__group" data-aos="fade-left" data-aos-duration="500">
+                    <input class="btn btn_right" type="submit" value="Send message">
+                </fieldset>
+            </form>
         </div>
     </section><!-- end form section -->
 </main>
@@ -562,6 +571,19 @@
         }
         slides[slideIndex-1].style.display = "block";
     }
+</script>
+
+<!-- Attach file -->
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+<script id="rendered-js">
+    const actualBtn = document.getElementById("form-file");
+
+    const fileChosen = document.getElementById("file-chosen");
+
+    actualBtn.addEventListener("change", function () {
+        fileChosen.textContent = this.files[0].name;
+        fileChosen.classList.add("active");
+    });
 </script>
 
 <!-- Animation -->

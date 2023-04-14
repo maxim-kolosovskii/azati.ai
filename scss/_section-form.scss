@@ -5,16 +5,7 @@ Bottom form section
   @import "img-left";
   //display: none;
 
-  /* Custom CSS only bottom form */
-  @include media-phablet-mn {
-
-    .btn_right {
-      padding-left: 2vw;
-      padding-right: 2vw;
-    }
-  }
-
-  & > .container {
+  .container:first-child {
     position: relative;
     z-index: 1;
   }
@@ -22,9 +13,6 @@ Bottom form section
   .section__title {
     @include media-netbook-mx {
       margin-bottom: 0;
-    }
-    @include media-phablet-netbook {
-      padding-left: 5vw;
     }
     @include media-phablet-mn {
       margin-bottom: -0.25em;
@@ -34,30 +22,41 @@ Bottom form section
     }
   }
 
-  .container-fluid {
+  .section__img-outer {
 
-    .container {
-      @include media-phablet-mx {
-        padding-bottom: 3vh;
-      }
-      @include media-phablet-mn {
-        padding-bottom: 60px;
-      }
-      @include media-desktop-mn {
-        padding-bottom: 20vh;
+    IMG {
+      bottom: 0;
+    }
+  }
+
+  /* Custom CSS only bottom form */
+  .form {
+    @include media-phablet-mx {
+      margin-bottom: 3vh;
+    }
+    @include media-phablet-mn {
+      border-bottom: 10vh solid $color-grey-light;
+      position: relative;
+
+      &:after {
+        @include bg-grey;
+        border-bottom: 10vh solid $color-grey-light;
+        right: -100vw;
       }
     }
   }
 
-  .section__img-outer {
-
-    IMG {
-      @include media-netbook-mn {
-        bottom: -60px;
-      }
-      @include media-desktop-mn {
-        bottom: -20vh;
-      }
+  .btn_right {
+    @include media-phablet-mn {
+      min-width: calc(50% - 2.5vw);
+      padding-left: 2vw;
+      padding-right: 2vw;
+    }
+    @include media-netbook-mn {
+      min-width: 44%;
+    }
+    @include media-desktop-mn {
+      min-width: 380px;
     }
   }
 }
