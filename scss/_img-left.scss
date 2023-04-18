@@ -1,14 +1,8 @@
-/* Block with a floating background image to left of content */
+/* All blocks with a floating background image to left of content */
 .container {
-  @include media-netbook-laptop {
-    display: grid;
-    //grid-template-columns: 1fr 1fr 1fr;
-    grid-template-columns: 330px 1fr 1fr;
-    grid-template-areas: "head form form";
 
-    .section__title, .section__img-outer + * {
-      grid-area: form;
-    }
+  & + .container {
+    @include form-grid;
   }
 }
 
@@ -19,19 +13,8 @@
     padding-left: 2.5vw;
     transition: none;
   }
-  //@include media-netbook-laptop {
-  //  grid-area: form;
-  //}
   @include media-laptop-mn {
-    //margin-left: 383px;
     margin-left: 407px;
-  }
-}
-
-.container + .container {
-  @include media-laptop-mn {
-    display: grid;
-    grid-template-columns: 407px 1fr;
   }
 }
 
@@ -44,30 +27,14 @@
   }
 
   IMG {
-    //max-width: 100%;
-
     @include media-netbook-mn {
       display: block;
-      max-height: calc(100% + 20vh);
-      max-width: 568px;
       position: absolute;
       right: 0;
-      //min-width: 30vw;
-      //max-width: 432px;
-      //max-height: 730px;
       object-fit: cover;
       @include transition(all $transition-duration $transition-timing-function);
-    }
-    @include media-desktop-mn {
-      //max-width: 568px;
-      //min-width: auto;
-      //width: 33vw;
-      //max-height: none;
-      max-height: calc(100% + 17vh);
+      max-width: 568px;
+      width: 100vh;
     }
   }
-
-  //& + * {
-  //  grid-area: form;
-  //}
 }

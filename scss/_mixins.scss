@@ -231,6 +231,57 @@
 }
 
 
+@mixin form-img-grid {
+  @include media-netbook-laptop {
+    display: grid;
+    grid-template-columns: 330px 1fr 1fr;
+    grid-template-areas: "head form form";
+
+    .section__title, .section__img-outer + * {
+      grid-area: form;
+    }
+  }
+}
+
+
+@mixin form-grid {
+  @include media-laptop-mn {
+    display: grid;
+    grid-template-columns: 407px 1fr;
+  }
+}
+
+
+@mixin form-alignment {
+  @include media-phablet-mn {
+    border-top: 10vh solid #fff;
+    border-bottom: 10vh solid $color-grey-light;
+    position: relative;
+
+    &:after {
+      @include bg-grey;
+      border-bottom: 10vh solid $color-grey-light;
+      right: -100vw;
+    }
+  }
+}
+
+
+@mixin form-btn_right {
+  @include media-phablet-mn {
+    min-width: calc(50% - 2.5vw);
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  @include media-netbook-mn {
+    min-width: 44%;
+  }
+  @include media-desktop-mn {
+    min-width: 380px;
+  }
+}
+
+
 
 // ------------ Prefixes for older browsers ------------
 

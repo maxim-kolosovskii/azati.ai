@@ -1,22 +1,94 @@
 @import "section";
 
-@import "section-form";
+@import "img-left";
 
-.section_form {
+.section_contact {
+  @import "img-left";
 
+  /* Only Contact Us page */
   .container-fluid {
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
 
-    .container {
-      //@include media-phablet-mx {
-      //  padding-bottom: 3vh;
-      //}
-      //@include media-phablet-mn {
-      //  padding-bottom: 60px;
-      //}
-      @include media-desktop-mn {
-        //padding-bottom: 10vh;
-        padding-bottom: 98px;
+    @include media-netbook-mx {
+      padding-bottom: 4vh;
+    }
+    @include media-netbook-mn {
+      padding-bottom: 8vh;
+    }
+
+    & + .container {
+      @include form-img-grid;
+      @include form-grid;
+      @include form-alignment;
+
+      @include media-netbook-mn {
+        margin-top: 6vh;
       }
     }
+  }
+
+  .section__title {
+    font-size: clamp(40px, calc(29px + 5vw), 110px);
+    line-height: 1.01; //98px;
+    margin: 0;
+
+    @include media-netbook-mx {
+      padding: 8vh 0 3vh;
+    }
+    @include media-phablet-mx {
+      padding: 8vh 0 0;
+    }
+    @include media-netbook-mn {
+      padding: 12vh 0 0;
+    }
+    @include media-laptop-mn {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .section__subtitle {
+    @include title_5;
+    display: block;
+
+    @include media-laptop-mx {
+      margin-top: 15px;
+    }
+    @include media-laptop-mn {
+      padding-left: 30px;
+      margin-top: 27px;
+      max-width: 20em;
+    }
+    @include media-desktop-mn {
+      max-width: 30em;
+    }
+  }
+
+  .section__img-outer {
+
+    IMG {
+      bottom: -10vh;
+      max-height: 950px;
+    }
+  }
+
+  .form {
+    padding-top: 0;
+
+    @include media-phablet-mx {
+      margin-bottom: 3vh;
+    }
+    @include media-phablet-mn {
+      margin-top: calc((105px + 1.58rem) / 2 * -1);
+    }
+    @include media-tablet-v-mn {
+      margin-top: calc((133px + 1.58rem) / 2 * -1);
+    }
+  }
+
+  .btn_right {
+    @include form-btn_right;
   }
 }

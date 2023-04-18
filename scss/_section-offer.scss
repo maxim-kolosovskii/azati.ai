@@ -1,31 +1,35 @@
-/*
-Offer section
-*/
+/* Offer section */
 .section_offer {
   //display: none;
-  @import "img-left";
 
   /* Custom CSS only offer section */
+  .container {
+    @include form-img-grid;
+
+    & + .container {
+      @include media-phablet-mn {
+        background-color: $color-grey-light;
+        padding-top: 3.5vh;
+        padding-bottom: 8vh;
+      }
+      @include media-laptop-mn {
+        padding-bottom: 12vh;
+      }
+    }
+  }
+
+
   .section__title {
     @include media-desktop-mn {
       padding-left: 3.5vw;
     }
   }
 
-  .container + .container {
-    @include media-phablet-mn {
-      background-color: $color-grey-light;
-      padding-top: 3.5vh;
-      padding-bottom: 8vh;
-    }
-    @include media-laptop-mn {
-      padding-bottom: 12vh;
-    }
-  }
-
   .section__img-outer {
 
     IMG {
+      max-height: 748px;
+
       @include media-netbook-mn {
         top: -145px;
       }
@@ -70,6 +74,7 @@ Offer section
       &:nth-child(odd) {
         width: 21.5em;
       }
+
       &:nth-child(even) {
         width: calc(100% - 21.5em);
 

@@ -49,17 +49,7 @@ FIELDSET,
 }
 
 .form__group_half-outer {
-  @include media-phone-mx {
-    display: inline-block;
-  }
-  @include media-phone-phablet {
-    display: flex;
-    justify-content: space-between;
-  }
-  @include media-phablet-netbook {
-    display: inline-block;
-  }
-  @include media-netbook-mn {
+  @include media-phone-mn {
     display: flex;
     justify-content: space-between;
   }
@@ -68,10 +58,7 @@ FIELDSET,
 .form__group_half {
   display: flex;
 
-  @include media-phone-phablet {
-    width: calc(50% - 20px);
-  }
-  @include media-netbook-mn {
+  @include media-phone-mn {
     width: calc(50% - 20px);
   }
 }

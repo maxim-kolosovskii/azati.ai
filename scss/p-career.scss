@@ -8,7 +8,6 @@
 
   @include media-phablet-mx {
     display: block;
-    //max-width: fit-content;
   }
   @include media-phablet-mn {
     margin-right: 16px;
@@ -16,6 +15,7 @@
 }
 
 
+/* Tabs section */
 .section_tabs {
   //display: none;
 
@@ -31,7 +31,6 @@
       margin-right: -8px;
     }
   }
-
 
   @import "card";
 
@@ -100,6 +99,11 @@
   .section__subtitle {
     order: -1;
   }
+}
+
+
+.section_img-left {
+  @import "img-left";
 }
 
 
@@ -182,8 +186,6 @@
     }
 
     P {
-      //display: flex;
-      //align-items: center;
       font-size: 2.4rem; // 48px;
       line-height: 1.2;
       max-width: 36em;
@@ -191,32 +193,24 @@
 
       IMG {
         max-width: 36px;
-        //margin-left: 1em;
       }
     }
   }
 }
 
 
+/* Bottom form section */
 @import "section-form";
 
 .section_form {
+  @include media-phablet-mn {
+    margin-top: 20vh;
+  }
 
-  .container-fluid {
+  .section__img-outer {
 
-    //.container {
-    //  @include media-desktop-mn {
-    //    padding-bottom: 10vh;
-        //padding-bottom: 98px;
-      //}
-    //}
-
-    //.form {
-    //  @include media-desktop-mn {
-    //    margin-bottom: 0;
-    //    border-bottom: 10vh solid $color-grey-light;
-        //padding-bottom: 98px;
-      //}
-    //}
+    IMG {
+      max-height: 1110px;
+    }
   }
 }
