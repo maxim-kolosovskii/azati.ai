@@ -350,15 +350,16 @@ Top section
   /*
   Filter
   */
+  /* Draggable Tabs Arrows */
+  /* Draggable Tabs Slider */
   /* Card box */
   /*
   Tag Block
   */ }
   .section_tabs .filter__bar {
     border-bottom: 1px solid #e1dfdf;
-    font-size: 0; }
-    .section_tabs .filter__bar .icon-filter SPAN {
-      display: none; }
+    font-size: 0;
+    display: flex; }
   .section_tabs .filter__bar-item {
     background: transparent;
     border: 0 none;
@@ -399,15 +400,10 @@ Top section
       width: 100%; }
     @media screen and (max-width: 767px) {
       .section_tabs .filter__bar-item {
-        display: block;
-        margin: 0 auto;
-        padding: 10px 1.6vw; } }
+        padding: 20px 3vw; } }
     @media screen and (min-width: 768px) {
       .section_tabs .filter__bar-item {
-        padding: 25px 1.6vw; } }
-    @media screen and (min-width: 1200px) {
-      .section_tabs .filter__bar-item {
-        padding: 25px .8vw; } }
+        padding: 25px 3vw; } }
     @media screen and (min-width: 1400px) {
       .section_tabs .filter__bar-item {
         min-width: 170px;
@@ -441,6 +437,39 @@ Top section
       font-weight: 400;
       line-height: 1;
       margin: -1px 1.5vw 0 0; }
+  .section_tabs .filter__bar-outer {
+    position: relative; }
+    .section_tabs .filter__bar-outer .filter__bar-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 50px;
+      position: absolute;
+      top: 0; }
+      .section_tabs .filter__bar-outer .filter__bar-arrow:first-child {
+        display: none;
+        left: -50px;
+        transform: rotate(180deg); }
+      .section_tabs .filter__bar-outer .filter__bar-arrow:last-child {
+        right: -50px; }
+      .section_tabs .filter__bar-outer .filter__bar-arrow SPAN {
+        background: url("../img/icons/i-arrow-sm-min.svg") center no-repeat;
+        background-size: 27%;
+        cursor: pointer;
+        height: 50px;
+        width: 50px; }
+        .section_tabs .filter__bar-outer .filter__bar-arrow SPAN:hover {
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2IDE2IiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxwYXRoIGQ9Ik00LjcgMi4xYy0uNC0uNC0uNC0xLjEgMC0xLjYuNC0uNCAxLjEtLjQgMS42IDBMMTMgNy4yYy40LjQuNCAxLjEgMCAxLjZsLTYuNyA2LjdjLS40LjQtMS4xLjQtMS42IDAtLjQtLjQtLjQtMS4xIDAtMS42bDUuOC01LjgtNS44LTZ6IiBzdHlsZT0iZmlsbDojZmY5NzFkIi8+PC9zdmc+"); }
+  .section_tabs .filter__bar {
+    overflow-x: hidden;
+    scroll-behavior: smooth; }
+    .section_tabs .filter__bar.dragging {
+      scroll-behavior: auto;
+      cursor: grab; }
+      .section_tabs .filter__bar.dragging .filter__bar-item {
+        user-select: none;
+        pointer-events: none; }
   @media only screen and (max-width: 399px) {
     .section_tabs .filter {
       margin-left: -16px;
@@ -449,6 +478,9 @@ Top section
     .section_tabs .filter {
       margin-left: -8px;
       margin-right: -8px; } }
+  @media screen and (min-width: 768px) {
+    .section_tabs .filter .filter__bar-arrow {
+      display: none !important; } }
   .section_tabs .card-outer {
     display: grid; }
     @media screen and (max-width: 767px) {

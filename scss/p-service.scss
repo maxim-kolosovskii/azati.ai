@@ -224,7 +224,24 @@
 /* Tabs section */
 .section_tabs {
 
+
   @import "filter";
+
+  .filter {
+
+    .filter__bar-arrow {
+      @media screen and (min-width: 466px) {
+        display: none !important;
+      }
+    }
+  }
+
+  .filter__bar-item {
+    @include media-laptop-mx {
+      padding-right: 1.5vw;
+      padding-left: 1.5vw;
+    }
+  }
 
   @include media-netbook-mx {
     .filter {

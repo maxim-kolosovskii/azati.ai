@@ -7,11 +7,10 @@ header[role="banner"] {
   border-bottom: 1px solid $color-grey-medium;
   display: flex;
   align-items: stretch;
+  height: var(--header-height);
   @include sticky;
   top: 0;
   z-index: 9;
-  height: var(--header-height);
-
   @include transition(all $transition-duration $transition-timing-function);
 
   &.sticky {

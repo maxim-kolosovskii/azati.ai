@@ -2,18 +2,23 @@
 
 @import "section-top";
 
-@import "filter";
-
 
 /* Blog section */
 .section_blog {
   //display: none;
 
-  .filter__bar {
-    @include media-phablet-mx {
-      padding-bottom: 2vh;
+
+  @import "filter";
+
+  .filter {
+
+    .filter__bar-arrow {
+      @include media-phablet-mn {
+        display: none !important;
+      }
     }
   }
+
 
   @import "card";
 

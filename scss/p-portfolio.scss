@@ -2,23 +2,43 @@
 
 @import "section-top";
 
-@import "filter";
-
 
 /* Portfolio exceptions */
 .section_portfolio {
   //display: none;
 
-  .filter__bar {
-    border-bottom: 1px solid $color-grey-medium;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+
+  @import "filter";
+
+  .filter {
+
+    @media screen and (max-width: 449px) {
+      .filter__bar-outer {
+        border-bottom: 1px solid $color-grey-medium;
+      }
+      .filter__bar {
+        border-bottom: 0 none;
+        width: calc(100% - 76px);
+      }
+    }
+    @media screen and (min-width: 450px) {
+      .filter__bar-arrow {
+        display: none !important;
+      }
+    }
 
     .icon-filter {
-      margin-bottom: -1px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+        SPAN {
+          display: none;
+        }
     }
   }
+
 
   @import "tag";
 

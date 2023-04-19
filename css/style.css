@@ -462,12 +462,12 @@ header[role="banner"] {
   border-bottom: 1px solid #e1dfdf;
   display: flex;
   align-items: stretch;
+  height: var(--header-height);
   position: -webkit-sticky;
   /* Safari */
   position: sticky;
   top: 0;
   z-index: 9;
-  height: var(--header-height);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);

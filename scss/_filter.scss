@@ -8,13 +8,9 @@ Filter
 .filter__bar {
   border-bottom: 1px solid $color-grey-medium;
   font-size: 0;
-
-  .icon-filter {
-
-    SPAN {
-      display: none;
-    }
-  }
+  display: flex;
+  //gap: 2px;
+  //gap: var(--md);
 }
 
 .filter__bar-item {
@@ -27,25 +23,16 @@ Filter
   @include transition(all $transition-duration-slow $transition-timing-function);
 
   @include media-phablet-mx {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 1.6vw;
+    padding: 20px 3vw;
   }
   @include media-phablet-mn {
-    padding: 25px 1.6vw;
-  }
-  @include media-netbook-mn {
-    padding: 25px .8vw;
+    padding: 25px 3vw;
   }
   @include media-laptop-mn {
     min-width: 170px;
     padding: 25px 1.6vw;
   }
 }
-
-//.active {
-  //border-bottom: 5px solid $color-blue;
-//}
 
 
 .filter__clear {
@@ -77,5 +64,60 @@ Filter
     font-weight: $font-weight-400;
     line-height: 1;
     margin: -1px 1.5vw 0 0;
+  }
+}
+
+
+
+/* Draggable Tabs Arrows */
+.filter__bar-outer {
+  position: relative;
+
+  .filter__bar-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    top: 0;
+
+    &:first-child {
+      display: none;
+      left: -50px;
+      transform: rotate(180deg);
+    }
+
+    &:last-child {
+      right: -50px;
+    }
+
+    SPAN {
+      background: url("../img/icons/i-arrow-sm-min.svg") center no-repeat;
+      background-size: 27%;
+      cursor: pointer;
+      height: 50px;
+      width: 50px;
+
+      &:hover {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2IDE2IiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxwYXRoIGQ9Ik00LjcgMi4xYy0uNC0uNC0uNC0xLjEgMC0xLjYuNC0uNCAxLjEtLjQgMS42IDBMMTMgNy4yYy40LjQuNCAxLjEgMCAxLjZsLTYuNyA2LjdjLS40LjQtMS4xLjQtMS42IDAtLjQtLjQtLjQtMS4xIDAtMS42bDUuOC01LjgtNS44LTZ6IiBzdHlsZT0iZmlsbDojZmY5NzFkIi8+PC9zdmc+");
+      }
+    }
+  }
+}
+
+/* Draggable Tabs Slider */
+.filter__bar {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  &.dragging {
+    scroll-behavior: auto;
+    cursor: grab;
+
+    .filter__bar-item {
+      user-select: none;
+      pointer-events: none;
+    }
   }
 }
