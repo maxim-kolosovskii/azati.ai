@@ -104,12 +104,16 @@
     <section class="section section_blog" data-aos="fade-up">
         <div class="container">
             <div itemscope itemtype="http://schema.org/Blog" class="filter">
-                <div class="filter__bar">
-                    <button class="filter__bar-item active" type="button" onclick="openTab(event,'All')">All</button>
-                    <button class="filter__bar-item" type="button" onclick="openTab(event,'Technology')">Technology</button>
-                    <button class="filter__bar-item" type="button" onclick="openTab(event,'Business')">Business</button>
-                    <button class="filter__bar-item" type="button" onclick="openTab(event,'AIML')">AI/ML</button>
-                    <button class="filter__bar-item" type="button" onclick="openTab(event,'Digitization')">Digitization</button>
+                <div class="filter__bar-outer">
+                    <div class="filter__bar-arrow"><span id="left"></span></div>
+                    <div class="filter__bar">
+                        <button class="filter__bar-item active" type="button" onclick="openTab(event,'All')">All</button>
+                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Technology')">Technology</button>
+                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Business')">Business</button>
+                        <button class="filter__bar-item" type="button" onclick="openTab(event,'AIML')">AI/ML</button>
+                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Digitization')">Digitization</button>
+                    </div>
+                    <div class="filter__bar-arrow"><span id="right"></span></div>
                 </div>
 
                 <div id="All" class="filter__content">
@@ -459,6 +463,9 @@
         evt.currentTarget.className += " active";
     }
 </script>
+
+<!-- Draggable tabs slider -->
+<script src="js/tabs-slider.js"></script>
 
 <!-- Text-overflow -->
 <script>

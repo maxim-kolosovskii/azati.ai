@@ -105,13 +105,16 @@
         <div class="container">
 
             <div class="filter">
-                <div class="filter__bar">
-                    <div>
+                <div class="filter__bar-outer">
+                    <div class="filter__bar-arrow"><span id="left"></span></div>
+                    <div class="filter__bar">
                         <button class="filter__bar-item active" type="button" onclick="openTab(event,'All')">All</button>
                         <button class="filter__bar-item" type="button" onclick="openTab(event,'Industries')">Industries</button>
                         <button class="filter__bar-item" type="button" onclick="openTab(event,'Services')">Services</button>
+                        <!-- filter options button -->
+                        <button  class="icon-filter active" type="button"><span>Filter Options</span></button>
                     </div>
-                    <button  class="icon-filter active" type="button"><span>Filter Options</span></button>
+                    <div class="filter__bar-arrow"><span id="right"></span></div>
                 </div>
 
                 <button type="button" class="filter__clear">Clear Choice</button>
@@ -423,6 +426,9 @@
         evt.currentTarget.className += " active";
     }
 </script>
+
+<!-- Draggable tabs slider -->
+<script src="js/tabs-slider.js"></script>
 
 <!-- AOS Animation -->
 <link href="css/aos.css" rel="stylesheet">

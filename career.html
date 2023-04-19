@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/p-career.css">
+
+    <!-- Font Awesome CDN Link for Icons -->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">-->
 </head>
 
 <body>
@@ -107,13 +110,18 @@
 
     <section class="section section_tabs">
         <div class="container">
+
             <div class="filter">
-                <div class="filter__bar">
-                    <button class="filter__bar-item active" type="button" onclick="openTab(event,'All')">All <span>/ 32</span></button>
-                    <button class="filter__bar-item" type="button" onclick="openTab(event,'Senior')">Senior <span>/ 8</span></button>
-                    <button class="filter__bar-item" type="button" onclick="openTab(event,'Middle')">Middle <span>/ 10</span></button>
-                    <button class="filter__bar-item" type="button" onclick="openTab(event,'Junior')">Junior <span>/ 10</span></button>
-                    <button class="filter__bar-item" type="button" onclick="openTab(event,'Trainee')">Trainee <span>/ 4</span></button>
+                <div class="filter__bar-outer">
+                    <div class="filter__bar-arrow"><span id="left"></span></div>
+                    <div class="filter__bar">
+                        <button class="filter__bar-item active" type="button" onclick="openTab(event,'All')">All <span>/ 32</span></button>
+                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Senior')">Senior <span>/ 8</span></button>
+                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Middle')">Middle <span>/ 10</span></button>
+                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Junior')">Junior <span>/ 10</span></button>
+                        <button class="filter__bar-item" type="button" onclick="openTab(event,'Trainee')">Trainee <span>/ 4</span></button>
+                    </div>
+                    <div class="filter__bar-arrow"><span id="right"></span></div>
                 </div>
 
                 <div id="All" class="filter__content">
@@ -547,6 +555,9 @@
         evt.currentTarget.className += " active";
     }
 </script>
+
+<!-- Draggable tabs slider -->
+<script src="js/tabs-slider.js"></script>
 
 <!-- Slideshow -->
 <script>
