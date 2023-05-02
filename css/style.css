@@ -1185,6 +1185,13 @@ TEXTAREA {
   #file-chosen.active {
     opacity: 1; }
 
+#form-file:required {
+  border: none;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  pointer-events: none; }
+
 /* Checkbox */
 @media screen and (max-width: 991px) {
   .form__group_checkbox {
@@ -1416,8 +1423,12 @@ Buttons
   .btn:focus, .btn-icon:focus, .btn-arrow:focus, .icon-filter:focus, .btn-more:focus {
     outline: 3px solid #97d2ff; }
   .btn.disabled, .disabled.btn-icon, .disabled.btn-arrow, .disabled.icon-filter, .disabled.btn-more, .btn:disabled, .btn-icon:disabled, .btn-arrow:disabled, .icon-filter:disabled, .btn-more:disabled {
-    user-select: none;
-    pointer-events: none; }
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
 
 /* Button without text, only icon */
 .btn-icon, .btn-arrow, .icon-filter {

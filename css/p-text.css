@@ -45,13 +45,13 @@ General Landing styles
   -moz-transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   -o-transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
-  .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_contact):not(.section_career) {
+  .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_contact):not(.section_career):not(.section_join) {
     overflow: hidden; }
     @media screen and (max-width: 767px) {
-      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_contact):not(.section_career) {
+      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_contact):not(.section_career):not(.section_join) {
         margin: 10vh 0; } }
     @media screen and (min-width: 768px) {
-      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_contact):not(.section_career) {
+      .section:not(.section_top):not(.section_top-small):not(.section_top-small + .section):not(.section_toggle):not(.section_form):not(.section_contact):not(.section_career):not(.section_join) {
         margin: 16vh 0; } }
 
 .section__title {

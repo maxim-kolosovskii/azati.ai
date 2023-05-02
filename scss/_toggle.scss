@@ -95,7 +95,7 @@
   padding-right: 3vw;
   position: relative;
   //width: 74%;
-  transition: all $transition-duration $transition-timing-function;
+  @include transition(all $transition-duration $transition-timing-function);
 
   DL {
     @include reset;

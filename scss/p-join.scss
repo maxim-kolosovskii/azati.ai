@@ -1,0 +1,189 @@
+@import "section";
+
+@import "section-top";
+
+.section_top {
+  @include media-phablet-mn {
+    padding-bottom: 0;
+    min-height: auto;
+  }
+
+  .section__content-left:before {
+    @include media-phablet-mn {
+      content: none;
+    }
+  }
+
+  //.section__img-outer {
+  //  @include media-phablet-mx {
+  //    &:before {
+  //      content: none;
+  //    }
+  //  }
+  //}
+
+  UL.section__slogan {
+    @include media-tablet-v-mx {
+      padding-top: 0;
+      padding-left: 20px;
+    }
+    @include media-tablet-v-mn {
+      padding-top: 1.5vh;
+      padding-left: 30px;
+    }
+  }
+}
+
+
+.container-fluid {
+  background-color: $color-grey-light;
+
+  .container {
+    background-color: #fff;
+    max-width: 1328px;
+  }
+}
+
+
+/* Suggestion */
+.suggestion {
+  &:first-child {
+    padding: 6vh 7.25vw 0;
+  }
+  &:not(:first-child) {
+    padding: 8.5vh 7.25vw 0;
+  }
+}
+
+.suggestion__title {
+  @include title_2;
+  margin-bottom: -1vh;
+
+  SPAN {
+    @include numeric_list;
+    margin-bottom: var(--md);
+    color: $color-grey-dark;
+    display: block;
+  }
+}
+
+%content {
+  content: '';
+  background-color: $color-blue;
+  margin: auto;
+  position: absolute;
+  top: 17px;
+  bottom: 0;
+  @include transition(all $transition-duration $transition-timing-function);
+}
+
+.suggestion__subtitle {
+  @include title_4;
+  cursor: pointer;
+  padding: 5.45vh 0 3.5vh;
+  position: relative;
+  @include user-select(none);
+
+  --right: 1.9vw;
+
+  &:after {
+    @extend %content;
+    height: 2px;
+    width: 24px;
+    right: var(--right);
+  }
+
+  &:before {
+    @extend %content;
+    height: 24px;
+    width: 2px;
+    right: calc(var(--right) + 11px);
+  }
+
+  &.active,
+  &:hover {
+
+    &:before,
+    &:after {
+      background-color: $font-color-base;
+    }
+  }
+
+  &.active {
+
+    &:before {
+      content: none;
+    }
+
+    & + .suggestion__content {
+      margin-top: -2.45vh;
+      padding-bottom: 2.2vh;
+    }
+  }
+}
+
+.suggestion__content {
+  border-bottom: 1px solid $color-grey-medium;
+  max-height: 0;
+  overflow: hidden;
+  @include transition(max-height $transition-duration-fast $transition-timing-function);
+
+  UL {
+    margin-left: 24px;
+
+    & > LI {
+      font-family: $font-family-accent;
+      font-size: 18px;
+      font-weight: $font-weight-800;
+      margin: 1.09vh 0;
+    }
+
+    OL {
+      list-style-type: lower-alpha;
+      margin-left: 22px;
+
+      LI {
+        font-size: 16px;
+        font-weight: $font-weight-400;
+        margin: 0.7vh 0;
+      }
+    }
+  }
+}
+
+
+/* QR code */
+.join-telegram {
+  @include text_link;
+  color: $color-blue;
+  font-weight: $font-weight-500;
+  position: relative;
+
+  &::after {
+    content: "";
+    background: url("https://static.azati.ai/web-site/res/join-our-team/telegram_bot.svg") no-repeat;
+    background-size: contain;
+    border-radius: 20px;
+    @include box-shadow(0 0 8px 0 rgba(0, 0, 0, 0.05));
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    @include transition(all $transition-duration $transition-timing-function);
+
+    @include media-phablet-mx {
+      height: 100px;
+      width: 100px;
+      top: -100px;
+    }
+    @include media-phablet-mn {
+      height: 146px;
+      width: 146px;
+      top: -150px;
+    }
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}

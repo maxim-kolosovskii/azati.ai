@@ -402,6 +402,22 @@
 }
 
 
+// @include user-select(none);
+//@mixin user-select($value) {
+//  -webkit-user-select: $value;
+//  -moz-user-select: $value;
+//  -ms-user-select: $value;
+//  user-select: $value;
+//}
+
+@mixin user-select($select) {
+  @each $pre in -webkit-, -moz-, -ms-, -o- {
+    #{$pre + user-select}: #{$select};
+  }
+  #{user-select}: #{$select};
+}
+
+
 // @include transition(all $transition-duration $transition-timing-function);
 @mixin transition($x...){
   -webkit-transition: $x;

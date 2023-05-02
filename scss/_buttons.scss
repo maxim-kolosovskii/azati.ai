@@ -117,8 +117,8 @@ Buttons
   &.disabled,
   &:disabled {
     //cursor: not-allowed;
-    user-select: none;
     pointer-events: none;
+    @include user-select(none);
   }
 }
 

@@ -112,12 +112,12 @@ Filter
   scroll-behavior: smooth;
 
   &.dragging {
-    scroll-behavior: auto;
     cursor: grab;
+    scroll-behavior: auto;
 
     .filter__bar-item {
-      user-select: none;
       pointer-events: none;
+      @include user-select(none);
     }
   }
 }
