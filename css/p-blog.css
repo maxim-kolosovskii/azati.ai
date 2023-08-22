@@ -628,6 +628,41 @@ Top section
     color: #fff; }
 
 /* Bottom form section */
+.section_form {
+  /* All blocks with a floating background image to left of content */ }
+  @media screen and (min-width: 1400px) {
+    .section_form .container + .container {
+      display: grid;
+      grid-template-columns: 407px 1fr; } }
+  .section_form .section__title {
+    padding-bottom: 0; }
+    @media screen and (min-width: 1200px) {
+      .section_form .section__title {
+        padding-left: 2.5vw;
+        transition: none; } }
+    @media screen and (min-width: 1400px) {
+      .section_form .section__title {
+        margin-left: 407px; } }
+  @media screen and (max-width: 1199px) {
+    .section_form .section__img-outer {
+      display: none; } }
+  @media screen and (min-width: 1200px) {
+    .section_form .section__img-outer {
+      position: relative; } }
+  @media screen and (min-width: 1200px) {
+    .section_form .section__img-outer IMG {
+      display: block;
+      position: absolute;
+      right: 0;
+      object-fit: cover;
+      -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      max-width: 568px;
+      width: 100vh; } }
+
+/* Bottom form section */
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
   .section_form .container {
     display: grid;
