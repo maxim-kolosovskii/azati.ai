@@ -396,7 +396,6 @@ Top section
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  -o-user-select: none;
   user-select: none;
   --right: 1.9vw; }
   @media screen and (max-width: 991px) {

@@ -1303,7 +1303,6 @@ Benefits section
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-        -o-user-select: none;
         user-select: none; }
   @media screen and (min-width: 466px) {
     .section_tabs .filter .filter__bar-arrow {
@@ -1350,7 +1349,6 @@ Benefits section
       .section_tabs .filter__content {
         padding-left: 50px; } }
     .section_tabs .filter__content P {
-      font-family: "Work Sans", "Arial", sans-serif;
       font-family: "Work Sans", "Arial", sans-serif;
       margin: 0;
       padding: 0;

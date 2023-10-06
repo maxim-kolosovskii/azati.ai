@@ -1,3 +1,26 @@
+/*!
+Theme Name: azati
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: azati
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+azati is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -1063,22 +1086,28 @@ Form elements
   -ms-transform: translateY(1.15rem) scale(0.7);
   transform: translateY(1.15rem) scale(0.7); }
 
+.wpcf7-form,
 .form {
   background-color: #fff; }
   @media screen and (max-width: 1699px) {
+    .wpcf7-form,
     .form {
       padding-bottom: 5vh; } }
   @media screen and (min-width: 768px) {
+    .wpcf7-form,
     .form {
       padding-top: 3.5vh; } }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .wpcf7-form,
     .form {
       padding-right: 5vw; } }
   @media screen and (min-width: 1200px) {
+    .wpcf7-form,
     .form {
       padding-right: 2.5vw;
       padding-left: 2.5vw; } }
   @media screen and (min-width: 1700px) {
+    .wpcf7-form,
     .form {
       padding-right: 7vw;
       padding-bottom: 10vh;
@@ -1427,7 +1456,6 @@ Buttons
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    -o-user-select: none;
     user-select: none; }
 
 /* Button without text, only icon */

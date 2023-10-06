@@ -585,7 +585,6 @@ Top section
       height: 100%;
       width: 100vw;
       right: -100vw;
-      top: 0;
       z-index: -1; }
     @media screen and (max-width: 767px) {
       .section_tabs .tab__content {

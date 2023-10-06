@@ -435,7 +435,6 @@ Top section
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-        -o-user-select: none;
         user-select: none; }
   @media screen and (max-width: 449px) {
     .section_portfolio .filter .filter__bar-outer {

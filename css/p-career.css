@@ -472,7 +472,6 @@ Top section
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-        -o-user-select: none;
         user-select: none; }
   @media only screen and (max-width: 399px) {
     .section_tabs .filter {

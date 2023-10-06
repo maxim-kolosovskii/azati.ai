@@ -432,7 +432,6 @@ Top section
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-        -o-user-select: none;
         user-select: none; }
   @media screen and (min-width: 768px) {
     .section_blog .filter .filter__bar-arrow {
