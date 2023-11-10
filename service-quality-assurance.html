@@ -355,7 +355,6 @@
         </div>
         <div class="container">
             <div class="clutch-widget-outer">
-                <script src="https://widget.clutch.co/static/js/widget.js"></script>
                 <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="12" data-height="auto" data-nofollow="true" data-expandifr="true" data-scale="100" data-primary-color="#29a2ff" data-secondary-color="#151731" data-reviews="2075977,2070710,2066303,2066195,760554,681970,413234,271696,143062,133475" data-clutchcompany-id="121634"wiвер="1440" height="357"></div>
             </div>
         </div>
@@ -465,103 +464,38 @@
     <p class="footer__copy">Azati© Copyright 2022. All Rights Reserved.</p>
 </footer>
 
-<!-- Background Images Lazy Loading -->
-<script defer src="js/lazy.min.js"></script>
-
-<!-- Modal window -->
-<script>
-    // Get the modal
-    var modal = document.getElementById("topNavModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(eventWindow) {
-        if (eventWindow.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-
-<!-- Hamburger -->
-<script>
-    var hamburger = document.getElementById("hamburger");
-
-    hamburger.onclick = function() {
-        if (hamburger.classList.contains("open")) {
-            hamburger.classList.remove("open");
-        } else {
-            hamburger.classList.add("open");
-        }
-    }
-</script>
-
- <!-- Sticky header -->
-<script>
-    // When the user scrolls the page, execute myFunction
-    window.onscroll = function() {stickyFunction()};
-
-    // Get the header
-    var header = document.getElementById("stickyHeader");
-
-    // Get the offset position of the navbar
-    var sticky = header.offsetTop;
-
-    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function stickyFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
-        }
-    }
-</script>
-
-<!-- jQuery. Toggle tab slider without arrows -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script>
-    $(function() {
-        $(".section").each(function(indx, el) {
-            var li = $("li", el),
-                box = $(".toggle__content-box", el),
-                btn = $(".btn-arrow", el),
-                len = li.length - 1,
-                i = 0;
-            $(el).on("click", "li", function() {
-                i = li.index(this);
-                li.removeClass("current").eq(i).addClass("current");
-                box.removeClass("visible").eq(i).addClass("visible")
-            });
-            $(el).on("click", ".btn-arrow", function(event) {
-                event.preventDefault();
-                i += $(this).is(".btn-arrow_prev") ? -1 : 1;
-                i < 0 && (i = len);
-                i > len && (i = 0);
-                li.eq(i).click()
-            })
-        })
-    });
-</script>
-
 <!-- AOS Animation -->
 <link href="css/aos.css" rel="stylesheet">
 <script src="js/aos.js"></script>
 <script>
     AOS.init();
+</script>
+
+<!-- Background Images Lazy Loading -->
+<script defer src="js/lazy.min.js"></script>
+
+<!-- Modal window -->
+<script defer src="js/modals.js"></script>
+
+<!-- Hamburger -->
+<script defer src="js/hamburger.js"></script>
+
+<!-- Sticky header -->
+<script defer src="js/sticky-header.js"></script>
+
+<!-- jQuery. Toggle tab slider without arrows -->
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script defer src="js/toggle-jquery.js"></script>
+
+<!-- Clutch widget -->
+<script defer src="js/widget-clutch.js"></script>
+
+<!-- Textarea autosize -->
+<script defer src="js/autosize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        autosize(document.querySelectorAll('#form-message'));
+    }, false);
 </script>
 
 </body>

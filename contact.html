@@ -206,88 +206,33 @@
     <p class="footer__copy">Azati© Copyright 2022. All Rights Reserved.</p>
 </footer>
 
-<!-- Modal window -->
-<script>
-    // Get the modal
-    var modal = document.getElementById("topNavModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(eventWindow) {
-        if (eventWindow.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-
-<!-- Hamburger -->
-<script>
-    var hamburger = document.getElementById("hamburger");
-
-    hamburger.onclick = function() {
-        if (hamburger.classList.contains("open")) {
-            hamburger.classList.remove("open");
-        } else {
-            hamburger.classList.add("open");
-        }
-    }
-</script>
-
-<!-- Sticky header -->
-<script>
-    // When the user scrolls the page, execute myFunction
-    window.onscroll = function() {stickyFunction()};
-
-    // Get the header
-    var header = document.getElementById("stickyHeader");
-
-    // Get the offset position of the navbar
-    var sticky = header.offsetTop;
-
-    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function stickyFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
-        }
-    }
-</script>
-
-<!-- Attach file -->
-<script src="js/stopexecutionontimeout.js"></script>
-<script id="rendered-js">
-    const actualBtn = document.getElementById("form-file");
-
-    const fileChosen = document.getElementById("file-chosen");
-
-    actualBtn.addEventListener("change", function () {
-        fileChosen.textContent = this.files[0].name;
-        fileChosen.classList.add("active");
-    });
-</script>
-
 <!-- AOS Animation -->
 <link href="css/aos.css" rel="stylesheet">
 <script src="js/aos.js"></script>
 <script>
     AOS.init();
 </script>
+
+<!-- Modal window -->
+<script defer src="js/modals.js"></script>
+
+<!-- Hamburger -->
+<script defer src="js/hamburger.js"></script>
+
+<!-- Sticky header -->
+<script defer src="js/sticky-header.js"></script>
+
+<!-- Textarea autosize -->
+<script defer src="js/autosize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        autosize(document.querySelectorAll('#form-message'));
+    }, false);
+</script>
+
+<!-- Attach file -->
+<script defer src="js/stopexecutionontimeout.js"></script>
+<script defer src="js/attach-file.js" id="rendered-js"></script>
 
 </body>
 </html>

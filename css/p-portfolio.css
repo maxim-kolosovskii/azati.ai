@@ -499,7 +499,8 @@ Top section
     -webkit-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     -moz-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     -o-transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-    transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
+    transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    user-select: none; }
     @media screen and (max-width: 991px) {
       .section_portfolio .tag__item {
         font-size: 1rem; } }
@@ -657,6 +658,7 @@ Top section
     font-weight: 700;
     letter-spacing: 2px;
     line-height: 1.9;
+    margin-top: auto;
     margin-left: auto;
     padding: 5px;
     text-transform: uppercase;

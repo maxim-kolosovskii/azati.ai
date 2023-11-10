@@ -29,6 +29,7 @@ Tag Block
   align-items: center;
   @include title_7;
   @include transition(all $transition-duration $transition-timing-function);
+  user-select: none;
 
   @include media-tablet-v-mx {
     height: 32px;
